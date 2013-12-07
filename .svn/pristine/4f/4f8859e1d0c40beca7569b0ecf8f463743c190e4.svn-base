@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">  
+<head>
+     
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Language" content="es" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content=" " />
+
+    <title>Valora la propuesta a tu deseo | Eldeseazo</title>
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+ 
+    <!-- CSS -->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/jqtransform.css" rel="stylesheet" type="text/css" />
+    
+    <!-- JS -->
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="js/jquery.jqtransform.js" type="text/javascript"></script>
+    <script src="js/jquery.raty.js" type="text/javascript"></script>
+    
+    
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript">
+        $(window).load(function(){
+            
+            $('#star').raty();
+            
+            $('.textForm').focusin(function(){ $(this).removeClass('gris'); $(this).addClass('blue'); });
+            $('.textForm').focusout(function(){ $(this).removeClass('blue'); if($(this).find('input').val()==''){ $(this).addClass('gris'); } });
+            
+            $('textarea').focusin(function () { if ($(this).val() == $(this).text() ) { $(this).val(''); } });
+            $('textarea').focusout(function () { if ($(this).val() == '') { $(this).val($(this).text());} });
+            
+            $('input[type="text"]').focusin(function () { if ($(this).val() == $(this).attr('value') ) { $(this).val(''); $(this).removeClass('inputClarito');$(this).addClass('cajaSeleccionada');} });
+            $('input[type="text"]').focusout(function () {  if ($(this).val() == '') {  $(this).val($(this).attr('value')); $(this).addClass('inputClarito');$(this).removeClass('cajaSeleccionada');} });
+            
+            $(function() { $("form.jqtransform").jqTransform();});
+            
+            $('.siteMap .boxCuarto span').click(function(){
+                if($(window).width()<=1024){ $(this).parent().find("ul").slideToggle(); }    
+            });
+            elpie();
+        });
+        $(window).resize(function(){
+            elpie();
+        }); 
+        function elpie() {
+            if($(window).height() > $('.header').height() + $('.content').height() + $('.footer').height() ){ $('.footer').css({position: 'absolute', bottom : '0', left : '0'});} else{  $('.footer').css({position: 'relative'});}
+        }
+    </script>
+
+</head>
+<body>
+
+    <header class="header">
+        <nav class="menu">
+            <ul class="box">
+                <li class="btnHome"><a href="home.html" title="Inicio" class="on">Inicio &nbsp;&nbsp;|</a></li>
+                <li><a href="homeViajes.html" title="Viajes">Viajes</a></li>
+                <li><a href="homeElectronica.html" title="Electrónica">Electrónica</a></li>
+                <li><a href="homeMotor.html" title="Motor">Motor</a></li>
+                <li><a href="homeVivienda.html" title="Vivienda">Vivienda</a></li>
+                <li><a href="homeModa.html" title="Moda">Moda</a></li>
+                <li><a href="homeRestaurantes.html" title="Restaurantes">Restaurantes</a></li>
+                <li><a href="homeOcio.html" title="Ocio">Ocio</a></li>
+                <li><a href="homeBienestar.html" title="Bienestar">Bienestar</a></li>
+                <li><a href="homeCursos.html" title="Cursos">Cursos</a></li>
+                <li><a href="homeServicios.html" title="Servicios">Servicios</a></li>
+                <li><a href="#" title="Más">Más</a></li>
+            </ul>
+        </nav>
+        <div class="box">
+            <div id="logo"><a href="home.html" title="Eldeseazo"><img src="img/logo_el_deseazo.jpg" title="Eldeseazo, el genio de tus compras." alt="Logotipo de Eldeseazo" /></a></div>
+            <div class="logado">
+                <div class="foto">
+                    <div class="circle"></div>
+                    <img src="img/bgFotoUser.jpg" alt="foto Usuario" title="Nombre del usuario" />
+                </div>
+                <div class="name">
+                    <strong>Nombre Usuario</strong><br />
+                    <a href="altaEmpresa.html">¿Tienes una Empresa?</a>
+                </div>
+                <div class="out"><a href="#" title="log Out"><img src="img/btnLogOut.png" alt="log Out" /></a></div>
+            </div>
+            <div class="search"><input type="text" value="¿Qué quieres comprar y a qué precio?" /><input type="submit" value="Pide tu deseo" /></div>
+            <a href="#" title="Botón Menu" class="btnMenu">&nbsp;</a>
+        </div>
+    </header>
+    
+    <section class="content">
+        
+        <div class="breadcrumb">
+            <div class="box">    
+                <p><b>Estás en:</b> <a href="home.html" title="Inicio">Inicio</a> <a href="listadoDeseos.html" title="Deseos">Deseos</a> <span>Deso concedido</span></p>
+            </div>
+        </div>
+        
+        <div class="boxWhite">
+            <div class="box boxUser">
+                <div class="colInfoUser titBoxUser">
+                    <h1>Deseos</h1>
+                </div>
+                <div class="user">
+                    
+                    <div class="colUser">
+                        <div class="foto">
+                            <div class="circle"></div>
+                            <img src="img/bgFotoUser.jpg" alt="foto Usuario" title="Nombre del usuario" />
+                        </div>
+                        <div class="contUser">
+                            <h2>¡Hola Carlos!</h2>
+                            <ul>
+                                <li><a href="#" title="Deseos" class="on">Deseos (1)</a></li>
+                                <li><a href="#" title="Ofertas">Ofertas (2)</a></li>
+                                <li><a href="#" title="Mi Cuenta">Mi Cuenta</a></li>
+                            </ul>
+                            <div class="percentUser">
+                                <h3>Completa tu perfil</h3>
+                                <p>Es muy importante para que nuestros genios puedan hacerte las mejores ofertas</p>
+                                <div class="porcentaje">
+                                    <div class="boxCircle">
+                                        <div class="circle">50</div>
+                                        <p>% del perfil completado</p>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#" title="Añade una foto de perfil">Añade una foto de perfil</a></li>
+                                        <li><a href="#" title="Enlaza con Facebook">Enlaza con Facebook</a></li>
+                                        <li><a href="#" title="Añade tu teléfono móvil">Añade tu teléfono móvil</a></li>
+                                        <li><a href="#" title="Crea una dirección de entrega para tus compras">Crea una dirección de entrega para tus compras</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="colInfoUser">
+                        <ul>
+                            <li class="boxItem">
+                                <div class="edit">
+                                    <div class="boxContItem">
+                                        <div class="thumbP"><img src="img/thumbBorrar.jpg" alt="alt de la imagen" /></div>
+                                        <div class="txt">
+                                            <div class="txtDate">En Santa Cruz de Tenerife el 22/06/2013 Carlos ha pedido...</div>
+                                            <div class="boxRrss"><div class="btnRrss"><a href="#" title="facebook" class="btnF">&nbsp;</a> <a href="#" title="twitter" class="btnT">&nbsp;</a> <a href="#" title="google+" class="btnG">&nbsp;</a> <a href="#" title="mail" class="btnRss">&nbsp;</a></div></div>
+                                            <div class="txtInfo">Viaje a Menorca en hotel de lujo (5*) para 2 personas la primera semana de agosto.</div>
+                                        </div>
+                                        <div class="boxBtn">
+                                            <div class="btnsLeft">
+                                                <a href="deseoModificar.html" title="Modificar deseo" class="mod"><span></span>Modificar deseo</a>
+                                                <a href="deseoConcedido.html" title="¿Deseo Concedido?" class="deseo on"><span></span>¿Deseo Concedido?</a>
+                                            </div>
+                                            <div class="btnsRight">
+                                                <a href="#" title="Ver 1 respuesta nueva" class="btn">Ver 1 respuesta nueva</a>
+                                                <a href="deseoEliminar.html" title="borrar" class="clear"><img src="img/btnClear.png" /></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="boxFormDeseo formulario">
+                                        <form class="jqtransform" action="perfilParticularDeseoRenovaicion1.html">
+                                            <div class="rowElem boxRadio">
+                                                <span class="label">¿Que valoración le das a viajes Menorca?</span>
+                                                <div id="star"></div>
+                                            <div class="rowElem">
+                                                <div class="contBlockG textForm">
+                                                    <textarea>Escribe aquí una valoración</textarea>
+                                                </div>
+                                            </div>
+                                            <div class="blockFormCierre">
+                                                <a href="perfilParticularDeseoRenovaicion1.html" title="cancelar">Cancelar</a> <input type="submit" value="Enviar" title="Enviar" class="btn" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="boxItem">
+                                <div class="boxContItem">
+                                    <div class="thumbP"><img src="img/thumbBorrar.jpg" alt="alt de la imagen" /></div>
+                                    <div class="txt">
+                                        <div class="txtDate">En Santa Cruz de Tenerife el 22/06/2013 Carlos ha pedido...</div>
+                                        <div class="boxRrss"><div class="btnRrss"><a href="#" title="facebook" class="btnF">&nbsp;</a> <a href="#" title="twitter" class="btnT">&nbsp;</a> <a href="#" title="google+" class="btnG">&nbsp;</a> <a href="#" title="mail" class="btnRss">&nbsp;</a></div></div>
+                                        <div class="txtInfo">Viaje a Menorca en hotel de lujo (5*) para 2 personas la primera semana de agosto.</div>
+                                    </div>
+                                    <div class="boxBtn">
+                                        <div class="btnsLeft">
+                                            <a href="deseoModificar.html" title="Modificar deseo" class="mod"><span></span>Modificar deseo</a>
+                                            <a href="deseoConcedido.html" title="¿Deseo Concedido?" class="deseo off"><span></span>¿Deseo Concedido?</a>
+                                        </div>
+                                        <div class="btnsRight">
+                                            <a href="#" title="Ver 1 respuesta nueva" class="btn">Ver 1 respuesta nueva</a>
+                                            <a href="#" title="borrar" class="clear"><img src="img/btnClear.png" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="boxItem caduca">
+                                <div class="boxContItem">
+                                    <div class="thumbP"><img src="img/thumbBorrar.jpg" alt="alt de la imagen" /></div>
+                                    <div class="txt">
+                                        <div class="txtDate">Creado el 22/06/2013 a las 22:30h<br />
+                                        <strong>¡Caduca en 4 días! (<a href="#" title="Renovar">Renovar</a>)</strong></div>
+                                        <div class="boxRrss"><div class="btnRrss"><a href="#" title="facebook" class="btnF">&nbsp;</a> <a href="#" title="twitter" class="btnT">&nbsp;</a> <a href="#" title="google+" class="btnG">&nbsp;</a> <a href="#" title="mail" class="btnRss">&nbsp;</a></div></div>
+                                        <div class="txtInfo">Esto es un deseo con una descripción media...</div>
+                                    </div>
+                                    <div class="boxBtn">
+                                        <div class="btnsLeft">
+                                            <a href="deseoModificar.html" title="Modificar deseo" class="mod"><span></span>Modificar deseo</a>
+                                            <a href="deseoConcedido.html" title="¿Deseo Concedido?" class="deseo off"><span></span>¿Deseo Concedido?</a>
+                                        </div>
+                                        <div class="btnsRight">
+                                            <a href="#" title="No hay respuesta" class="btn inactivo">No hay respuestas</a>
+                                            <a href="#" title="borrar" class="clear"><img src="img/btnClear.png" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="boxItem caduca">
+                                <div class="boxContItem">
+                                    <div class="thumbP"><img src="img/thumbBorrar.jpg" alt="alt de la imagen" /></div>
+                                    <div class="txt">
+                                        <div class="txtDate">Creado el 22/06/2013 a las 22:30h<br />
+                                        <strong>¡Caduca en 4 días! (<a href="#" title="Renovar">Renovar</a>)</strong></div>
+                                        <div class="boxRrss"><div class="btnRrss"><a href="#" title="facebook" class="btnF">&nbsp;</a> <a href="#" title="twitter" class="btnT">&nbsp;</a> <a href="#" title="google+" class="btnG">&nbsp;</a> <a href="#" title="mail" class="btnRss">&nbsp;</a></div></div>
+                                        <div class="txtInfo">Esto es un deseo con una descripción media...</div>
+                                    </div>
+                                    <div class="boxBtn">
+                                        <div class="btnsLeft">
+                                            <a href="deseoModificar.html" title="Modificar deseo" class="mod"><span></span>Modificar deseo</a>
+                                            <a href="deseoConcedido.html" title="¿Deseo Concedido?" class="deseo off"><span></span>¿Deseo Concedido?</a>
+                                        </div>
+                                        <div class="btnsRight">
+                                            <a href="#" title="No hay respuestas" class="btn inactivo">No hay respuestas</a>
+                                            <a href="#" title="borrar" class="clear"><img src="img/btnClear.png" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="boxItem caduca">
+                                <div class="boxContItem">
+                                    <div class="thumbP"><img src="img/thumbBorrar.jpg" alt="alt de la imagen" /></div>
+                                    <div class="txt">
+                                        <div class="txtDate">Creado el 22/06/2013 a las 22:30h<br />
+                                        <strong>¡Caduca en 4 días! (<a href="#" title="Renovar">Renovar</a>)</strong></div>
+                                        <div class="boxRrss"><div class="btnRrss"><a href="#" title="facebook" class="btnF">&nbsp;</a> <a href="#" title="twitter" class="btnT">&nbsp;</a> <a href="#" title="google+" class="btnG">&nbsp;</a> <a href="#" title="mail" class="btnRss">&nbsp;</a></div></div>
+                                        <div class="txtInfo">Esto es un deseo con una descripción media...</div>
+                                    </div>
+                                    <div class="boxBtn">
+                                        <div class="btnsLeft">
+                                            <a href="deseoModificar.html" title="Modificar deseo" class="mod"><span></span>Modificar deseo</a>
+                                            <a href="deseoConcedido.html" title="¿Deseo Concedido?" class="deseo off"><span></span>¿Deseo Concedido?</a>
+                                        </div>
+                                        <div class="btnsRight">
+                                            <a href="#" title="No hay respuestas" class="btn inactivo">No hay respuestas</a>
+                                            <a href="#" title="borrar" class="clear"><img src="img/btnClear.png" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+    <footer class="footer">
+        <div class="subMenu">
+            <div class="box">
+                <div class="siteMap">
+                    <div class="boxCuarto">
+                        <span>Eldeseazo</span>
+                        <ul>
+                            <li><a href="home.html" title="Inicio">Inicio</a></li>
+                            <li><a href="listadoDeseos.html" title="Últimos deseos">Últimos deseos</a></li>
+                            <li><a href="listadoOfertas.html" title="Últimas ofertas">Últimas ofertas</a></li>
+                            <li><a href="listadoGenios.html" title="Directorio de genios">Directorio de genios</a></li>
+                        </ul>
+                    </div>
+                    <div class="boxCuarto">
+                        <span>Sobre Nosotros</span>
+                        <ul>
+                            <li><a href="comoFunciona.html" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+                            <li><a href="contacto.html" title="Contacto">Contacto</a></li>
+                            <li><a href="#" title="Blog">Blog</a></li>
+                            <li><a href="prensa.html" title="Sala de prensa">Sala de prensa</a></li>
+                        </ul>
+                    </div>
+                    <div class="boxCuarto">
+                        <span>Acceso</span>
+                        <ul>
+                            <li><a href="acceso.html" title="Mi cuenta">Mi cuenta</a></li>
+                            <li><a href="altaEmpresa.html" title="¿Tienes una empresa?">¿Tienes una empresa?</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="boxCuarto rrss">
+                    <span>Síguenos</span>
+                    <a href="#" title="facebook" target="_blank" class="btnF">&nbsp;</a><a href="#" title="twitter" target="_blank" class="btnT">&nbsp;</a><a href="#" title="Google+" target="_blank" class="btnG">&nbsp;</a><a href="#" title="Rss" target="_blank" class="btnRss">&nbsp;</a>
+                </div>
+            </div>
+        </div>
+        <div class="close">
+            <div class="box">
+                <div class="copy">Eldeseazo el genio de tus compras 2013. Todos los derechos reservados · <a href="politicaDePrivacidad.html" title="Política de privacidad">Política de privacidad</a> · <a href="condicionesDeUso.html" title="Condiciones de uso">Condiciones de uso</a></div>
+                <div class="logos">&nbsp;</div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">  
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Language" content="es" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Cuéntanos qué producto de electrónica, informática o electrodoméstico buscas, el precio que quieres pagar y nosotros los buscamos por ti." />
+    
+    <title>Electrónica - Informática - Electrodomésticos | Eldeseazo</title>
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+ 
+    <!-- CSS -->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/colorbox.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/windy.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    
+    <!-- JS -->
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="js/jquery.colorbox.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+    
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript">
+        $(window).load(function(){
+            
+            $('input[type="text"]').focusin(function () { if ($(this).val() == $(this).attr('value') ) { $(this).val(''); $(this).removeClass('inputClarito');$(this).addClass('cajaSeleccionada');} });
+            $('input[type="text"]').focusout(function () {  if ($(this).val() == '') {  $(this).val($(this).attr('value')); $(this).addClass('inputClarito');$(this).removeClass('cajaSeleccionada');} });
+            
+            $(".btnVideo").colorbox({iframe:true, innerWidth:640, innerHeight:390});
+            
+            $('.siteMap .boxCuarto span').click(function(){
+                if($(window).width()<=1024){ $(this).parent().find("ul").slideToggle(); }    
+            });
+            $('.header').css({ position: "absolute" });
+        }); 
+    </script>
+
+
+</head>
+<body>
+
+    <header class="header">
+        <nav class="menu">
+            <ul class="box">
+                <li class="btnHome"><a href="home.html" title="Inicio">Inicio &nbsp;&nbsp;|</a></li>
+                <li><a href="homeViajes.html" title="Viajes">Viajes</a></li>
+                <li><a href="homeElectronica.html" title="Electrónica" class="on">Electrónica</a></li>
+                <li><a href="homeMotor.html" title="Motor">Motor</a></li>
+                <li><a href="homeVivienda.html" title="Vivienda">Vivienda</a></li>
+                <li><a href="homeModa.html" title="Moda">Moda</a></li>
+                <li><a href="homeRestaurantes.html" title="Restaurantes">Restaurantes</a></li>
+                <li><a href="homeOcio.html" title="Ocio">Ocio</a></li>
+                <li><a href="homeBienestar.html" title="Bienestar">Bienestar</a></li>
+                <li><a href="homeCursos.html" title="Cursos">Cursos</a></li>
+                <li><a href="homeServicios.html" title="Servicios">Servicios</a></li>
+                <li><a href="homeCategorias.html" title="Más">Más</a></li>
+            </ul>
+        </nav>
+        <div class="box">
+            <div id="logo"><a href="#" title="Eldeseazo"><img src="img/logo_el_deseazo.jpg" title="Eldeseazo, el genio de tus compras." alt="Logotipo de Eldeseazo" /></a></div>
+            <div class="registro">
+                <a href="registro.html" title="Registro">Regístrate</a>
+                <a href="acceso.html" title="Entrar" class="btnIn">Entrar</a>
+            </div>
+            <a href="#" title="Botón Menu" class="btnMenu">&nbsp;</a>
+        </div>
+    </header>
+    
+    <section class="content">
+        
+        <div class="breadcrumb">
+            <div class="box">
+                <h1><strong>ELECTRÓNICA</strong> <span>Informática, Electrodomésticos</span></h1>
+            </div>
+        </div>
+        
+        <div class="landing electronica">
+            <div class="box boxSearch">
+                <h2>¿Qué quieres comprar y a qué precio?</h2>
+            <form action="pedirDeseo.html">
+                <input type="text" value="Ejemplo: Busco viaje a Italia saliendo de Madrid, dos adultos y un niño..." /><input type="submit" value="Pide tu deseo gratis" />
+            </form>
+            </div>
+        </div>
+        <div class="boxCount">
+            <div class="box count">
+                <div class="countIn">
+                    <b><span>3</span><span>3</span><span>3</span><span class="punto">.</span><span>5</span><span>7</span><span>2</span><span class="punto">.</span><span>1</span><span>8</span><span>7</span></b>
+                    <a href="listadoDeseos.html" title="deseos concedidos">deseos concedidos</a>
+                </div>
+            </div>
+        </div>
+        <div class="boxWhite">
+            <div class="box">
+                <h2 class="titPasos"><a href="comoFunciona.html" title="¿Cómo funciona Eldeseazo?">¿Cómo funciona Eldeseazo?</a></h2>
+                <div class="pasos">
+                    <div class="paso">
+                        <img src="img/iconPasos1.png" alt="Ilustración del paso correspondiente" />
+                        <h3><strong><span>&sup1;</span>.</strong> Pide un deseo</h3>
+                        <p>Escribe tu deseo con tus propias palabras. Cuanto más información más posibilidades tendrás de recibir una respuesta.</p>
+                    </div>
+                    <div class="paso">
+                        <img src="img/iconPasos2.png" alt="Ilustración del paso correspondiente" />
+                        <h3><strong><span>&sup2;</span>.</strong> Recibe ofertas en tu email</h3>
+                        <p>Tu deseo llegará a miles de empresas que pueden ayudarte. Ellas son nuestros genios y contactarán contigo para hacerte llegar las mejores ofertas.</p>
+                    </div>
+                    <div class="paso">
+                        <img src="img/iconPasos3.png" alt="Ilustración del paso correspondiente" />
+                        <h3><strong><span>&sup3;</span>.</strong> Elige la mejor oferta</h3>
+                        <p>Desde tu área privada podrás gestionar las ofertas que te envíen los genios. Elige la que más te guste y tu deseo se hará realidad.</p>
+                    </div>
+                </div>
+                <div class="masPasos"><a href="http://www.youtube-nocookie.com/embed/NVrnih8eqM0" title="¿Cómo funciona Eldeseazo?" class="btnVideo">ver vídeo</a> | <a href="comoFunciona.html" title="saber más">saber más</a></div>
+            </div>
+        </div>
+        <div class="boxGrey">
+            <div class="box">
+		    <h3><a title ="Últimos deseos pedidos" href="listadoDeseos.html"><img src="img/icono-lampara.png" />&nbsp;Últimos deseos pedidos</a></h3>
+                <div class="slide">
+                    <span id="nav-prev" class="btnL">&#8249;</span>
+		    <ul id="ultimosDeseosPedidos" class="wi-container">
+		    <li>
+                    <div class="boxSlide">
+                        <div class="thumbP"><a href="deseo.html"><img src="img/thumbBorrar.jpg" alt="alt de la imagen" /></a></div>
+                        <div class="txt">
+                            <div class="txtDate">En Santa Cruz de Tenerife el 22/06/2013 <b>Carlos</b> ha pedido...</div>
+                            <div class="txtInfo"><a href="deseo.html">Esto es un deseo con una descripción media...</a></div>
+                        </div>
+		    </div>
+		    </li>
+		    <li>
+                    <div class="boxSlide">
+                        <div class="thumbP"><a href="deseo.html"><img src="img/thumbBorrar2.jpg" alt="alt de la imagen" /></a></div>
+                        <div class="txt">
+                            <div class="txtDate">En Logroño el 12/08/2013 <b>Nacho</b> ha pedido...</div>
+                            <div class="txtInfo"><a href="deseo.html">Esto es un deseo con una descripción media...</a></div>
+                        </div>
+		    </div>
+		    </li>
+		    <li>
+                    <div class="boxSlide">
+                        <div class="thumbP"><a href="deseo.html"><img src="img/thumbBorrar3.jpg" alt="alt de la imagen" /></a></div>
+                        <div class="txt">
+                            <div class="txtDate">En Melilla el 19/08/2013 <b>Paola</b> ha pedido...</div>
+                            <div class="txtInfo"><a href="deseo.html">Esto es un deseo con una descripción media...</a></div>
+                        </div>
+		    </div>
+		    </li>
+		    <li>
+                    <div class="boxSlide">
+                        <div class="thumbP"><a href="deseo.html"><img src="img/thumbBorrar4.jpg" alt="alt de la imagen" /></a></div>
+                        <div class="txt">
+                            <div class="txtDate">En Colsada el 8/08/2013 <b>Ricardo</b> ha pedido...</div>
+                            <div class="txtInfo"><a href="deseo.html">Esto es un deseo con una descripción media...</a></div>
+                        </div>
+		    </div>
+		    </li>
+		    </ul>
+                    <span id="nav-next" class="btnR">&#8250;</span>
+                </div>
+                <div class="boxAll"><a href="listadoDeseos.html" title="ver todos">ver todos</a></div>
+            </div>
+        </div>
+        <div class="boxWhite">
+            <div class="box boxEmpresa">
+                <h3><a href="altaEmpresa" title="¿Tienes una empresa?">¿Tienes una empresa?</a></h3>
+                <p>Conviértete en uno de nuestros genios y ayuda a los usuarios a hacer realidad sus deseos. Eldeseazo pone a tu disposición 47.441 clientes potericiales <span class="gris">¡garantizado!</span></p>
+                <div class="nDeseosG"><span>Más de</span> <b><span>3</span><span>3</span><span>3</span><span class="punto">.</span><span>3</span><span>3</span><span>3</span><span class="punto">.</span><span>3</span><span>3</span><span>3</span><span class="punto">€</span></b>
+                <br /><span>en peticiones y seguimos sumando.</span></div>
+            </div>
+            <a href="formularioEmpresa.html" title="Dar de alta a mi empresa, gratis" class="btn alta">Dar de alta a mi empresa, gratis</a>
+        </div>
+        <div class="boxGrey">
+            <div class="box">
+		    <h3><a href="listadoOfertas.html" title="Últimas ofertas"><img src="img/icono-etiqueta.png">&nbsp;Últimas ofertas de nuestros genios</a></h3>
+                <div class="slide">
+                    <span id="nav-prev2" class="btnL">&#8249;</span>
+		    <ul id="ultimosDeseosOfrecidos" class="wi-container">
+		    <li>
+                    <div class="boxSlide">
+                        <div class="thumbP"><a href="ofertaCertificado.html"><img src="img/thumbBorrar2.jpg" alt="alt de la imagen" /></a></div>
+                        <div class="txt">
+                            <div class="txtDate">En Santa Cruz de Tenerife el 22/06/2013 <a href="escaparateCertifica.html">Cantina Pedro</a> ha publicado...</div>
+                            <div class="txtInfo"><a href="ofertaCertificado.html">Esto es una oferta con una descripción media...</a></div>
+                        </div>
+		    </div>
+		    </li>
+		    <li>
+                    <div class="boxSlide">
+                        <div class="thumbP"><a href="ofertaPremium.html"><img src="img/thumbBorrar.jpg" alt="alt de la imagen" /></a></div>
+                        <div class="txt">
+                            <div class="txtDate">En Logroño el 12/08/2013 <a href="escaparateCertifica.html">Viajes Alcampo</a> ha publicado...</div>
+                            <div class="txtInfo"><a href="ofertaPremium.html">Esto es una oferta con una descripción media...</a></div>
+                        </div>
+		    </div>
+		    </li>
+		    <li>
+                    <div class="boxSlide">
+                        <div class="thumbP"><a href="ofertaPremium.html"><img src="img/thumbBorrar3.jpg" alt="alt de la imagen" /></a></div>
+                        <div class="txt">
+                            <div class="txtDate">En Melilla el 19/08/2013 <a href="escaparateCertifica.html">Melilla Airlines</a> ha publicado...</div>
+                            <div class="txtInfo"><a href="ofertaPremium.html">Esto es una oferta con una descripción media...</a></div>
+                        </div>
+		    </div>
+		    </li>
+		    <li>
+                    <div class="boxSlide">
+                        <div class="thumbP"><a href="ofertaPremium.html"><img src="img/thumbBorrar4.jpg" alt="alt de la imagen" /></a></div>
+                        <div class="txt">
+                            <div class="txtDate">En Colsada el 8/08/2013 <a href="escaparateCertifica.html">Restaurante Txistu</a> ha publicado...</div>
+                            <div class="txtInfo"><a href="ofertaPremium.html">Esto es una oferta con una descripción media...</a></div>
+                        </div>
+		    </div>
+		    </li>
+		    </ul>
+                    <span id="nav-next2" class="btnR">&#8250;</span>
+                </div>
+                <div class="boxAll"><a href="listadoOfertas.html" title="ver todos">ver todos</a></div>
+            </div>
+        </div>
+        <div class="boxWhite">
+            <div class="box">
+                <div class="logoPress"><img src="img/iconExpansion.jpg" alt="logotipo Expansión" title="Expansión" /></div>
+                <div class="txtPress"><p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique."</p></div>
+                <div class="viewPress"><a href="prensa.html" title="ver sala de prensa" class="btnPress">ver sala de prensa</a></div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="subMenu">
+            <div class="box">
+                <div class="siteMap">
+                    <div class="boxCuarto">
+                        <span>Eldeseazo</span>
+                        <ul>
+                            <li><a href="home.html" title="Inicio">Inicio</a></li>
+                            <li><a href="listadoDeseos.html" title="Últimos deseos">Últimos deseos</a></li>
+                            <li><a href="listadoOfertas.html" title="Últimas ofertas">Últimas ofertas</a></li>
+                            <li><a href="listadoGenios.html" title="Directorio de genios">Directorio de genios</a></li>
+                        </ul>
+                    </div>
+                    <div class="boxCuarto">
+                        <span>Sobre Nosotros</span>
+                        <ul>
+                            <li><a href="comoFunciona.html" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+                            <li><a href="contacto.html" title="Contacto">Contacto</a></li>
+                            <li><a href="#" title="Blog">Blog</a></li>
+                            <li><a href="prensa.html" title="Sala de prensa">Sala de prensa</a></li>
+                        </ul>
+                    </div>
+                    <div class="boxCuarto">
+                        <span>Acceso</span>
+                        <ul>
+                            <li><a href="acceso.html" title="Mi cuenta">Mi cuenta</a></li>
+                            <li><a href="altaEmpresa.html" title="¿Tienes una empresa?">¿Tienes una empresa?</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="boxCuarto rrss">
+                    <span>Síguenos</span>
+                    <a href="#" title="facebook" target="_blank" class="btnF">&nbsp;</a><a href="#" title="twitter" target="_blank" class="btnT">&nbsp;</a><a href="#" title="Google+" target="_blank" class="btnG">&nbsp;</a><a href="#" title="Rss" target="_blank" class="btnRss">&nbsp;</a>
+                </div>
+            </div>
+        </div>
+        <div class="close">
+            <div class="box">
+                <div class="copy">Eldeseazo el genio de tus compras 2013. Todos los derechos reservados · <a href="politicaDePrivacidad.html" title="Política de privacidad">Política de privacidad</a> · <a href="condicionesDeUso.html" title="Condiciones de uso">Condiciones de uso</a></div>
+                <div class="logos">&nbsp;</div>
+            </div>
+        </div>
+    </footer>
+        <script type="text/javascript" src="js/jquery.windy.js"></script>
+        <script type="text/javascript"> 
+                        $(function() {
+
+                                var $el = $( '#ultimosDeseosOfrecidos' ),
+                                        windy = $el.windy(),
+                                        allownavnext = false,
+                                        allownavprev = false;
+
+                                $( '#nav-prev2' ).on( 'mousedown', function( event ) {
+
+                                        allownavprev = true;
+                                        navprev();
+                                
+                                } ).on( 'mouseup mouseleave', function( event ) {
+
+                                        allownavprev = false;
+                                
+                                } );
+
+                                $( '#nav-next2' ).on( 'mousedown', function( event ) {
+
+                                        allownavnext = true;
+                                        navnext();
+                                
+                                } ).on( 'mouseup mouseleave', function( event ) {
+
+                                        allownavnext = false;
+                                
+                                } );
+
+                                function navnext() {
+                                        if( allownavnext ) {
+                                                windy.next();
+                                                setTimeout( function() {        
+                                                        navnext();
+                                                }, 150 );
+                                        }
+                                }
+                                
+                                function navprev() {
+                                        if( allownavprev ) {
+                                                windy.prev();
+                                                setTimeout( function() {        
+                                                        navprev();
+                                                }, 150 );
+                                        }
+                                }
+
+                        });
+                </script>	
+        <script type="text/javascript"> 
+                        $(function() {
+
+                                var $el = $( '#ultimosDeseosPedidos' ),
+                                        windy = $el.windy(),
+                                        allownavnext = false,
+                                        allownavprev = false;
+
+                                $( '#nav-prev' ).on( 'mousedown', function( event ) {
+
+                                        allownavprev = true;
+                                        navprev();
+                                
+                                } ).on( 'mouseup mouseleave', function( event ) {
+
+                                        allownavprev = false;
+                                
+                                } );
+
+                                $( '#nav-next' ).on( 'mousedown', function( event ) {
+
+                                        allownavnext = true;
+                                        navnext();
+                                
+                                } ).on( 'mouseup mouseleave', function( event ) {
+
+                                        allownavnext = false;
+                                
+                                } );
+
+                                function navnext() {
+                                        if( allownavnext ) {
+                                                windy.next();
+                                                setTimeout( function() {        
+                                                        navnext();
+                                                }, 150 );
+                                        }
+                                }
+                                
+                                function navprev() {
+                                        if( allownavprev ) {
+                                                windy.prev();
+                                                setTimeout( function() {        
+                                                        navprev();
+                                                }, 150 );
+                                        }
+                                }
+
+                        });
+                </script>	
+    
+</body>
+</html>

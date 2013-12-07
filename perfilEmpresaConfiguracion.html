@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">  
+<head>
+     
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Language" content="es" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content=" " />
+
+    <title>Mi configuración | Eldeseazo</title>
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+ 
+    <!-- CSS -->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/jqtransform.css" rel="stylesheet" type="text/css" />
+    
+    <!-- JS -->
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="js/jquery.jqtransform.js" type="text/javascript"></script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script type="text/javascript">
+        
+        function initialize() {
+            
+            var newark = new google.maps.LatLng(40.38, -3.705);
+            var imageBounds = new google.maps.LatLngBounds(
+            new google.maps.LatLng(40.3947,-3.7369),
+            new google.maps.LatLng(40.3653,-3.6741));
+            
+            var mapOptions = {
+                zoom: 15,
+                center: newark,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            
+            var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+            
+            
+            var marker = new google.maps.Marker ({
+                
+                position: newark,
+                map: map,
+                title: "hola mundo"
+                
+            });
+            
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+        
+    </script>
+    
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript">
+        $(window).load(function(){
+            
+            $('input[type="text"]').focusin(function () { if ($(this).val() == $(this).attr('value') ) { $(this).val(''); $(this).removeClass('inputClarito');$(this).addClass('cajaSeleccionada');} });
+            $('input[type="text"]').focusout(function () { $(this).removeClass('cajaSeleccionada'); if ($(this).val() == '') {  $(this).val($(this).attr('value')); $(this).addClass('inputClarito');$(this).removeClass('cajaSeleccionada');}});
+            
+            $('.campoForm').focusin(function(){ $(this).removeClass('orange'); $(this).removeClass('red'); $(this).addClass('ocre'); });
+            $('.campoForm').focusout(function(){ $(this).removeClass('ocre');$(this).removeClass('red');  if($(this).find('input').val()==''){ $(this).addClass('orange'); } });
+            
+            $('.textForm').focusin(function(){ $(this).removeClass('orange');$(this).removeClass('red');  $(this).addClass('ocre'); });
+            $('.textForm').focusout(function(){ $(this).removeClass('ocre');$(this).removeClass('red');  if($(this).find('textarea').val()==''){ $(this).addClass('orange'); } });
+            
+            $(function() { $("form.jqtransform").jqTransform();});
+            
+            $('#btnFinalizar').click(function(){
+                $('.campoForm').each(function(){
+                    if($(this).find('input').val()==''){
+                        $(this).removeClass('orange');
+                        $(this).removeClass('ocre');
+                        $(this).addClass('red');
+                    }    
+                });
+                $('.textForm').each(function(){
+                    if($(this).find('textarea').val()==''){
+                        $(this).removeClass('orange');
+                        $(this).removeClass('ocre');
+                        $(this).addClass('red');
+                    }    
+                });
+            });
+            
+            $('.siteMap .boxCuarto span').click(function(){
+                if($(window).width()<=1024){ $(this).parent().find("ul").slideToggle(); }    
+            });
+            elpie();
+        });
+        $(window).resize(function(){
+            elpie();
+        }); 
+        function elpie() {
+            if($(window).height() > $('.header').height() + $('.content').height() + $('.footer').height() ){ $('.footer').css({position: 'absolute', bottom : '0', left : '0'});} else{  $('.footer').css({position: 'relative'});}
+        }
+    </script>
+
+</head>
+<body>
+
+    <header class="header">
+        <nav class="menu">
+            <ul class="box">
+                <li class="btnHome"><a href="home.html" title="Inicio" class="on">Inicio &nbsp;&nbsp;|</a></li>
+                <li><a href="homeViajes.html" title="Viajes">Viajes</a></li>
+                <li><a href="homeElectronica.html" title="Electrónica">Electrónica</a></li>
+                <li><a href="homeMotor.html" title="Motor">Motor</a></li>
+                <li><a href="homeVivienda.html" title="Vivienda">Vivienda</a></li>
+                <li><a href="homeModa.html" title="Moda">Moda</a></li>
+                <li><a href="homeRestaurantes.html" title="Restaurantes">Restaurantes</a></li>
+                <li><a href="homeOcio.html" title="Ocio">Ocio</a></li>
+                <li><a href="homeBienestar.html" title="Bienestar">Bienestar</a></li>
+                <li><a href="homeCursos.html" title="Cursos">Cursos</a></li>
+                <li><a href="homeServicios.html" title="Servicios">Servicios</a></li>
+                <li><a href="homeCategorias.html" title="Más">Más</a></li>
+            </ul>
+        </nav>
+        <div class="box">
+            <div id="logo"><a href="home.html" title="Eldeseazo"><img src="img/logo_el_deseazo.jpg" title="Eldeseazo, el genio de tus compras." alt="Logotipo de Eldeseazo" /></a></div>
+            <div class="logado premium">
+                <div class="foto">
+                    <div class="circle"></div>
+                    <img src="img/bgFotoUser.jpg" alt="foto Usuario" title="Nombre del usuario" />
+                </div>
+                <div class="name">
+                    <strong>Nombre Usuario</strong><br />
+                </div>
+                <div class="out"><a href="#" title="Salir"><img src="img/btnLogOut.png" alt="Salir" /></a></div>
+            </div>
+            <div class="search"><input type="text" value="¿Qué quieres comprar y a qué precio?" /><input type="submit" value="Pide tu deseo" /></div>
+            <a href="#" title="Botón Menu" class="btnMenu">&nbsp;</a>
+        </div>
+    </header>
+    
+    <section class="content">
+        
+        <div class="breadcrumb">
+            <div class="box">    
+                <p><b>Estás en:</b> <a href="home.html" title="Inicio">Inicio</a> <a href="listadoDeseos.html" title="Deseos">Deseos</a> <span>Modificar deseo</span></p>
+            </div>
+        </div>
+        
+        <div class="boxWhite">
+            <div class="box boxUser premium">
+            
+                <div class="colInfoUser titBoxUser">
+                    <h1>Mi cuenta</h1>
+                </div>
+                <div class="user">
+                    
+                    <div class="colUser">
+                        <div class="foto">
+                            <div class="circle"></div>
+                            <img src="img/bgFotoUser.jpg" alt="foto Usuario" title="Nombre del usuario" />
+                        </div>
+                        <div class="contUser">
+                            <h2>¡Hola Carlos!</h2>
+                            <ul>
+                                <li><a href="#" title="Deseos">Deseos (1)</a></li>
+                                <li><a href="#" title="Ofertas">Ofertas (2)</a></li>
+                                <li><a href="#" title="Mi Cuenta" class="on">Mi Cuenta</a></li>
+                                <li><a href="#" title="Estadísticas">Estadísticas</a></li>
+                                <li><a href="#" title="Facturas">Facturas</a></li>
+                            </ul>
+                            <div class="percentUser">
+                                <h3>Completa tu perfil</h3>
+                                <p>Es muy importante para que nuestros genios puedan hacerte las mejores ofertas</p>
+                                <div class="porcentaje">
+                                    <div class="boxCircle">
+                                        <div class="circle">50</div>
+                                        <p>% del perfil completado</p>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#" title="Añade una foto de perfil">Añade una foto de perfil</a></li>
+                                        <li><a href="#" title="Enlaza con Facebook">Enlaza con Facebook</a></li>
+                                        <li><a href="#" title="Añade tu teléfono móvil">Añade tu teléfono móvil</a></li>
+                                        <li><a href="#" title="Crea una dirección de entrega para tus compras">Crea una dirección de entrega para tus compras</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="colInfoUser">
+                        <div class="modUser">
+                            <div class="edit premium">
+                                <div class="contPerfil formulario boxFormDeseo">
+                                    <form class="jqtransform">
+                                        <div class="fotoUsuario">
+                                            <div class="foto">
+                                                <div class="circle"></div>
+                                                <img src="img/bgFotoUser.jpg" alt="foto Usuario" title="Nombre del usuario" />
+                                            </div>
+                                            <a href="#" class="addPhoto">Añade una foto al perfil</a>
+                                        </div>
+                                       <!-- <div class="rowElem enlaceFb">
+                                            <span class="title">Enlaza tu cuenta de Facebook</span>    
+                                            <p>Es la forma mas sencilla de disfrutar de Eldeseazo</p>
+                                            <a href="#" title="facebook Entrar" class="btn">Enlazar mi cuenta de Facebook</a>   
+                                        </div> -->
+                                        
+                                        <h2>1. Información sobre la empresa</h2>
+                                        <div class="blockForm">  
+                                            <div class="rowElem">
+                                                <div class="contBlockM campoForm">
+                                                    <label>Nombre de la empresa / Razón social</label>
+                                                    <input type="text" value="" title="Nombre" />
+                                                </div>
+                                                <div class="contBlockSP cif campoForm">
+                                                    <label>CIF</label>
+                                                    <input type="text" value="" title="CIF" />
+                                                </div>
+                                            </div>
+                                            <div class="rowElem">
+                                                <div class="contBlockPM">
+                                                    <div class="rowElem">
+                                                        <label>Sector <span>Por ejemplo: Alimentación</span></label><br />
+                                                        <select>
+                                                            <option>Seleciona un sector</option>
+                                                            <option>Madrid</option>
+                                                            <option>...</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="rowElem campoForm">
+                                                        <label>Actividad <span>Por ejemplo: Bebidas, refrescos...</span></label>
+                                                        <input type="text" value="" title="Actividad" />
+                                                    </div>
+                                                </div>
+                                                <div class="boxInfo"><div class="i">i</div>Es muy importante que indiques con exactitud el sector y la actividad de tu empresa para que podamos enviarte clientes que puedan interesarte</div>
+                                            </div>
+                                            <div class="rowElem">                                
+                                                <div class="contBlockSG">
+                                                    <div class="izBlock">
+                                                        <div class="rowElem textForm">
+                                                            <label>Descripción <span>(la que verán los usuarios en tu página de empresa)</span></label>
+                                                            <textarea></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rowElem boxRadio">
+                                                <span class="label">¿Dónde vendes?</span>
+                                                <div class="contBoxRadio"><input type="radio" value="A nivel nacional" name="donde" /><label>A nivel nacional</label> <input type="radio" value="A nivel provincial" name="donde" /><label>A nivel provincial</label> <input type="radio" value="A nivel local" name="donde" /><label>A nivel local</label></div>
+                                            </div>  
+                                        </div>
+                                        
+                                        <h2>2. Localización y contacto</h2>
+                                        <div class="blockForm">
+                                            <div class="contBlockM">
+                                                <div class="rowElem campoForm">
+                                                    <label>Dirección</label>
+                                                    <input type="text" value="" title="Dirección" />
+                                                </div>
+                                                <div class="rowElem">
+                                                    <div class="contBlockSP campoForm">
+                                                        <label>Provincia</label>
+                                                        <input type="text" value="" title="Provincia" />
+                                                    </div>
+                                                    <div class="contBlockSP campoForm">
+                                                        <label>Ciudad</label>
+                                                        <input type="text" value="" title="Ciudad" />
+                                                    </div>
+                                                </div>
+                                                <div class="rowElem contBlockSP campoForm">
+                                                    <label>Código postal</label>
+                                                        <input type="text" value="" title="CP" />
+                                                </div>
+                                                <div class="rowElem contBlockSP campoForm">
+                                                    <label>Teléfono</label>
+                                                    <input type="text" value="" title="Teléfono" />
+                                                </div>
+                                            </div>
+                                            <div class="map" id="map-canvas">
+                                               <!-- <iframe width="260" height="270" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.es/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=calle+acacias+madrid&amp;aq=&amp;sll=3.987778,-73.759722&amp;sspn=0.850741,0.681839&amp;ie=UTF8&amp;hq=&amp;hnear=Acacias,+Madrid,+Comunidad+de+Madrid&amp;t=m&amp;ll=40.402712,-3.7078&amp;spn=0.017647,0.02223&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>-->
+                                            </div>
+                                            <div class="contBlockM">
+                                                <div class="rowElem campoForm">
+                                                    <label>Nombre y apellidos de la persona de contacto</label>
+                                                    <input type="text" value="" title="Nombre" />
+                                                </div>
+                                            </div>
+                                            <div class="rowElem espacio">
+                                                 <a href="#" class="mas">Añade tu teléfono movil</a>
+                                            </div>
+                                            <div class="rowElem espacio">
+                                                <a href="#" class="mas">Crea una dirección de entrega para tus compras</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <h2>3. Perfiles sociales</h2>
+                                        <div class="rowElem espacio">
+                                            <a href="#" class="mas">Agregar página de empresa de Facebook</a>
+                                        </div>
+                                        <div class="rowElem espacio">
+                                            <a href="#" class="mas">Agregar perfil de Twitter</a>
+                                        </div>
+                                        
+                                        <h2>4. Datos de acceso</h2>
+                                        <div class="blockForm">
+                                            <div class="rowElem contBlockG campoForm">
+                                                <span>ejemplo@nombredeldominio.com</span>
+                                                <span class="labelPeq">Si quieres cambiar tu email ponte en contacto con nosotros en<br />premium@eldeseazo.com o llamandonos al teléfono 902000000</span>
+                                            </div>
+                                            <div class="rowElem espacio">
+                                                <a href="#" class="mas">Cambiar contraseña</a>
+                                            </div>
+                                            <div class="rowElem acepto">
+                                                <input type="checkbox" value="acepto" title="acepto" /><span class="heLeido">He leído y acepto las <a href="condicionesDeUso.html">Condiciones de uso</a> y la <a href="politicaDePrivacidad.html">Política de privacidad</a></span>
+                                            </div>
+                                        </div>
+                                        <div class="blockFormCierre">
+                                            <input type="button" value="Guardar" title="Guardar" id="btnFinalizar" class="btn" />
+                                        </div> 
+                                        <div class="blockFormCierre">
+                                            <h4 class="tit">¿Quiéres dar de baja tu cuenta?</h4>
+                                            <p>Si <a href="perfilEmpresaConfiguracionBaja.html" class="enlaceBaja">das de baja </a>tu cuenta todos tus deseos y ofertas pendientes se perderán y no podrán recuperarse en el futuro.</p>
+                                        </div>
+                                     </form>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+    <footer class="footer">
+        <div class="subMenu">
+            <div class="box">
+                <div class="siteMap">
+                    <div class="boxCuarto">
+                        <span>Eldeseazo</span>
+                        <ul>
+                            <li><a href="home.html" title="Inicio">Inicio</a></li>
+                            <li><a href="listadoDeseos.html" title="Últimos deseos">Últimos deseos</a></li>
+                            <li><a href="listadoOfertas.html" title="Últimas ofertas">Últimas ofertas</a></li>
+                            <li><a href="listadoGenios.html" title="Directorio de genios">Directorio de genios</a></li>
+                        </ul>
+                    </div>
+                    <div class="boxCuarto">
+                        <span>Sobre Nosotros</span>
+                        <ul>
+                            <li><a href="comoFunciona.html" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+                            <li><a href="contacto.html" title="Contacto">Contacto</a></li>
+                            <li><a href="#" title="Blog">Blog</a></li>
+                            <li><a href="prensa.html" title="Sala de prensa">Sala de prensa</a></li>
+                        </ul>
+                    </div>
+                    <div class="boxCuarto">
+                        <span>Acceso</span>
+                        <ul>
+                            <li><a href="acceso.html" title="Mi cuenta">Mi cuenta</a></li>
+                            <li><a href="altaEmpresa.html" title="¿Tienes una empresa?">¿Tienes una empresa?</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="boxCuarto rrss">
+                    <span>Síguenos</span>
+                    <a href="#" title="facebook" target="_blank" class="btnF">&nbsp;</a><a href="#" title="twitter" target="_blank" class="btnT">&nbsp;</a><a href="#" title="Google+" target="_blank" class="btnG">&nbsp;</a><a href="#" title="Rss" target="_blank" class="btnRss">&nbsp;</a>
+                </div>
+            </div>
+        </div>
+        <div class="close">
+            <div class="box">
+                <div class="copy">Eldeseazo el genio de tus compras 2013. Todos los derechos reservados · <a href="politicaDePrivacidad.html" title="Política de privacidad">Política de privacidad</a> · <a href="condicionesDeUso.html" title="Condiciones de uso">Condiciones de uso</a></div>
+                <div class="logos">&nbsp;</div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

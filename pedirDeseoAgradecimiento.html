@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">  
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Language" content="es" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content=" " />
+
+    <title>¡Tu deseazo está pedido! | Eldeseazo</title>
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+ 
+    <!-- CSS -->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/jqtransform.css" rel="stylesheet" type="text/css" />
+    
+    <!-- JS -->
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script> 
+    <script src="js/jquery.jqtransform.js" type="text/javascript"></script>
+        
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript">
+        $(window).load(function(){
+            elpie();
+        });
+        $(window).resize(function(){
+            elpie();
+        }); 
+        function elpie() {
+            if($(window).height() > $('.header').height() + $('.content').height() + $('.footer').height() ){ $('.footer').css({position: 'absolute', bottom : '0', left : '0'});} else{  $('.footer').css({position: 'relative'});}
+        }
+    </script>
+
+</head>
+<body>
+
+    <header class="header">
+        <nav class="menu">
+            <ul class="box">
+                <li class="btnHome"><a href="home.html" title="Inicio" class="on">Volver a inicio</a></li>
+            </ul>
+        </nav>
+        <div class="box">
+            <div id="logo"><a href="home.html" title="Eldeseazo"><img src="img/logo_el_deseazo.jpg" title="Eldeseazo, el genio de tus compras." alt="Logotipo de Eldeseazo" /></a></div>
+            <div class="logado">
+                <div class="foto">
+                    <div class="circle"></div>
+                    <img src="img/bgFotoUser.jpg" alt="foto Usuario" title="Nombre del usuario" />
+                </div>
+                <div class="name">
+                    <strong>Nombre Usuario</strong><br />
+                    <a href="altaEmpresa.html">¿Tienes una Empresa?</a>
+                </div>
+                <div class="out"><a href="#" title="log Out"><img src="img/btnLogOut.png" alt="log Out" /></a></div>
+            </div>
+            <a href="#" title="Botón Menu" class="btnMenu">&nbsp;</a>
+        </div>
+    </header>
+    
+    <section class="content">
+        
+        <div class="breadcrumb black">
+            <div class="box">    
+                <p><b>Estas en:</b> <a href="home.html">Inicio</a> <span>Pide un deseo</span></p>
+            </div>
+        </div>
+        
+        <div class="landing viajesBlue"></div>        
+        
+        <div class="boxGrey">
+            <div class="boxPedir entrar">
+                
+                <h1>Has pedido un viaje a Italia saliendo de Madrid, dos adultos y un niño, por 300€</h1>
+                
+                <div class="boxForm">
+                    
+                    <h2>¡Hecho!<br />Tu deseazo está pedido… y pronto lo verás concedido.</h2>
+                    <div class="gracias">
+                        <img src="img/iconPasosGracias.png" alt="" title=" " />
+                        <p>En los próximos minutos, recibirás en hola@neolabels.com un email con un enlace a tu área privada desde la que podrás mantener un seguimiento de tu deseo.<br /><br /><strong>¡Gracias por tu deseazo!</strong></p>
+                    </div>
+                    <div class="boxRrss"><div class="txtRrss">Cúentale a tus amigos el deseo que has pedido</div> <div class="btnRrss"><a href="#" title="facebook" class="btnF">&nbsp;</a> <a href="#" title="twitter" class="btnT">&nbsp;</a> <a href="#" title="google+" class="btnG">&nbsp;</a> <a href="#" title="mail" class="btnRss">&nbsp;</a></div></div>
+                    
+                    <div class="blockFormCierre">
+                        <input type="button" value="Hecho" title="Hecho" class="btn" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="close">
+            <div class="box">
+                <div class="copy">Eldeseazo el genio de tus compras 2013. Todos los derechos reservados · <a href="politicaDePrivacidad.html" title="Política de privacidad">Política de privacidad</a> · <a href="#" title="">Condiciones de uso</a></div>
+                <div class="logos">&nbsp;</div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

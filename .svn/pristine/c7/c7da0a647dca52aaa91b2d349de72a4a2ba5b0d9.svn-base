@@ -1,0 +1,54 @@
+<html>
+<head></head>
+<body style="background-color:#edf0f3;font-family: Arial, sans-serif;">
+	<p style="font-size:10px;color:#8e9596;text-align:center;margin-bottom:22px;margin-top:23px;">
+	Pide tu deseo de compra en Eldeseazo y ahorra tiempo y dinero.<br />
+	Si no ves correctamente este mensaje, <a>haz clic aqu&#237;.</a>
+	</p>
+	<table style="background-color:#ffffff;padding-bottom:70px;width:600px;border-radius:6px;box-shadow:0px -2px 0 0 #cfd9dc;" align="center">
+		<tr><td><table style="border-bottom: solid 1px #edf0f3;width:100%;margin-top:22px;padding-bottom:22px;">
+		<tr>
+			<td align=center>
+				<img src="img/logo-deseazo-email.png" alt="El deseazo" />
+			</td>
+		</tr>
+		</table></td></tr>
+		<tr><td><table style="margin-top:35px;">
+			<tr>
+				<td style="padding-bottom:30px;"><p style="font-size:24px;color:#2383ba;margin-left:20px;font-family: Arial, sans-serif;">Pedir un deseo</p></td>
+			</tr>
+			<tr >
+				<td>
+				<p style="text-align:left;font-size:14px;color:#5b6d73;margin-left:20px;margin-right:40px;margin-top:0px;margin-bottom:0px;font-family: Arial, sans-serif;">
+					Podr&#225;s hacer realidad tus deseos. P&#237;denos lo que est&#225;s buscando comprar o el servicio que quieres contratar y nosotros lo buscamos por ti.
+				</p>
+				</td>
+			</tr>
+			<tr >
+				<td style="padding-top:22px;padding-bottom:25px;">
+					<p style="font-size:12px;color:#849295;margin-left:20px;font-style:italic;line-height:28px;margin-top:0px;margin-bottom:0px;font-family: Arial, sans-serif;">
+
+						Por ejemplo:<br />
+						"Busco comprar un sof&#225; 3+2 para mi nueva casa. Vivo en Ciudad Real"<br />
+						"Busco una casa rural por la zona de Gerona para 6 personas para ir el puente de Noviembre."<br />
+						"Busco un alba&#241;il para reformar mi piso en Madrid. Necesito presupuestos."<br />
+					</p>
+				</td>
+			<tr><td>
+			<p style="text-align:left;font-size:14px;color:#5b6d73;margin-left:20px;margin-right:40px;margin-top:0;margin-bottom:0;font-family: Arial, sans-serif;">
+                        Cuanto m&#225;s completo sea tu deseo y m&#225;s informaci&#243;n pongas, m&#225;s posibilidad de hacerlo realidad.<br /><br />
+                        Entra en Eldeseazo y &#161;pide tu deseo!<br /><br />
+                        Eldeseazo, el genio de tus compras.<br />
+			</p>
+			</td></tr>
+		</table>
+		<table align=center style="margin-top:68px;">
+			<tr>
+			<tr style="width:160px;">
+			<td align=center style="background-color:#2faef9;border-radius:6px;padding-top:12px;padding-bottom:12px;padding-left:36px;padding-right:36px;"><a style="font-size:14px;color:#ffffff;text-decoration:none;font-family: Arial, sans-serif;" href="">Pide tu deseo</a></td>
+			</tr>
+	</table>
+	</table>
+		<p style="font-size:12px;text-align:center;color:#8e9596;margin-top:22px;font-family: Arial, sans-serif;"> Si no deseas seguir recibiendo estos emails puedes <a style="text-decoration:none;color:#2faef9;" href="">darte de baja</a></p>
+</body>
+</html>

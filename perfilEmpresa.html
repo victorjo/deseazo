@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html lang="es">  
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Language" content="es" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content=" " />
+
+    <title> | Eldeseazo</title>
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+ 
+    <!-- CSS -->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/jqtransform.css" rel="stylesheet" type="text/css" />
+    <link href="css/responsive3.css" rel="stylesheet" type="text/css" />
+    <!-- JS -->
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="js/jquery.jqtransform.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+        $(function() { $("form.jqtransform").jqTransform(); /* JS para etiquetas Select -- Necesario estar dentro de etiqueta form */ });
+    </script>
+    
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript">
+        $(window).load(function(){
+            
+            $('input[type="text"]').focusin(function () { if ($(this).val() == $(this).attr('value') ) { $(this).val(''); $(this).removeClass('inputClarito');$(this).addClass('cajaSeleccionada');} });
+            $('input[type="text"]').focusout(function () {  if ($(this).val() == '') {  $(this).val($(this).attr('value')); $(this).addClass('inputClarito');$(this).removeClass('cajaSeleccionada');} });
+            
+            $('.campoForm').focusin(function(){ $(this).removeClass('gris'); $(this).addClass('blue'); });
+            $('.campoForm').focusout(function(){ $(this).removeClass('blue'); if($(this).find('input').val()==''){ $(this).addClass('gris'); } });
+            
+            $('.siteMap .boxCuarto span').click(function(){
+                if($(window).width()<=1024){ $(this).parent().find("ul").slideToggle(); }    
+            });
+            elpie();
+        });
+        $(window).resize(function(){
+            elpie();
+        }); 
+        function elpie() {
+            if($(window).height() > $('.header').height() + $('.content').height() + $('.footer').height() ){ $('.footer').css({position: 'absolute', bottom : '0', left : '0'});} else{  $('.footer').css({position: 'relative'});}
+        }
+    </script>
+
+</head>
+<body>
+
+    <header class="header">
+        <nav class="menu">
+            <ul class="box">
+                <li class="btnHome"><a href="home.html" title="Inicio" class="on">Inicio &nbsp;&nbsp;|</a></li>
+                <li><a href="homeViajes.html" title="Viajes">Viajes</a></li>
+                <li><a href="homeElectronica.html" title="Electrónica">Electrónica</a></li>
+                <li><a href="homeMotor.html" title="Motor">Motor</a></li>
+                <li><a href="homeVivienda.html" title="Vivienda">Vivienda</a></li>
+                <li><a href="homeModa.html" title="Moda">Moda</a></li>
+                <li><a href="homeRestaurantes.html" title="Restaurantes">Restaurantes</a></li>
+                <li><a href="homeOcio.html" title="Ocio">Ocio</a></li>
+                <li><a href="homeBienestar.html" title="Bienestar">Bienestar</a></li>
+                <li><a href="homeCursos.html" title="Cursos">Cursos</a></li>
+                <li><a href="homeServicios.html" title="Servicios">Servicios</a></li>
+                <li><a href="homeCategorias.html" title="Más">Más</a></li>
+            </ul>
+        </nav>
+        <div class="box">
+            <div id="logo"><a href="home.html" title="Eldeseazo"><img src="img/logo_el_deseazo.jpg" title="Eldeseazo, el genio de tus compras." alt="Logotipo de Eldeseazo" /></a></div>
+            <div class="logado">
+                <div class="foto">
+                    <div class="circle"></div>
+                    <img src="img/bgFotoUser.jpg" alt="foto Usuario" title="Nombre del usuario" />
+                    <a href="#">¡Hazte Premium!</a>
+                </div>
+                <div class="name">
+                    <strong>Nombre Usuario</strong><br />
+                    <a href="perfilParticularConfPremium.html" title="¡Hazte Premium!">¡Hazte Premium!</a>
+                </div>
+                <div class="out"><a href="#" title="Salir"><img src="img/btnLogOut.png" alt="Salir" /></a></div>
+            </div>
+            <div class="search"><input type="text" value="¿Qué quieres comprar y a qué precio?" /><input type="submit" value="Pide tu deseo" /></div>
+            <a href="#" title="Botón Menu" class="btnMenu">&nbsp;</a>
+        </div>
+    </header>
+    
+    <section class="content">
+        
+        <div class="breadcrumb">
+            <div class="box">   
+                <p><b>Estas en:</b> <a href="home.html" title="Inicio">Inicio</a> <span>Deseos pendientes</span></p>
+            </div>
+        </div>
+        
+        <div class="boxWhite">
+            <div class="box boxUser">
+                <div class="colInfoUser titBoxUser">
+                    <h1>Deseos</h1>
+                    <div class="pag">1 - 10 de 50 <a href="#" title="anterior" class="prev">&#8249;</a> <a href="#" title="siguiente" class="next">&#8250;</a></div>
+                </div>
+                <div class="user">
+                    
+                    <div class="colUser">
+                        <div class="icon"></div>
+                        <div class="foto">
+                            <div class="circle"></div>
+                            <img src="img/bgFotoUser.jpg" alt="foto Usuario" title="Nombre del usuario" />
+                        </div>
+                        <div class="contUser">
+                            <h2>¡Hola Carlos!</h2>
+                            <ul>
+                                <li><a href="#" title="Deseos" class="on">Deseos (3)</a></li>
+                                <li><a href="#" title="Ofertas">Ofertas (2)</a></li>
+                                <li><a href="#" title="Mi Cuenta">Mi Cuenta</a></li>
+                            </ul>
+                            
+                            <div class="premium">
+                                <h3>¡Hazte premium!</h3>
+                                <p>¡Clientes, ofertas y respuestas ilimitadas!</p>
+                                <a href="perfilParticularConfPremium.html" title="Dar de alta plan Premium" class="btn">Dar de alta plan Premium</a>
+                            </div>
+                            
+                            <div class="percentUser">
+                                <h3>Completa tu perfil</h3>
+                                <p>Es muy importante para que nuestros genios puedan hacerte las mejores ofertas</p>
+                                <div class="porcentaje">
+                                    <div class="boxCircle">
+                                        <div class="circle">50</div>
+                                        <p>% del perfil completado</p>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#" title="Añade una foto de perfil">Añade una foto de perfil</a></li>
+                                        <li><a href="#" title="Enlaza con Facebook">Enlaza con Facebook</a></li>
+                                        <li><a href="#" title="Añade tu teléfono móvil">Añade tu teléfono móvil</a></li>
+                                        <li><a href="#" title="Crea una dirección de entrega para tus compras">Crea una dirección de entrega para tus compras</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="colInfoUser">
+                        
+                        <div class="alert">
+                            <p>Puedes contestar hasta <strong>3 deseos</strong> gratis más.</p>
+                            <a href="#" class="btn ocre">Hazte premium</a>
+                        </div>
+                        
+                        <div class="filters">
+                            <div class="drops">
+                                <form class="jqtransform">
+                                <div class="combo">
+                                    <label>Ubicación</label>
+                                    <select>
+                                        <option>Madrid</option>
+                                        <option>Barcelona</option>
+                                        <option>Cuenca</option>
+                                        <option>Toledo</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="combo">
+                                    <label>Categorías</label>
+                                    <select>
+                                        <option>Todas</option>
+                                        <option>Casas</option>
+                                        <option>Camas</option>
+                                        <option>Cazuelas</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                </form>
+                            </div>
+                            <div class="search campoForm"><form><input type="text" value=" " /><input type="submit" value="Buscar" /></form></div>   
+                        </div>
+                        
+                        <div class="comentario deseoOn">
+                            <div class="contComentario">
+                                <div class="foto">
+                                    <div class="circle"></div>
+                                    <img src="img/bgFotoUser.jpg" alt="foto Usuario" title="Nombre del usuario" />
+                                </div>
+                                <div class="txt">
+                                   Un viaje a Menorca en hotel de lujo para 2 la primera semana de...<br />
+                                   <span>Pedido el 22/07/2013 a las 11:45 por Carlos</span>
+                                </div>
+                            </div>
+                            <div class="boxBtn">
+                                <a href="#" title="Ver 1 respuesta nueva" class="btn">1 respuesta nueva</a>
+                                <a href="#" title="borrar" class="clear"><img src="img/btnClear.png" /></a>
+                            </div>
+                        </div>
+                        
+                        <div class="comentario deseoOn">
+                            <div class="contComentario">
+                                <div class="foto">
+                                    <div class="circle"></div>
+                                    <img src="img/bgFotoUser.jpg" alt="foto Usuario" title="Nombre del usuario" />
+                                </div>
+                                <div class="txt">
+                                   Un viaje a Menorca en hotel de lujo para 2 la primera semana de...<br />
+                                   <span>Pedido el 22/07/2013 a las 11:45 por Carlos</span>
+                                </div>
+                            </div>
+                            <div class="boxBtn">
+                                <a href="#" title="Ver 1 respuesta nueva" class="btn">1 respuesta nueva</a>
+                                <a href="#" title="borrar" class="clear"><img src="img/btnClear.png" /></a>
+                            </div>
+                        </div>
+                        
+                        <div class="comentario deseoOn">
+                            <div class="contComentario">
+                                <div class="foto">
+                                    <div class="circle"></div>
+                                    <img src="img/bgFotoUser.jpg" alt="foto Usuario" title="Nombre del usuario" />
+                                </div>
+                                <div class="txt">
+                                   Un viaje a Menorca en hotel de lujo para 2 la primera semana de...<br />
+                                   <span>Pedido el 22/07/2013 a las 11:45 por Carlos</span>
+                                </div>
+                            </div>
+                            <div class="boxBtn">
+                                <a href="#" title="Ver 1 respuesta nueva" class="btn">1 respuesta nueva</a>
+                                <a href="#" title="borrar" class="clear"><img src="img/btnClear.png" /></a>
+                            </div>
+                        </div>
+                        
+                        <div class="comentario deseoOff">
+                            <div class="contComentario">
+                                <div class="foto">
+                                    <div class="circle"></div>
+                                    <img src="img/bgFotoUser.jpg" alt="foto Usuario" title="Nombre del usuario" />
+                                </div>
+                                <div class="txt">
+                                   Un viaje a Menorca en hotel de lujo para 2 la primera semana de...<br />
+                                   <span>Pedido el 22/07/2013 a las 11:45 por Carlos</span>
+                                </div>
+                            </div>
+                            <div class="boxBtn">
+                                <a href="#" title="Ver 1 respuesta nueva" class="btn">ver 5 respuestas</a>
+                                <a href="#" title="borrar" class="clear"><img src="img/btnClear.png" /></a>
+                            </div>
+                        </div>
+                        
+                        <div class="comentario deseoOff">
+                            <div class="contComentario">
+                                <div class="foto">
+                                    <div class="circle"></div>
+                                    <img src="img/bgFotoUser.jpg" alt="foto Usuario" title="Nombre del usuario" />
+                                </div>
+                                <div class="txt">
+                                   Un viaje a Menorca en hotel de lujo para 2 la primera semana de...<br />
+                                   <span>Pedido el 22/07/2013 a las 11:45 por Carlos</span>
+                                </div>
+                            </div>
+                            <div class="boxBtn">
+                                <a href="#" title="Ver 1 respuesta nueva" class="btn">ver 5 respuestas</a>
+                                <a href="#" title="borrar" class="clear"><img src="img/btnClear.png" /></a>
+                            </div>
+                        </div>
+                        
+                        <div class="pag bottom">1 - 10 de 50 <a href="#" title="anterior" class="prev">&#8249;</a> <a href="#" title="siguiente" class="next">&#8250;</a></div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+    <footer class="footer">
+        <div class="subMenu">
+            <div class="box">
+                <div class="siteMap">
+                    <div class="boxCuarto">
+                        <span>Eldeseazo</span>
+                        <ul>
+                            <li><a href="home.html" title="Inicio">Inicio</a></li>
+                            <li><a href="listadoDeseos.html" title="Últimos deseos">Últimos deseos</a></li>
+                            <li><a href="listadoOfertas.html" title="Últimas ofertas">Últimas ofertas</a></li>
+                            <li><a href="listadoGenios.html" title="Directorio de genios">Directorio de genios</a></li>
+                        </ul>
+                    </div>
+                    <div class="boxCuarto">
+                        <span>Sobre Nosotros</span>
+                        <ul>
+                            <li><a href="comoFunciona.html" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+                            <li><a href="contacto.html" title="Contacto">Contacto</a></li>
+                            <li><a href="#" title="Blog">Blog</a></li>
+                            <li><a href="prensa.html" title="Sala de prensa">Sala de prensa</a></li>
+                        </ul>
+                    </div>
+                    <div class="boxCuarto">
+                        <span>Acceso</span>
+                        <ul>
+                            <li><a href="acceso.html" title="Mi cuenta">Mi cuenta</a></li>
+                            <li><a href="altaEmpresa.html" title="¿Tienes una empresa?">¿Tienes una empresa?</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="boxCuarto rrss">
+                    <span>Síguenos</span>
+                    <a href="#" title="facebook" target="_blank" class="btnF">&nbsp;</a><a href="#" title="twitter" target="_blank" class="btnT">&nbsp;</a><a href="#" title="Google+" target="_blank" class="btnG">&nbsp;</a><a href="#" title="Rss" target="_blank" class="btnRss">&nbsp;</a>
+                </div>
+            </div>
+        </div>
+        <div class="close">
+            <div class="box">
+                <div class="copy">Eldeseazo el genio de tus compras 2013. Todos los derechos reservados · <a href="politicaDePrivacidad.html" title="Política de privacidad">Política de privacidad</a> · <a href="condicionesDeUso.html" title="Condiciones de uso">Condiciones de uso</a></div>
+                <div class="logos">&nbsp;</div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

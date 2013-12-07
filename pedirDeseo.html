@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">  
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Language" content="es" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content=" " />
+
+    <title>Necesitamos mas información | Eldeseazo</title>
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+ 
+    <!-- CSS -->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/jqtransform.css" rel="stylesheet" type="text/css" />
+    <link href="css/responsive2.css" rel="stylesheet" type="text/css" />
+    <!-- JS -->
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script> 
+    <script src="js/jquery.jqtransform.js" type="text/javascript"></script>
+        
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript">
+        $(window).load(function(){
+            
+            $('input').focusin(function () { if ($(this).val() == $(this).attr('value') ) { $(this).val(''); $(this).removeClass('inputClarito');$(this).addClass('cajaSeleccionada');} });
+            $('input').focusout(function () {  if ($(this).val() == '') {  $(this).val($(this).attr('value')); $(this).addClass('inputClarito');$(this).removeClass('cajaSeleccionada');} });
+            
+            $('.campoForm').focusin(function(){ $(this).removeClass('orange'); $(this).removeClass('gris'); $(this).addClass('blue'); });
+            $('.campoForm').focusout(function(){ $(this).removeClass('blue'); $(this).addClass('gris');  if($(this).find('input').val()==''){ $(this).removeClass('gris'); $(this).addClass('orange'); } });
+            
+            $('.textForm').focusin(function(){ $(this).removeClass('orange'); $(this).removeClass('gris'); $(this).addClass('blue'); });
+            $('.textForm').focusout(function(){ $(this).removeClass('blue'); $(this).addClass('gris'); if($(this).find('textarea').val()==''){ $(this).removeClass('gris'); $(this).addClass('orange'); } });
+            
+            $(function() { $("form.jqtransform").jqTransform();});
+            
+            $('select').change(function(){
+                alert('yeah!');
+            });
+            
+            $('.siteMap .boxCuarto span').click(function(){
+                if($(window).width()<=1024){ $(this).parent().find("ul").slideToggle(); }    
+            });
+            elpie();
+        });
+        $(window).resize(function(){
+            elpie();
+        }); 
+        function elpie() {
+            if($(window).height() > $('.header').height() + $('.content').height() + $('.footer').height() ){ $('.footer').css({position: 'absolute', bottom : '0', left : '0'});} else{  $('.footer').css({position: 'relative'});}
+        }
+    </script>
+
+</head>
+<body>
+
+    <header class="header">
+        <nav class="menu">
+            <ul class="box">
+                <li class="btnHome"><a href="home.html" title="Inicio" class="on">Volver a inicio</a></li>
+            </ul>
+        </nav>
+        <div class="box">
+            <div id="logo"><a href="#" title="Eldeseazo"><img src="img/logo_el_deseazo.jpg" title="Eldeseazo, el genio de tus compras." alt="Logotipo de Eldeseazo" /></a></div>
+            <a href="#" title="Botón Menu" class="btnMenu">&nbsp;</a>
+        </div>
+    </header>
+    
+    <section class="content">
+        
+        <div class="breadcrumb black">
+            <div class="box">    
+                <p><b>Estás en:</b> <a href="#">Inicio</a> <span>Pide un deseo</span></p>
+            </div>
+        </div>
+        
+        <div class="landing viajesBlue"></div>        
+        
+        <div class="boxGrey">
+            <div class="boxPedir formulario">
+                
+                <h1>Tu deseazo es...</h1>
+                <input type="text" value="Un viaje a Italia saliendo de Madrid, dos adultos y un niño, por 300€" class="avisaCheck campoForm" />
+                
+                <div class="boxForm">
+                    <form class="jqtransform" action="acceso.html">
+                        <h2><strong><span>&sup1;</span>.</strong> Asegúrate de que lo hemos captado bien</h2>                      
+                        <div class="rowElem">
+                            <div class="contBlockG gris">
+                                <label>Tu deseazo está en la categoría</label><br />
+                                <select>
+                                    <option>Viajes - Turismo - Escapadas - Hoteles - Vuelos - Estancias</option>
+                                    <option>Electrónica - Informática - Electrodomésticos</option>
+                                    <option>Motor - Coches - Motos</option>
+                                    <option>Vivienda - Inmobiliaria - Pisos - Alquiler - Compra</option>
+                                    <option>Moda - Textil - Complementos</option>
+                                    <option>Restaurantes</option>
+                                    <option>Ocio - Deporte - Aventura</option>
+                                    <option>Bienestar - Belleza - Salud - Relax</option>
+                                    <option>Cursos - Formación - Enseñanza</option>
+                                    <option>Servicos</option>                                    
+                                </select>
+                            </div>
+                        </div>
+                        <div class="rowElem">
+                            <div class="contBlockP campoForm gris">
+                                <label>¿Cuál es tu presupuesto? (€)</label>
+                                <input type="text" value="200" title="Actividad" />
+                            </div>
+                        </div>
+                        <h2><strong><span>&sup2;</span>.</strong>Si nos das más detalles, te haremos mejores ofertas</h2>
+                        <p>Algunos datos ya los hemos captado de tu deseazo. Si completas los campos señalados, nos ayudarás a buscar exactamente lo que tú estás buscando y recibirás las ofertas más adecuadas.</p>
+                        <div class="blockForm">
+                            <div class="rowElem">
+                                <div class="contBlockSP orange campoForm">
+                                    <label>Ida</label>
+                                    <input type="text" value="" title="Provincia" class="ida" />
+                                </div>
+                                <div class="contBlockSP orange campoForm">
+                                    <label>Vuelta</label>
+                                    <input type="text" value="" title="Ciudad" class="vuelta" />
+                                </div>
+                            </div>
+                            <div class="rowElem">
+                                <div class="contBlockSP orange campoForm">
+                                    <label>Origen</label>
+                                    <input type="text" value="" title="Provincia" class="origen"  />
+                                </div>
+                                <div class="contBlockSP orange campoForm">
+                                    <label>Destino</label>
+                                    <input type="text" value="" title="Ciudad" class="destino"  />
+                                </div>
+                            </div>
+                            <div class="rowElem">
+                                <div class="contBlockSP orange campoForm">
+                                    <label>Numero de Personas</label>
+                                    <input type="text" value="" title="Número de personas" class="nPersonas"  />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blockForm">                            
+                            <div class="rowElem">
+                                <div class="contBlockG textForm gris">
+                                    <label>Cuéntanos más detalles de tu deseazo. <br /><span>Quizá hayas pensado en hacer una excursión, una actividad o quieras hacer algo especial. Explícanoslo aquí.</span></label>
+                                    <textarea>Me gustan los albergues de montaña</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blockForm">
+                            <div class="rowElem">
+                                <div class="contBlockP campoForm gris">
+                                    <label>Buscas tu deseazo en</label><br />
+                                    <input type="text" value="Madrid" title="Provincia" />
+                                    <!--<select>
+                                        <option>Madrid</option>
+                                        <option>Barcelona</option>
+                                        <option>La puebla de montalban</option>
+                                    </select>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blockFormCierre">
+                            <input type="submit" value="Siguiente" title="Siguiente" class="btn"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="close">
+            <div class="box">
+                <div class="copy">Eldeseazo el genio de tus compras 2013. Todos los derechos reservados · <a href="politicaDePrivacidad.html" title="Política de privacidad">Política de privacidad</a> · <a href="condicionesDeUso.html" title="Condiciones de uso">Condiciones de uso</a></div>
+                <div class="logos">&nbsp;</div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

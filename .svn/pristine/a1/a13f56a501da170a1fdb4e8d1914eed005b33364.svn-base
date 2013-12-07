@@ -1,0 +1,171 @@
+/* Responsive --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+
+.box, .boxCuatro, .boxTercio, .boxDosTercios, .boxG, .thumbG, .slide, .boxSlide, .boxSlide .thumbP, .titPasos, .pasos, .paso, .masPasos, .logoPress, .txtPress { transition: all 0.2s ease-in; -webkit-transition: all 0.2s ease-in; -moz-transition: all 0.2s ease-in; -o-transition: all 0.2s ease-in;}
+.btnMenu { display: none;}
+.bulletSlide { display: none;}
+
+
+/* 480, 768, 1024 y 1281 */
+
+/*@media screen and (min-width: 1281px) {
+
+.header .box { height: 110px;}
+#logo img { width: 290px; height: 62px;}
+
+.box { width: 1200px;}
+
+.boxCuarto { width: 280px;}
+.boxTercio { width: 380px;}
+.boxDosTercios { width: 780px;}
+
+.boxG { float: left; width: 1180px; min-height: 160px; margin: 0 10px; background: #FFF;}
+.thumbG { float: left; width: 280px; height: 170px; margin: 10px; background: #edf0f3;}
+
+.slide { width: 880px;}
+.boxSlide { width: 780px; height: 140px;}
+.boxSlide .thumbP, .boxSlide .thumbP img { width: 120px; height: 120px;}
+
+.landing { height: 460px;}
+.titPasos { width: 780px;}
+.pasos { width: 1120px; float: left; margin: 0 30px; text-align: center;}
+.paso { width: 350px;}
+.masPasos { width: 780px; margin: 0 210px;}
+
+.logoPress { width: 300px; height: 150px;}
+.txtPress { width: 820px; min-height: 130px;}
+
+}*/
+
+/*escritorio*/
+
+/*@media screen and (max-width: 1024px) {
+    
+.box { width: 720px;}
+.btnMenu { display: none;}
+
+.boxCuarto { width: 460px;}
+.boxCuarto ul li { display: inline;}
+.boxTercio { width: 220px;}
+.boxDosTercios { width: 460px;}
+
+.boxG { float: left; width: 700px;}
+.thumbG { float: left; width: 220px; height: 140px; margin: 10px; background: #edf0f3;}
+
+.rrss { width: 220px; position: absolute; top: 0; right: 0;}
+.footer h3 { padding-bottom: 10px; color: #a9bec3;}
+.footer ul { padding-left: 0px; margin-bottom: 10px;}
+
+.titPasos { width: 460px;}
+.pasos { width: 720px; margin: 0;}
+.paso { width: 220px;}
+.masPasos { width: 460px; margin: 0 130px;}
+
+.logoPress { width: 180px; height: 90px; margin: 0 20px 0 10px;}
+.txtPress { width: 470px; min-height: 70px;}
+
+}*/
+
+/*tablet*/
+
+@media screen and (max-width: 959px) {
+.search{display: none;}
+.box { width: 720px;}
+.breadcrumb .box{width: 700px}
+.btnMenu { display: none;}
+
+.boxCuarto { width: 460px;}
+.boxCuarto ul li { display: inline;}
+.boxTercio { width: 220px;}
+.boxDosTercios { width: 460px;}
+
+.boxG { float: left; width: 700px;}
+.thumbG { float: left; width: 220px; height: 140px; margin: 10px; background: #edf0f3;}
+
+.rrss { width: 220px; position: absolute; top: 0; right: 0;}
+.footer h3 { padding-bottom: 10px; color: #a9bec3;}
+.footer ul { padding-left: 0px; margin-bottom: 10px;}
+
+.titPasos { width: 460px;}
+.pasos { width: 720px; margin: 0;}
+.paso { width: 220px;}
+.masPasos { width: 460px; margin: 0 130px;}
+
+.logoPress { width: 180px; height: 90px; margin: 0 20px 0 10px;}
+.txtPress { width: 470px; min-height: 70px;margin-left: 0;}
+
+.footer ul { padding-left: 15px;display: none;}
+.footer .subMenu{padding: 0;}
+.footer .siteMap .boxCuarto{border-top: 1px solid #154d6e;border-right: 1px solid #154d6e; margin-left: 0;width: 65%}
+.footer .box, .footer .siteMap {width: 100%}
+.footer span{padding: 20px 0px 20px 20px}
+}
+
+/*smartphone*/
+
+@media screen and (max-width: 767px) {
+
+.header .box { height: 60px;}
+#logo { margin-top: 13px; margin-left: 10px;} 
+#logo img { width: 146px; height: 32px;}
+.search{display: none;}
+.titleDeseo h1{font-size: 26px}
+.breadcrumb { display: none;}
+
+.landing{margin-top: 60px;}
+.content{margin-top: 0px;}
+
+.boxSearch{padding-top: 50px;}
+.boxSearch input[type="text"] {width: 265px;margin: 0 0px 20px 0;}
+.countIn a{position: initial;width: inherit;display: block;}
+.box { width: 320px;}
+.boxGrey{height: 450px}
+.boxAll{display: none;}
+ul.wi-container{width: 100%}
+.boxSlide .txt{padding: 0;text-align: center;width: 100%;}
+.boxEmpresa p{margin: 0 5% 0 5%}
+.txtPress p{text-align: center;}
+.boxCuarto { width: 300px;}
+.boxTercio { width: 300px; margin-bottom: 5px; min-height: 140px;}
+.boxDosTercios { width: 300px; margin-bottom: 5px; min-height: 140px;text-align: center;}
+
+.btnMenu { display: block; position: absolute; top: 5px; right: 10px;width: 50px;height: 50px;background: url(../img/btnMenu.png);}
+.menu { display: none;}
+.registro { display: none;}
+
+.landing { height: 370px;}
+.titPasos { width: 100%;}
+.pasos { width: 240px; margin: 10px 40px; text-align: center;}
+.paso { width: 220px; margin: 10px;}
+.masPasos { width: 100%;margin: 0;}
+
+.bulletSlide, .bulletSlide ul { display: block; width: 100%; text-align: center; list-style: none; margin: 20px 0 0 0;}
+.bulletSlide ul li { display: inline-block;}
+.btnL, .btnR { display: none;}
+.slide { width: 280px;}
+.boxSlide { width: 260px; height: 300px;}
+.boxSlide .thumbP { padding: 20px;}
+.boxSlide .thumbP, .boxSlide .thumbP img { width: 220px; height: 140px;}
+
+.boxG { width: 260px; height: 300px; margin: 0 30px;}
+.boxG .txt{width: 100%;text-align: center}
+.thumbG { width: 220px; height: 140px; margin: 20px;}
+
+.logoPress { width: 180px; min-height: 90px; margin: 0 70px 20px 70px;}
+.txtPress { width: 280px; margin: 0 10px;}
+
+.rrss { width: 300px; position: absolute; top: 0; right: initial; margin-left: 20px}
+.siteMap { float: left; margin-top: 80px;}
+
+.footer h3 { }
+.footer ul { padding-left: 15px;display: none;}
+.footer span{padding: 20px 0px 20px 20px}
+.footer .box, .footer .siteMap {width: 100%}
+.footer .siteMap .boxCuarto{border-top: 1px solid #154d6e;margin-left: 0;width: 100%}
+.footer .rrss span{display: none;}
+.footer .subMenu{padding: 10px 0;}
+.footer .close { width: 100%; height: auto; text-align: center;}
+.copy, .logos { float: left; width: 100%; padding: 13px 0 0 0;max-width: inherit;}
+.logos { padding-bottom: 13px;background-position-x: 50%;}
+
+}

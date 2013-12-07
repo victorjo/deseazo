@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">  
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Language" content="es" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Accede a tu perfil o date de alta como nuevo usuario introduciendo tu email o conectándote a Facebook." />
+
+    <title>¿Todavía no estás registrado? | Eldeseazo</title>
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+ 
+    <!-- CSS -->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/jqtransform.css" rel="stylesheet" type="text/css" />
+    
+    <!-- JS -->
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script> 
+    <script src="js/jquery.jqtransform.js" type="text/javascript"></script>
+        
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript">
+        $(window).load(function(){
+            
+            $('.campoForm').focusin(function(){ $(this).removeClass('gris'); $(this).addClass('blue'); });
+            $('.campoForm').focusout(function(){ $(this).removeClass('blue'); if($(this).find('input').val()==''){ $(this).addClass('gris'); } });
+            
+            $(function() { $("form.jqtransform").jqTransform();});
+            elpie();
+            landing();
+        });
+        $(window).resize(function(){
+            elpie();
+            landing();
+        }); 
+        function elpie() { if($(window).height() > $('.header').height() + $('.content').height() + $('.footer').height() ){ $('.footer').css({position: 'absolute', bottom : '0', left : '0'});} else{  $('.footer').css({position: 'relative'});}}
+        function landing() { var altura = 640; if($(window).height() > $('.header').height() + altura + $('.footer').height() ){ $('.landing').height( $(window).height() - $('.header').height() - $('.footer').height() );} else {$('.landing').height(altura);}}
+    </script>
+
+</head>
+<body>
+
+    <header class="header">
+        <nav class="menu">
+            <ul class="box">
+                <li class="btnHome"><a href="home.html" title="Inicio" class="on">Volver a inicio</a></li>
+            </ul>
+        </nav>
+        <div class="box">
+            <div id="logo"><a href="home.html" title="Eldeseazo"><img src="img/logo_el_deseazo.jpg" title="Eldeseazo, el genio de tus compras." alt="Logotipo de Eldeseazo" /></a></div>
+        </div>
+    </header>
+    
+    <section class="content">
+        
+        <div class="breadcrumb black">
+            <div class="box">    
+                <p><b>Estás en:</b> <a href="home.html">Inicio</a> <span>Entrar</span></p>
+            </div>
+        </div>
+        
+        <div class="landing entrarRegistro">
+            
+            <div class="boxAccesoRegistro">
+                <div class="boxForm">
+                    <div class="colDos">
+                        <h2>¿Eres un particular?</h2>
+                        <p>Regístrate gratis para pedir deseos y recibir las mejores ofertas.</p>
+                        <a href="registroEmail.html" title="Registrarme con mi email" class="btn mail">Registrarme con mi email</a>
+                        <p>Si prefieres regístrate con facebook</p>
+                        <a href="#" title="Registrarme con facebook" class="btn fbFin">Registrarme con facebook</a>
+                    </div>
+                    <div class="colDos grey">
+                        <h2>¿Tienes una empresa?</h2>
+                        <p>Conviértete en uno de nuestros genios y ayuda a los usuarios a hacer realidad sus deseos.</p>
+                        <p>Eldeseazo te proporciona miles de potenciales potenciales clientes con los que podrás hacer crecer tu negocio.</p>
+                        <p><br /><strong>¡Pruébalo gratis!</strong><br /></p>
+                        <a href="altaEmpresa.html" title="Registra tu empresa, gratis" class="btn">Registra tu empresa, gratis</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+    <footer class="footer">
+        <div class="close">
+            <div class="box">
+                <div class="copy">Eldeseazo el genio de tus compras 2013. Todos los derechos reservados · <a href="politicaDePrivacidad.html" title="Política de privacidad">Política de privacidad</a> · <a href="condicionesDeUso.html" title="Condiciones de uso">Condiciones de uso</a></div>
+                <div class="logos">&nbsp;</div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

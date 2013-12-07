@@ -1,0 +1,1337 @@
+@charset "UTF-8";
+
+@import "fonts.css"; /* font-family: 'museo'; */
+
+/* Inicializadores --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+* { margin: 0; padding: 0; border: 0; outline: 0; text-decoration: none;}
+header, nav, section, footer { display: block;}
+form, textarea, input, select { outline: none; text-indent: 0; margin: 0; padding: 0; border: 0; white-space: normal;}
+html, body { font-family: 'museo500', sans-serif; font-size: 12px; letter-spacing: 1px; color: #879095;}
+html { height: 100%;}
+body { min-height: 100%;}
+::selection { background: #edf0f3; color: #000;}
+::-moz-selection { background: #edf0f3; color: #000;}
+::-webkit-selection { background: #edf0f3; color: #000;}
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Maven Pro', sans-serif; font-weight: normal; font-style: normal;}
+h3 img { vertical-align:bottom;}
+h2 { padding-bottom: 15px;}
+p { font-family: 'museo500', sans-serif; font-size: 13px; line-height: 18px; padding-bottom: 18px;}
+
+a { color: #2faef9; text-decoration: none; font-family: 'museo500', sans-serif; -webkit-transition: all 0.2s ease-in; -moz-transition: all 0.2s ease-in; -o-transition: all 0.2s ease-in;}
+a:hover { outline: 0; color: #2383ba;}
+a:hover img { /*-moz-opacity: .7; opacity: .7; filter: alpha(opacity=70);*/}
+img { border: none;}
+em { font-weight: normal; /*font-style: italic;*/}
+strong { font-weight: normal; font-style: normal;}
+
+
+
+/* Comunes --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.box { position: relative; width: 960px; margin: auto;list-style: none;}
+.cont { float: left; width: 100%;}
+.boxWhite { float: left; width: 100%; background: #FFF; padding: 40px 0; position: relative;}
+.boxGrey { float: left; width: 100%; background: #edf0f3; padding: 40px 0; position: relative;}
+.boxYellow { float: left; width: 100%; background: #faf5da; padding: 40px 0; position: relative;}
+
+.breadcrumb { width: 100%; margin: 0; height: 26px; position: absolute; top: 0; left: 0; background: #edf0f3; z-index: 10;}
+.breadcrumb.black { background: #000; -moz-opacity: .6; opacity: .6; filter: alpha(opacity=60); color: #FFF;}
+.breadcrumb.black a { color: #FFF;}
+
+.breadcrumb .box { width: 940px;}
+.breadcrumb p, .breadcrumb h1 { font-family: 'museo500', sans-serif; display: block; float: left; padding: 5px 0 0 0; font-size: 12px;}
+.breadcrumb p b, .breadcrumb h1 b { font-weight: normal; color: #2383ba;}
+.breadcrumb a { color: #849295; padding-right: 10px; margin-right: 5px; background: url(../img/iconFlechaBreadcrumb.gif) no-repeat right center;}
+.breadcrumb a:hover { color: #2383ba;}
+
+.boxCuarto { float: left; width: 220px; margin: 0 10px;}
+.boxTercio { float: left; width: 260px; margin: 0 10px; padding: 20px;}
+.boxDosTercios { float: left; width: 620px; margin: 0 10px;}
+.boxG { float: left; width: 940px; margin: 0 10px 10px 10px; background: #FFF; position: relative;}
+.boxG.premium { background: #FFF url(../img/iconSelloPremium.png) no-repeat top right;}
+.boxG.certificado { background: #FFF url(../img/iconSelloCertifica.png) no-repeat top right;}
+
+.thumbG { float: left; width: 220px; height: 140px; margin: 10px; border-radius: 5px; overflow: hidden;}
+.thumbG img { width: 100%;}
+.boxG .txt { float: left; width: 580px; margin: 20px 10px 60px 10px;}
+.list .boxG .boxBtn { position: absolute; width: 680px; right: 10px; bottom: 10px;}
+
+.slide { width: 700px; margin: auto; position: relative;}
+.btnL, .btnR { position: absolute; top: 50%; margin-top: -11px; width: 12px; height: 22px; font-size: 1px; color: #edf0f3; cursor:pointer;}
+.btnL { left: 0; background: url(../img/common.png) no-repeat; background-position: -204px -0px;}
+.btnR { right: 0; background: url(../img/common.png) no-repeat; background-position: -216px -0px;}
+.btnR:hover, .btnL:hover { -moz-opacity: .7; opacity: .7; filter: alpha(opacity=70); color: #edf0f3;}
+.boxSlide { display: block; width: 600px; height: 90px; background: #FFF; padding: 10px; margin: auto; border-top: 2px solid #cfd9db; border-radius: 5px;}
+.boxSlide .thumbP { float: left; width: 90px; height: 90px; overflow: hidden; border-radius: 3px;}
+.boxSlide .thumbP img { width: 100%;}
+.boxSlide .txt { float: left; width: 470px; padding: 3px 20px;}
+.txt .txtDate { color: #7b868a; padding-bottom: 15px; font-family: 'museo500', sans-serif; font-size: 12px; letter-spacing: 1px; margin: 0}
+.txt .txtDate b { color: #000; font-weight: normal; letter-spacing: 0;}
+.txt .txtInfo { color: #879095; font-size: 14px;}
+.txt .txtDate a { color: #2eadfa;}
+.txt .txtInfo a:hover, .txt .txtDate a:hover { color: #2383ba;}
+.boxAll { text-align: center; padding-top: 20px;}
+.boxAll a { color: #2faef9;}
+.boxAll a:hover { color: #5193c5;}
+
+span#listadoDeseosFlecha{background-image: url(../img/common.png);background-position: -246px -0px; width: 12px; height: 10px;text-indent: -9999px;display: inline-block;margin: 2px 0 0 10px;position: absolute;}
+span#verSalaPrensaFlecha{background-image: url(../img/common.png);background-position: -258px -0px; width: 3px; height: 7px;text-indent: -9999px;display: block;margin: -9px 0 0 0px;position: absolute;}
+span#etiqueta{background-image: url(../img/common.png);background-position: -155px -0px;width: 49px;height: 26px;text-indent: -9999px;display: inline-block;}
+span#lampara{background-image: url(../img/common.png);background-position: -104px -0px; width: 51px; height: 28px;text-indent: -9999px;display: inline-block;}
+span#imgVerVideo{background-image: url(../img/common.png);background-position: -228px -0px; width: 18px; height: 18px;text-indent: -9999px;display: inline-block;margin: 5px 5px 0 0;}
+
+input[type="text"], input[type="pass"] { height: 44px; padding: 0 15px; border-radius: 5px; border: 1px solid #e1e1e1; box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); -o-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); color: #839295; font-size: 14px; font-family: 'museo500', sans-serif;}
+input[type="submit"] { height: 45px; padding: 0 15px; border-radius: 5px; border-bottom: 3px solid #1f72a4; color: #FFF; font-size: 16px; font-family: 'museo500', sans-serif; background: #2faffa; cursor: pointer; /*appearance: none;*/ -moz-appearance: none; -webkit-appearance: none;}
+input[type="submit"]:hover { background: #2383ba;}
+textarea { padding: 10px 3%; border-radius: 5px; border: 1px solid #edf0f3; box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); -o-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); color: #839295; font-family: 'museo500', sans-serif;}
+
+.btn { display: inline-block; height: 45px; padding: 0 15px; border-radius: 5px; border-bottom: 3px solid #17567b; color: #FFF; line-height: 45px; text-align: center; font-size: 16px; font-family: 'museo500', sans-serif; background: #2faffa;}
+.btn:hover { background: #2383ba; color: #FFF; border-bottom: 3px solid #17567b;}
+.btn:active { background: #2383ba; border-bottom: 3px solid #2383ba; box-shadow: inset 0px 2px 2px rgba(0,0,0, 0.2); -webkit-box-shadow: inset 0px 2px 2px rgba(0,0,0, 0.2); -moz-box-shadow: inset 0px 2px 2px rgba(0,0,0, 0.2);}
+.btn.ocre { background: #c9b151; border: none;}
+.btn.ocre:hover { background: #b8a248;}
+.btn.ocre:active { background: #a69037;}
+a.enlaceBaja {margin-right: 0 !important}
+
+ 
+/* Estructura --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.header { width: 100%; float: left; position: fixed; top: 0; left: 0; background: #FFF; box-shadow: 0px 0px 1px rgba(0,0,0, 0.3); -webkit-box-shadow: 0px 0px 1px rgba(0,0,0, 0.3); -moz-box-shadow: 0px 0px 1px rgba(0,0,0, 0.3); z-index: 20;}
+.content { width: 100%; float: left; margin-top: 120px; position: relative;}
+.footer { width: 100%; float: left;}
+
+
+
+/* header */
+
+.btnMenu { display: none;}
+.menu { width: 100%; height: 30px; background: #2383ba;}
+.menu ul.box { list-style: none; height: auto; padding-top: 8px;}
+.menu ul li { display: inline;}
+.menu a { color: #dfe4e9; margin: 0 3px;}
+.menu a:hover, .menu a.on { color: #FFF;}
+.menu ul li.btnHome { margin-left: 10px; color: #FFF;}
+.menu ul li.btnHome a { margin: 0 3px 0 0;}
+.header .box { height: 90px;}
+#logo { float: left; margin: 20px 0 0 10px;}
+#logo a { display: block; float: left;} 
+#logo img { display: block; float: left; width: 231px;}
+.registro { float: right; margin: 27px 10px 0 0; line-height: 34px; font-size: 14px;}
+.registro a { color: #2483bb; margin-left: 20px;}
+.registro a:hover { color: #CCC;}
+.registro a.btnIn { display: inline-block; text-align: center; width: 120px; height: 34px; border-radius: 5px; border-bottom: 2px solid #d9dde0; color: #91a4a8; font-size: 16px; font-family: 'museo500', sans-serif; background: #edf1f4;}
+.registro a.btnIn:hover { color: #849699; background: #d3d6d7;}
+.telefono { float: right; margin: 27px 10px 0 0; line-height: 20px; font-size: 15px; letter-spacing: 0; text-align: right;}
+.telefono strong { color: #2383ba; font-size: 18px;}
+.search { position: absolute; left: 50%; top: 27px; width: 460px; margin: 0 0 0 -230px; text-align: center;}
+.search input { display: inline-block; height: 34px; line-height: 34px; }
+.search input[type="submit"] { display: inline-block; border-bottom: 2px solid #2ba0e5; height: 37px; font-size: 13px;}
+.search input[type="submit"]:hover { border-bottom: 2px solid #17567b;}
+.search input[type="submit"]:active { border-bottom: 2px solid #2383ba; box-shadow: inset 0px 2px 2px rgba(0,0,0, 0.2); -webkit-box-shadow: inset 0px 2px 2px rgba(0,0,0, 0.2); -moz-box-shadow: inset 0px 2px 2px rgba(0,0,0, 0.2);}
+.search input[type="text"] { display: inline-block; height: 34px; width: 270px; margin-right: 5px; /* border: solid 1px #FFF;*/}
+.logado { position: relative; height: 50px; width: 230px; float: right; margin: 20px 10px 0 0;}
+.logado .foto { float: left; width: 50px; height: 50px; overflow: hidden; margin-right: 10px;}
+.logado .foto img { width: 100%;}
+.logado .foto .circle { position: absolute; top: 0; left: 0; width: 50px; height: 50px; background: url(../img/iconFotoUserVerde.png) no-repeat top left;}
+.logado .foto .circle.sinNotificaciones { position: absolute; top: 0; left: 0; width: 50px; height: 50px; background: url(../img/iconFotoUserBorde.png) no-repeat top left;}
+.logado .name { float: left; width: 130px; margin: 7px 0 0 0; line-height: 18px; letter-spacing: 0;}
+.logado .name a { text-transform: uppercase; font-size: 11px;}
+.logado.premium .name a { color: #c8b051;}
+.logado .out { float: left; margin: 7px 0 0 0;}
+.logado .out a, .logado .out img { display: block;}
+.logado.premium .foto .icon { position: absolute; top: 0px; left: 35px; z-index: 80; width: 20px; height: 16px; background: url(../img/iconPremiumLogado.png) left top no-repeat;}
+
+
+
+/* footer */
+
+.footer .subMenu { float: left; width: 100%; background: #195c83; padding: 40px 0;}
+.siteMap { float: left;}
+.rrss { float: right;}
+.rrss a { margin: 0 5px 0 0; -webkit-transition: none; -moz-transition: none; -o-transition: none;}
+.rrss a:hover { background-position: 0 -50px;}
+.rrss a:active { background-position: 0 -100px;}
+.btnF, .btnT, .btnG, .btnRss { display: inline-block; width: 50px; height: 50px;}
+.btnF { background-image: url(../img/common.png); background-repeat: no-repeat; background-position: -0px -0px; width: 50px; height: 50px;}
+a.btnF:hover{background-position: 0px -50px;}
+.btnT { background-image: url(../img/btnTwitter.png); background-repeat: no-repeat; background-position: 0 0;}
+.btnG { background-image: url(../img/btnGoogle.png); background-repeat: no-repeat; background-position: 0 0;}
+.btnRss { background-image: url(../img/btnRss.png); background-repeat: no-repeat; background-position: 0 0;}
+.footer span { display: block; padding-bottom: 30px; color: #a9bfc5; text-transform: uppercase; font-size: 14px; letter-spacing: 0;}
+.footer ul { padding-left: 12px; line-height: 25px; letter-spacing: 0; font-size: 13px;margin:0; padding:0;text-align: left;}
+.footer ul li { list-style-type: none; padding-top: 5px; padding-left: 35px; line-height:1.5em;position: relative;padding-bottom: 10px;}
+.footer ul li:before { position: absolute;margin: -4px 0 0 -35px;min-height: 15px; background: url(../img/common.png) no-repeat;width:31px;content:"";vertical-align: middle;}
+.footer ul li:before { background-position: -261px -0px; }
+.footer ul li a { color: #e3e6e9;display: block;margin-top: -10px;margin-left: -20px;}
+.footer ul li a:hover { color: #CCC;}
+.footer .close { float: left; width: 100%; min-height: 40px; background: #154d6e; color: #849295;}
+.close a { color: #849295; display: inline-block;}
+.close a:hover { color: #CCC;}
+.copy { float: left; padding: 13px 0 13px 10px; max-width: 80%; font-size: 11px;}
+.logos { float: right; margin: 5px 10px 0 0; background: url(../img/btnConfianza.gif) no-repeat; width: 70px; height: 30px;}
+
+
+
+/* content */
+
+.content { position: relative;}
+.content h2 { color: #2384bb; font-size: 30px;}
+.content h3 { color: #5193c5; margin: 10px 0 30px 0; font-size: 25px; text-align: center;}
+
+
+
+/* Home --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.landing { float: left; width: 100%; height: 370px; text-align: center; background-image: url(../img/bgHome.jpg); background-size: 100%; background-position: center top; background-repeat: no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+.landing.entrar { width: 100%; height: 610px; text-align: center; background-image: url(../img/bgAcceso.jpg); background-size: 100%; background-position: center top; background-repeat: no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+.landing.entrarRegistro { width: 100%; height: 780px; text-align: center; background-image: url(../img/bgAccesoRegistro.jpg); background-size: 100%; background-position: center top; background-repeat: no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+
+.landing.viajes { background-image: url(../img/bgHomeViajes.jpg);}
+.landing.motor { background-image: url(../img/bgHomeMotor.jpg);}
+.landing.electronica { background-image: url(../img/bgHomeElectronica.jpg);}
+.landing.vivienda { background-image: url(../img/bgHomeVivienda.jpg);}
+.landing.moda { background-image: url(../img/bgHomeModa.jpg);}
+.landing.restaurantes { background-image: url(../img/bgHomeRestaurantes.jpg); background-position: center center;}
+.landing.ocio { background-image: url(../img/bgHomeOcio.jpg); background-position: center center;}
+.landing.bienestar { background-image: url(../img/bgHomeBienestar.jpg); background-position: center center;}
+.landing.cursos { background-image: url(../img/bgHomeCursos.jpg); background-position: center center;}
+.landing.servicios { background-image: url(../img/bgHomeServicios.jpg); background-position: center center;}
+.landing.viajesBlue { background-image: url(../img/bgHomeViajesB.jpg);}
+.landing.boxAltaEmpresa { height: 550px; background-image: url(../img/bgAltaEmpresa.jpg);}
+.landing.comoFunciona { height: 470px; background-image: url(../img/bgComoFunciona.jpg);}
+
+.boxSearch { padding-top: 115px;}
+.boxSearch h1 { margin-bottom: 30px; color: #FFF; font-size: 30px; font-weight: bold; text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); padding-bottom: 0;}
+.boxSearch h2 { margin-bottom: 30px; color: #FFF; font-size: 30px; font-weight: bold; text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); padding-bottom: 0;}
+.boxSearch input { height: 44px; line-height: 44px; padding: 0 15px; display: inline-block;}
+.boxSearch input[type="text"] { width: 570px; height: 44px; margin: 0 10px 20px 0;}
+.boxSearch input[type="submit"] { height: 45px; padding: 0 15px;}
+.boxSearch input[type="submit"]:hover { background: #569bc3;}
+
+.boxCount { float: left; width: 100%;}
+.count { text-align: center;}
+.countIn { display: inline-block; position: relative;}
+.countIn b { display: inline-block; width: auto; height: 32px; margin-top: -26px; background: #2384bb; border-radius: 3px; padding: 10px 9px 6px 9px; border-bottom: 2px solid #1f79ab; font-weight: normal;}
+.countIn b span { float: left; display: block; width: 24px; height: 32px; font-size: 24px; text-align: center; line-height: 32px; 
+	background: url(../img/common.png) no-repeat top left; color: #2382b8; background-position: -80px -0px;}
+.countIn b span.punto { background: none; width: 10px; color: #fffeff;}
+.countIn a { position: absolute; width: 140px; bottom: 8px; right: -170px; padding-right: 20px; }
+
+.titPasos { width: 620px; margin: auto; text-align: center; border-bottom: 1px solid #bdccd0;}
+.pasos { width: 900px; float: left; margin: 0 30px; text-align: center; letter-spacing: 0;}
+.paso { float: left; width: 280px; margin: 0 10px 20px 10px; padding: 20px 0 40px 0;}
+.paso img { margin-top: 20px;}
+.paso h3 { padding-bottom: 5px; font-family: 'museo500', sans-serif; font-size: 16px; color: #2f4a51; margin: 0 0 10px 0; vertical-align: middle;}
+.paso h3 strong { font-family: 'Flamenco', sans-serif; font-size: 70px; font-weight: normal; color: #2fadf7; display: inline-block;}
+.paso h3 span { display: inline-block; font-family: 'Flamenco', sans-serif; font-size: 100px; line-height: 20px; height: 20px; color: #2fadf7; display: inline-block; vertical-align: bottom;}
+.paso p { color: #9fa7aa; font-size: 15px; line-height: 24px; padding: 0 20px;}
+.masPasos { width: 620px; float: left; margin: 0 170px; padding: 20px 0 0 0; text-align: center; border-top: 1px solid #bdccd0; color: #2eaef9; letter-spacing: 0; line-height: 25px;}
+.masPasos a { margin: 0 10px; color: #2eaef9; display: inline-block; height: 25px;}
+.masPasos a:hover {outline: 0; color: #2383ba;}
+.masPasos a.btnVideo { padding-left: 25px;}
+
+.boxEmpresa { width: 720px; margin-bottom: 0; text-align: center; font-size: 20px; color: #a6afb4;}
+.boxEmpresa h1 { color: #2383ba; font-size: 32px; margin: 20px 0 20px 0;}
+.boxEmpresa p { font-size: 15px; line-height: 24px; margin-bottom: 0;}
+.nDeseosG { font-size: 24px; color:#666;}
+.nDeseosG span { display: inline-block; line-height: 43px; height: 43px;}
+.nDeseosG b { display: inline-block; margin-left: 5px;}
+.nDeseosG b span { width: 30px; height: 43px; font-size: 30px; text-align: center; line-height: 43px; 
+	background: url(../img/common.png) no-repeat top left; color: #2382b8; background-position: -50px -0px;}
+.nDeseosG b span.punto { width: auto; background: none;}
+
+.nDeseosP { font-size: 24px;}
+.nDeseosP span { display: inline-block; line-height: 32px; height: 32px;}
+.nDeseosP b { display: inline-block; margin-left: 5px;}
+.nDeseosP b span { width: 24px; height: 32px; font-size: 24px; text-align: center; line-height: 32px; background: url(../img/bgNumP.png) no-repeat top left; color: #2382b8;}
+.nDeseosP b span.punto { width: auto; background: none;}
+
+.alta { position: absolute; bottom: -23px; left: 50%; margin-left: -145px; width: 290px; padding: 0; z-index: 2;}
+.titPlanes { float: left; width: 100%; color: #2383ba; font-size: 25px; text-align: center;}
+.titPlanesSolo { float: left; width: 100%; color: #2383ba; font-size: 25px; margin: 100px 0 140px 0; text-align: center;}
+.titPlanes h2 { color: #2383ba; font-size: 25px; margin: 0 0 100px 0;}
+
+.boxBorde { float: left; width: 100%; color: #a9b3bc; border-top: 1px solid #ecf0f3; border-bottom: 1px solid #ecf0f3;}
+.boxBorde.dos { float: left; color: #a9b3bc; border-top: 1px solid #ecf0f3; border-bottom: 1px solid #ecf0f3; padding: 10px 0;}
+.boxBorde h3 { font-size: 20px; color: #a9b3bc; margin: 10px 0 13px 0;}
+.logosYa { margin-top: 10px;}
+.logosYa img { width: 100%;}
+.azul { color: #2eaef9;}
+.gris { color: #5b6d73;}
+
+.logoPress { float: left; width: 239px; height: 120px; margin: 0 30px 0 10px; background: #edf1f4; border-right: solid 1px #ced9db; overflow: hidden; border-radius: 5px 0 0 5px;}
+.logoPress img { width: 100%;}
+.txtPress { float: right; width: 640px; min-height: 100px; margin: 0 10px; padding: 10px; color: #9fa7aa; display: table;}
+.txtPress p { display: table-cell; vertical-align: middle; font-size: 15px;}
+.viewPress { float: right; margin-right: 15px; letter-spacing: 0; font-size: 13px;}
+.btnPress { color: #408dc3; padding-left: 15px; }
+.btnPress:hover { color: #2182b7; }
+
+.categorias { padding: 40px 0 60px 0; letter-spacing: 0;}
+.categorias a { display: block;}
+.categorias a:hover { -moz-opacity: .8; opacity: .8; filter: alpha(opacity=80);}
+.categorias .boxTercio { float: left; width: 300px; margin: 0 10px; padding: 20px 0;}
+.categorias span.img { display: block; float: left; width: 140px; height: 140px; margin-right: 10px; padding: 0; overflow: hidden; border-radius: 4px; background: #FFF;}
+.categorias span { display: block; float: left; font-family: 'museo500', sans-serif; font-size: 15px; color: #849295; width: 150px; line-height: 20px; padding-top: 5px;}
+.categorias strong { display: block; font-family: 'museo500', sans-serif; font-size: 18px; text-transform: uppercase; color: #2faef9; padding-bottom: 10px;}
+.categorias .viajes span.img { background: #FFF url(../img/bgCatViajes.jpg) no-repeat left top;}
+.categorias .electronica span.img { background: #FFF url(../img/bgCatElectronica.jpg) no-repeat left top;}
+.categorias .motor span.img { background: #FFF url(../img/bgCatMotor.jpg) no-repeat left top;}
+.categorias .alimentacion span.img { background: #FFF url(../img/bgCatAlimentacion.jpg) no-repeat left top;}
+.categorias .cursos span.img { background: #FFF url(../img/bgCatCursos.jpg) no-repeat left top;}
+.categorias .hogar span.img { background: #FFF url(../img/bgCatHogar.jpg) no-repeat left top;}
+.categorias .mascotas span.img { background: #FFF url(../img/bgCatMascotas.jpg) no-repeat left top;}
+.categorias .moda span.img { background: #FFF url(../img/bgCatModa.jpg) no-repeat left top;}
+.categorias .ocio span.img { background: #FFF url(../img/bgCatOcio.jpg) no-repeat left top;}
+.categorias .restaurantes span.img { background: #FFF url(../img/bgCatRestaurantes.jpg) no-repeat left top;}
+.categorias .servicios span.img { background: #FFF url(../img/bgCatServicios.jpg) no-repeat left top;}
+.categorias .seguros span.img { background: #FFF url(../img/bgCatSeguros.jpg) no-repeat left top;}
+.categorias .vivienda span.img { background: #FFF url(../img/bgCatVivienda.jpg) no-repeat left top;}
+.categorias .bienestar span.img { background: #FFF url(../img/bgCatBienestar.jpg) no-repeat left top;}
+
+/* Deseo --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.deseo h4 { padding: 30px 10px; float: left; line-height: 18px; font-size: 14px; color: #a4b1b5;}
+.deseo span.boxInf{padding: 30px 10px;float: left;line-height: 18px;font-size: 14px;color: #a4b1b5;font-family: 'Maven Pro', sans-serif;font-weight: normal;font-style: normal;}
+.deseo h4 strong, .deseo span.boxInf strong { color: #000; font-weight: normal;}
+.deseo .boxDate { padding: 30px 10px; float: right; text-align: right; line-height: 18px; font-size: 12px; color: #a4b1b5;}
+
+.card { position: relative; float: left; width: 100%; min-height: 250px;}
+.card .boxDosTercios { margin-bottom: 15px; padding-bottom: 5px; position: relative;}
+.card .boxTercio { position: absolute; top: 0; right: 0; bottom: 20px; background: #edf0f3; border: 1px solid #cfd9dc; border-radius: 0 5px 5px 0; margin: 0 9px 0 9px; overflow: hidden;}
+.boxDes { width: 100%; float: left;}
+.boxDes h1 { font-size: 25px; font-weight: lighter; color: #2383ba; padding-right: 175px;}
+
+.boxThumb { float: left; width: 100%; padding: 20px 0;}
+.boxThumb .thumbP { float: left; width: 90px; height: 90px; overflow: hidden; border-radius: 5px;}
+.boxThumb .thumbP img { width: 100%;}
+.boxThumb .txt { float: left; width: 490px; padding: 5px 20px;}
+.boxThumb .txt .txtInfo { color: #879095; font-size: 14px; padding: 0 150px 0 0; min-height: 60px;}
+.boxThumb .txt p { line-height: 15px; padding-bottom: 15px;}
+.boxThumb .txt a { color: #2eadfa;}
+.boxThumb .txt .txtMeta { list-style: none;}
+.boxThumb .txt .txtMeta li { display: inline-block; line-height: 24px; margin: 0 10px 5px 0;}
+.boxThumb .txt .txtMeta li b { font-weight: normal; color: #3b4545; padding-left: 30px;}
+.ida { background: url(../img/iconIda.png) no-repeat;}
+.vuelta { background: url(../img/iconVuelta.png) no-repeat;}
+.personas { background: url(../img/iconPerson.png) no-repeat;}
+
+.boxObj { position: absolute; top: 0; right: 0; width: 150px;}
+.cashObj { float: left; width: 100%; padding: 8px 0; border-radius: 7px 7px 0 0; background: #2383ba; color: #FFF; text-align: center;}
+.cashObj span { font-size: 28px;}
+.dateObj { float: left; width: 100%; padding: 8px 0; text-align: center; border-radius: 0 0 7px 7px; background: #edf0f3; color: #849295; font-size: 11px;}
+
+.boxRrss { float: right;}
+.boxRrss div.txtRrss { float: left; display: block; padding: 15px 10px 0 0;}
+.boxRrss div.btnRrss { float: right; padding-top: 5px;}
+div.btnRrss a { margin: 0 0 0 0; -webkit-transition: none; -moz-transition: none; -o-transition: none;}
+div.btnRrss a:hover { background-position: 0 -24px;}
+div.btnRrss a:active { background-position: 0 0;}
+div.btnRrss .btnF, .boxRrss div.btnRrss .btnT, .boxRrss div.btnRrss .btnG, .boxRrss div.btnRrss .btnRss { display: inline-block; width: 24px; height: 24px;}
+div.btnRrss .btnF { background-image: url(../img/btnFacebookP.png); background-repeat: no-repeat; background-position: 0 -48px;}
+div.btnRrss .btnT { background-image: url(../img/btnTwitterP.png); background-repeat: no-repeat; background-position: 0 -48px;}
+div.btnRrss .btnG { background-image: url(../img/btnGoogle+P.png); background-repeat: no-repeat; background-position: 0 -48px;}
+div.btnRrss .btnRss { background-image: url(../img/btnMail.png); background-repeat: no-repeat; background-position: 0 -48px;}
+
+.boxTercio h5 { font-size: 16px; color: #2faef9; margin: 0 0 10px 0;}
+.boxTercio span.boxSend {font-size: 16px; color: #2faef9; margin: 0 0 10px 0; font-family: 'Maven Pro', sans-serif;font-weight: normal;font-style: normal; display: block;}
+.deseo .boxTercio .rowElem { margin-bottom: 15px;}
+.boxTercio textarea { float: left; width: 93%; height: 55%;}
+.boxTercio .enviar { float: right; margin-top: 0; line-height: 28px; font-size: 14px; width: 100%;}
+.boxTercio .enviar a.btnAdjuntar, a.btnAdjuntar { font-family: 'museo500', sans-serif; display: inline-block; float: left; height: 20px; line-height: 20px; padding: 0 0 0 20px; letter-spacing: 0; color: #bdccd0; font-size: 12px; background: url(../img/btnAdjuntar.png) no-repeat left center;}
+.boxTercio .enviar a.btnAdjuntar:hover, a.btnAdjuntar:hover { color: #2383ba;}
+.boxTercio .enviar .btn { display: inline-block; float: right; text-align: center; height: 28px; margin-left: 5px; padding: 0 10px; border: 0; font-size: 12px; line-height: 28px; color: #FFF; cursor: pointer; font-family: 'museo500', sans-serif;}
+
+.mensaje { padding-top: 60px;}
+.mensaje h1 { color: #2383ba; font-size: 24px; padding: 25px 0; letter-spacing: 0;}
+.mensaje p.gracias { font-size: 16px; margin: 40px 0;}
+
+
+
+
+/* Escaparate & Oferta --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.escaparate, .oferta { margin-top: 30px;}
+.oferta .card { margin-bottom: 30px;}
+.escaparate .boxDate, .oferta .boxDate { padding: 30px 10px; float: right; text-align: right; line-height: 18px; font-size: 12px; color: #a4b1b5;}
+.escaparate h1 { color: #2383ba; font-size: 25px; margin-bottom: 5px; font-family: 'museo500', sans-serif; letter-spacing: 0;}
+.oferta h1 { color: #2383ba; font-size: 22px; margin-bottom: 7px; font-family: 'museo500', sans-serif;  letter-spacing: 0;}
+.escaparate.premium h1 { color: #c8b051;}
+
+.escaparate .thumbG, .oferta .thumbG { float: left; width: 280px; height: 170px; margin: 0 20px 5px 0; border-radius: 5px; overflow: hidden;}
+.escaparate .thumbG img, .oferta .thumbG img { width: 100%;}
+.escaparate.certificado .boxDosTercios .sello { width: 100%; margin-bottom: 15px; height: 25px; line-height: 25px; font-size: 14px; color: #9dca3a; vertical-align: middle; text-transform: uppercase;}
+.escaparate.premium .boxDosTercios .sello { width: 100%; margin-bottom: 15px; height: 25px; line-height: 25px; font-size: 14px; color: #c8b051; vertical-align: middle; text-transform: uppercase;}
+.escaparate.certificado .boxDosTercios .sello img, .escaparate.premium .boxDosTercios .sello img { float: left; margin-right: 10px;}
+.escaparate .boxRrss, .oferta .boxRrss { width: 100%; margin-bottom: 35px;}
+.escaparate .boxRrss .verGaleria, .oferta .boxRrss .verGaleria { display: block; float: left; height: 24px; padding: 12px 0 0 35px; letter-spacing: 0; color: #bdccd0; background: url(../img/iconFullscreen.png) no-repeat left center;}
+.escaparate .boxRrss .verGaleria:hover, .oferta .boxRrss .verGaleria:hover { color: #aebcbe;}
+.escaparate .starts, .oferta .starts { float: none; margin-bottom: 15px;}
+.escaparate .boxCat { display: block; letter-spacing: 0;}
+.oferta .boxCat { display: block; letter-spacing: 0; padding-bottom: 5px;}
+.escaparate .boxCat strong, .oferta .boxCat strong { color: #5b6d73; font-family: 'museo500', sans-serif;}
+.escaparate .boxRrss div.txtRrss, .oferta .boxRrss div.txtRrss { padding: 10px 10px 0 0;}
+.escaparate .txtDescripcion, .oferta .txtDescripcion  { float: left; width: 100%;}
+.card .map { width: 620px; height: 160px; margin: 40px 0 0 0;}
+
+.escaparate .card .boxTercio, .oferta .card .boxTercio { position: absolute; width: 298px; top: 0; right: 0; bottom: 20px; background: #edf0f3; border: 1px solid #cfd9dc; border-radius: 0 5px 5px 0; padding: 20px 0 0 0; margin: 0 9px 0 9px;}
+.escaparate .formulario label, .oferta .formulario label { margin-top: 0;}
+.escaparate .formulario .rowElem, .oferta .formulario .rowElem  { margin: 0 0 15px 20px; width: 260px;}
+.escaparate input[type="text"], .oferta input[type="text"] { height: 34px; width: 228px;}
+.escaparate .enviar input[type="button"], .oferta .enviar input[type="button"] { font-family: 'museo500', sans-serif; font-size: 13px; height: 28px; line-height: 28px; border: none; margin: 0 20px 15px 0;}
+
+.boxDatos { float: left; width: 100%; background: #f5f9fc; letter-spacing: 0;}
+.escaparate.premium .boxDatos { background: #fdfbf3;}
+.oferta.premium .boxDatos { background: #fdfbf3 url(../img/iconPremium.png) no-repeat 94% 20px;}
+.oferta.certificado .boxDatos { background: #f5f9fc url(../img/iconCertifica.png) no-repeat 94% 20px;}
+.contBoxDatos { padding: 20px; font-size: 14px;}
+.oferta .contBoxDatos { padding: 20px 70px 20px 20px; font-size: 14px;}
+.contBoxDatos strong { display: inline-block; font-size: 18px; padding-bottom: 10px; color: #2383ba;}
+.escaparate.premium .contBoxDatos strong, .escaparate.premium .contBoxDatos a, .escaparate.premium div.starts a, .oferta.premium .contBoxDatos strong, .oferta.premium .contBoxDatos a { color: #c8b051;}
+
+.oferta .caracteristicas { float: left; width: 100%; margin-bottom: 30px; border: none; border-spacing: 0; background: #edf0f3; border: 0; border-radius: 5px; box-shadow: inset 0px -1px 1px rgba(0,0,0, 0.2); -webkit-box-shadow: inset 0px -1px 1px rgba(0,0,0, 0.2); -moz-box-shadow: inset 0px -1px 1px rgba(0,0,0, 0.2);}
+.oferta .caracteristicas span { width: 25%; text-align: center; vertical-align: middle; letter-spacing: 0;}
+.bord { border-right: 1px solid #bdccd0; float: left;}
+.boxPrecio { background: #2383ba; border-radius: 5px 0 0 5px; color: #FFF; float: left;}
+.oferta .caracteristicas span.tit { padding: 7px 0 2px 0;}
+.oferta .caracteristicas span.tit, .oferta .caracteristicas b { display: block; width: 100%;}
+.oferta .caracteristicas b { font-size: 28px; padding-bottom: 7px; font-weight: normal;font-style: normal;}
+.oferta .caracteristicas b span { font-size: 22px;}
+.oferta .caracteristicas b.time { font-size: 18px; padding-top: 7px;}
+.oferta .caracteristicas b.time span { font-size: 16px;}
+
+.contItems { width: 100%;}
+.item { width: 300px; margin: 9px; border: 1px solid #edf0f3; border-radius: 5px; box-shadow: 0px 0px 2px rgba(0,0,0, 0.15); -webkit-box-shadow: 0px 0px 2px rgba(0,0,0, 0.15); -moz-box-shadow: 0px 0px 2px rgba(0,0,0, 0.15);}
+.item .starts, .item .txt { float: left; padding: 5%; width: 90%;}
+.item .txt { font-size: 13px; border-bottom: 1px solid #edf0f3; border-top: 1px solid #edf0f3;}
+.item .boxBtn a { margin: 0; padding: 0;}
+.item .boxBtn .btnAprobado { float: left; display: block; height: 40px; width: 49.8%; background: url(../img/btnManoOk.png) no-repeat center 0px;}
+.item .boxBtn .btnSuspenso { float: right; display: block; height: 40px; width: 49.8%; border-left: 1px solid #edf0f3; background: #f7f9fa url(../img/btnManoKo.png) no-repeat center 0px;}
+.item .boxBtn .btnAprobado:hover { background: url(../img/btnManoOk.png) no-repeat center -40px;}
+.item .boxBtn .btnSuspenso:hover { background: #f7f9fa url(../img/btnManoKo.png) no-repeat center -40px;}
+.item .boxBtn .btnAprobado:active, .item .boxBtn .btnAprobado.on { background: #afdb2c url(../img/btnManoOk.png) no-repeat center -80px;}
+.item .boxBtn .btnSuspenso:active, .item .boxBtn .btnSuspenso.on { background: #ff5435 url(../img/btnManoKo.png) no-repeat center -80px;}
+.masComentarios { text-align: center;}
+.masComentarios a { display: inline-block; font-size: 13px; font-family: 'museo500', sans-serif; margin-top: 30px;}
+.boxGrey.verGenios { padding: 20px 0; color: #2faef9; letter-spacing: 0;}
+.verGenios a { display: inline-block; font-size: 13px; font-family: 'museo500', sans-serif; margin: 0 10px;}
+
+
+
+/* Listado --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.list h2 { margin: 10px; font-size: 26px; color: #5b6d73;}
+.list h2.noResultados { display: block; float: left; margin: 0; padding: 100px 0; border-bottom: 1px solid #bdccd0; border-top: 1px solid #bdccd0; text-align: center; width: 100%; font-size: 28px; color: #5b6d73; font-family: 'museo500', sans-serif;}
+.list h2.noResultados strong { color: #304951; font-family: 'museo500', sans-serif;}
+
+.boxBtn .btn { float: right; display: block; text-align: center; height: 28px; margin: 0; padding: 0 10px; font-size: 12px; line-height: 28px; color: #FFF; border: none;}
+.inactivo { background: #bdccd0; color: #FFF; border-bottom: 3px solid #aebcc0;}
+.inactivo span { color: #2383ba;}
+.inactivo:hover { background: #bdccd0; color: #FFF; }
+.inactivo:hover span { color: #115f8f;}
+
+
+
+/* Listado Deseos --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.titleDeseo { padding: 40px 0 10px 0;}
+.titleDeseo h1 { margin: 0 0 17px 0; font-family: 'museo500', sans-serif; font-size: 36px; color: #2383ba;}
+.titleDeseo p { max-width: 580px; margin: 0 0 0 0; font-family: 'museo500', sans-serif; font-size: 15px; color: #849295;}
+
+.boxFilter {}
+.boxFilter .filters { float: left; margin: 0 0 30px 10px;}
+.boxFilter .filters label { margin: 0 0 5px 0;}
+.boxFilter .filters .combo { float: left; width: 140px; margin-right: 15px;}
+.boxFilter .filters .combo .jqTransformSelectWrapper { width: 100%;}
+.boxFilter .search { float: right; position: static; left: auto; top: auto; width: 300px; margin: 18px 10px 25px 0; text-align: right;}
+.boxFilter .search input[type="text"] { display: inline-block; height: 34px; width: 180px; margin-right: 5px;}
+.boxFilter .search input[type="submit"] { width: 80px;}
+
+.pages ul { float: right; margin: 20px 10px 10px 10px; text-align: right;}
+.pages ul li { display: inline-block; margin-left: 3px; float: left;}
+.pages ul li a { display: block;  width: 24px; height: 24px; line-height: 24px; text-align: center; border-radius: 3px; background: #cfd9dc; color: #849295;}
+.pages ul li a:hover { color: #FFF; background: #9eadb0;}
+.pages ul li a:active, .pages ul li a.on { color: #FFF; background: #2383ba;}
+.pages ul li a.flecha { font-size: 16px;}
+.pages .enlaces { float: left; margin: 30px 10px 10px 10px; color: #2faef9;}
+.enlaces a { color: #2faef9; letter-spacing: 0; margin: 0 3px;}
+
+
+
+/* Listado Genios --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.headListado { float: left; width: 280px; margin: 0 10px; padding: 0 0 0 19px; border-left: 1px solid #cfd9dc;}
+.headListado h2 { text-align: left; font-size: 20px; color: #2faef9;padding-bottom: 0;margin: 10px 0 20px 0;}
+.headListado .btn { padding: 0; width: 100%; height: 34px; line-height: 34px; font-size: 15px;}
+
+.starts, .contStart, .contStart img, .starts a, .starts span { display: inline-block; float: left; letter-spacing: 0;}
+span.rating {
+	background: url("../img/stars.png") top left;
+	/* background: url("stars-blue.png") top left; */
+	display: inline-block;
+	height: 15px;
+	width: 80px;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+span.gold{
+	background: url("../img/goldstars.png") top left;
+}
+span.r0 {background-position: -80px 0;}
+span.r05{background-position: -80px 15px;}
+span.r1 {background-position: -64px 0;}
+span.r15{background-position: -64px 15px;}
+span.r2 {background-position: -48px 0;}
+span.r25{background-position: -48px 15px;}
+span.r3 {background-position: -32px 0;}
+span.r35{background-position: -32px 15px;}
+span.r4 {background-position: -16px 0;}
+span.r45{background-position: -16px 15px;}
+span.r5 {background-position: 0 0;}
+.starts a, .starts span { margin: 0;}
+.starts span.valoration { margin: 3px 0px 0px 10px;}
+span.seeComments { margin: 3px 0 0 7px;}
+span.comments { margin: 0px 0 0 7px;}
+.contStart { padding-top: 2px;}
+
+
+
+/* Listado Ofertas --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.ofertas.list .boxG { position: relative; border-radius: 5px;}
+.ofertas.list .boxG .boxBtn { padding: 10px 0; z-index: 5;}
+.ofertas.list .boxG .boxBtn .ver { float: right; margin-top: 5px;}
+.ofertas.list .boxG .txt { float: left; width: 460px; margin: 20px 10px 60px 10px;}
+
+.ofertas.list .boxG .infoCoste { position: absolute; right: 0; top: 0; height: 100%; background: #f5f9fc; width: 190px; border-radius: 0 5px 5px 0;}
+.ofertas.list .boxG .infoCoste .txtCoste { position: absolute; top: 14px; right: -4px; /*background: url(../img/bgBordeBanderita.png) top right no-repeat;*/}
+.ofertas.list .boxG .infoCoste .contH { display: block; float: right; height: 41px; padding: 0; margin: 0 0 10px 0; line-height: 38px;}
+.ofertas.list .boxG .infoCoste a { display: block; float: right; height: 41px; padding: 0 3px 0 0; background: url(../img/bgBordeBanderita.png) top right no-repeat; -webkit-transition: none; -moz-transition: none; -o-transition: none;}
+.ofertas.list .boxG .infoCoste .num { float: right; font-size: 20px; color: #FFF; margin: 0 0 0 0; padding: 0 10px 0 15px; letter-spacing: 0; font-family: 'museo500', sans-serif; background: url(../img/bgRepeatBanderita.png) top left repeat-x;}
+.ofertas.list .boxG .infoCoste .borde { display: block; float: left; height: 41px; width: 18px; background: url(../img/bgBanderita.png) top left no-repeat; }
+.ofertas.list .boxG .infoCoste p { float: right; width: 90%; text-align: right; color: #a3b0b5; padding: 0 14px 0 0; font-size: 12px;}
+
+.ofertas.list .boxG .infoCoste a:hover { background: url(../img/bgBordeBanderitaH.png) top right no-repeat;}
+.ofertas.list .boxG .infoCoste a:hover .num { background: url(../img/bgRepeatBanderitaH.png) top left repeat-x;}
+.ofertas.list .boxG .infoCoste a:hover .borde { background: url(../img/bgBanderitaH.png) top left no-repeat; }
+
+
+
+/* User --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.boxUser { margin-top: 20px;}
+.colInfoUser.titBoxUser { position: relative; width: 668px; padding: 20px 15px; margin-right: 10px; border-top: 1px solid #edf0f3; border-right: 1px solid #edf0f3; border-radius: 0 10px 0 0; border-left: 1px solid #edf0f3;}
+.titBoxUser h1 { font-family: 'museo500', sans-serif; font-size: 24px; color: #2383ba; text-transform: uppercase; float: left;}
+.titBoxUser h1 a { background: url(../img/btnAtras.png) no-repeat left center; padding-left: 20px;}
+.premium .titBoxUser h1, .premium .titBoxUser h1 a  { color: #c8b051;}
+.user { float: left; background: url(../img/bgUser.gif) repeat-y left top; margin: 0 10px; border-left: 1px solid #edf0f3; border: 1px solid #edf0f3; border-radius: 10px 0 10px 10px;}
+.premium .user { float: left; background: url(../img/bgUserPremium.gif) repeat-y left top; margin: 0 10px; border-left: 1px solid #edf0f3; border: 1px solid #edf0f3; border-radius: 10px 0 10px 10px;}
+
+.colUser { float: left; width: 239px; position: relative; /*background: #faf5da;*/}
+.colUser .foto { position: absolute; top: -65px; left: 50%; width: 130px; height: 130px; margin-left: -65px; overflow: hidden;}
+.colUser .foto img { width: 100%;}
+.colUser .foto .circle { position: absolute; top: 0; left: 0; width: 130px; height: 130px; background: url(../img/iconFotoUserG.png) no-repeat top left;}
+.premium .user .colUser .foto { height: 139px; }
+.premium .user .colUser .foto .circle {  height: 139px; background: url(../img/iconFotoUserGPremium.png) no-repeat left top;}
+
+.colUser .contUser { float: left; width: 239px; margin: 80px 0 30px 0;}
+.contUser h2 { font-family: 'museo500', sans-serif; font-size: 24px; color: #2383ba; text-align: center; margin-bottom: 15px;}
+.premium .contUser h2 { color: #c8b051; margin: 10px 0 15px 0;}
+.contUser ul { list-style: none; border-top: 1px solid #cfd9dc;}
+.premium .contUser ul { border-top: 1px solid #ede6c6;}
+.contUser ul a { float: left; display: block; width: 84%; padding: 12px 8% 14px 8%; font-size: 16px; text-transform: uppercase; color: #849295; border-bottom: 1px solid #cfd9dc; background: url(../img/iconSelectContUser.png) no-repeat 120% 50%; font-family: 'museo500', sans-serif;}
+.premium .contUser ul a { border-bottom: 1px solid #ede6c6;}
+.contUser ul a:hover, .contUser ul a.on { color: #2faef9; background: url(../img/iconSelectContUser.png) no-repeat 92% 50%;}
+.premium .contUser ul a:hover, .premium .contUser ul a.on { color: #c8b051;}
+.contUser .percentUser, .contUser .premium { float: left; width: 84%; padding: 12px 8% 14px 8%; text-align: left;}
+.contUser .percentUser h3 { font-size: 16px; color: #2faef9; text-align: left; padding: 0; margin: 0 0 5px 0;}
+.premium .contUser .percentUser h3 { color: #c8b051;}
+.contUser .premium h3 { font-family: 'museo500', sans-serif; font-size: 20px; color: #2faef9; text-align: left; padding: 0; margin: 0 0 10px 0;}
+.contUser .premium { background: #c7e3f4; padding: 20px 8% 25px 8%;}
+.contUser .premium .btn { font-size: 12px; height: 32px; line-height: 30px; padding: 0; width: 100%; border: none;}
+
+.porcentaje { }
+.porcentaje .boxCircle { float: left; width: 100%;}
+.porcentaje .boxCircle .circle { float: left; padding: 13px 0 0 12px; width: 28px; height: 28px; background: url(../img/bgPercent.png) no-repeat 0 0;}
+.porcentaje .boxCircle p { float: left; padding: 12px 0 0 5px; letter-spacing: 0px; font-size: 13px;}
+.porcentaje ul, .premium .porcentaje ul { float: left; border: none;}
+.porcentaje ul li { float: left; background: url(../img/bgLineaPercent.png) repeat-y 20px 0;}
+.porcentaje ul li:first-child { padding: 10px 0 0 0;}
+.porcentaje ul li:last-child { background: none;}
+.porcentaje ul li a, .premium .porcentaje ul li a { display: block; float: left; width: auto; border-bottom: none; padding: 2px 0 15px 35px; background: url(../img/iconListCaracterUser.png) no-repeat 11px 0px; font-size: 12px; letter-spacing: 0; text-transform: none; color: #929fa2;}
+.porcentaje ul li a:hover { background: url(../img/iconListCaracterUser.png) no-repeat 11px 0px;}
+
+.colInfoUser { float: right; width: 699px;}
+.alert { position: relative; display: table; padding: 15px 0; width: 100%; background: #ffeba4 url(../img/iconAlert.png) no-repeat 20px center;}
+.alert strong { color: #000; font-weight: normal; letter-spacing: 0;}
+.alert.ok { background: #d5eb95 url(../img/iconAlertOk.png) no-repeat 20px center;}
+.alert.ko { background: #ffb6a8 url(../img/iconAlertKo.png) no-repeat 20px center;}
+.alert p, .alert h1 { font-size: 13px; padding: 0 0 0 75px; /*max-width: 75%;*/ display: table-cell; vertical-align: middle; color: #304951; font-family: 'museo500', sans-serif;}
+.alert p span { font-size: 12px; font-family: 'museo500', sans-serif;}
+.alert a { float: right; margin-right: 15px; height: 32px; padding: 0 20px; line-height: 34px; font-size: 13px; white-space: nowrap;}
+.colInfoUser ul { list-style: none;}
+.colInfoUser ul li.caduca { background: #f4f8fb;}
+
+.boxItem { position: relative; float: left; width: 100%; border-bottom: 1px solid #edf0f3;}
+.edit { float: left; border-left: 4px solid #2faef9; width: 695px; /*background: #e9f6fe;*/}
+.edit.blue { background: #e9f6fe;}
+.edit.premium { float: left; border-left: 4px solid #b8a248; width: 695px;}
+.edit.ocre { background: #fcfbf6;}
+.boxContItem { position: relative; float: left; width: 96%; height: auto; padding: 10px 2%;}
+.boxItem .thumbP { float: left; width: 110px; height: 110px; overflow: hidden; border-radius: 3px;}
+.boxItem .thumbP img { width: 100%;}
+.boxItem .txt { position: relative; float: left; width: 535px; padding: 10px 0 10px 20px;}
+
+.boxItem .txt .txtDate { font-size: 11px; padding: 0 140px 20px 0;}
+.boxItem .txt .txtDate strong { font-weight: normal; color: #ff5435;}
+.boxItem .txt .txtDate strong.green { color: #9dca3a;}
+.boxItem .txt .txtDate b.blue { color: #333; font-weight: normal; letter-spacing: 0;}
+.boxItem .txt .txtDate strong a { font-weight: normal; color: #ff5435; text-decoration: underline;}
+.boxItem .txt .txtInfo { padding-bottom: 30px;}
+.boxItem .txt .boxRrss { position: absolute; top: 0; right: 0;}
+.boxItem .txt .boxRrss .btnRrss { float: right;}
+
+.boxItem .boxBtn { width: 96%; position: absolute; bottom: 0; right: 0; padding: 0 2%; line-height: 23px; height: 40px;}
+.boxItem .boxBtn a { margin-right: 15px;}
+.boxItem .boxBtn .btn, .boxBtn .clear { float: right;}
+.boxBtn .clear { margin-right: 0; width: 22px; height: 35px;}
+.boxItem .boxBtn .btnsLeft { float: left; margin-left: 130px;}
+.boxItem .boxBtn .btnsRight { float: right;}
+.boxItem .boxBtn .btnsRight .btn { margin: 0;}
+.boxItem .boxBtn .mod { float: left; color: #bdccd0; height: 30px; padding: 0 0 5px 0;}
+.boxItem .boxBtn .mod:hover { color: #2383ba;}
+.boxItem .boxBtn .mod span { background: url(../img/btnMod.png) no-repeat; display: block; float: left; width: 26px; height: 20px;}
+.boxBtn a { display: block; margin-top: 5px; /*margin-right: 15px;*/}
+.boxItem .boxBtn .mod { float: left; color: #bdccd0; height: 30px; padding: 0 0 5px 0;}
+.boxItem .boxBtn .mod span { background: url(../img/btnMod.png) no-repeat; display: block; float: left; width: 26px; height: 20px;}
+.boxItem .boxBtn .deseo { float: left; color: #bdccd0; height: 30px; padding: 0 0 5px 0;}
+.boxItem .boxBtn .deseo:hover { color: #2383ba;}
+.boxItem .boxBtn .deseo span { background: url(../img/btnDeseo.png) no-repeat; display: block; float: left; width: 36px; height: 20px;}
+.boxBtn .mod.on, .boxBtn .deseo.on { color: #5b6d73; background: url(../img/bgBtnOnUserFrom.png) no-repeat left bottom;}
+.premium .boxBtn .mod.on, .premium .boxBtn .deseo.on { color: #5b6d73; background: url(../img/bgBtnOnUserPremiumFrom.png) no-repeat left bottom;}
+.boxBtn .clear.on { color: #5b6d73; background: url(../img/bgBtnOnUserFromRed.png) no-repeat left bottom;}
+
+.boxItem .boxBtn .off { -moz-opacity: .4; opacity: .4; filter: alpha(opacity=40);}
+
+.boxFormDeseo { position: relative; float: left; width: 96%; height: auto; padding: 10px 2%; background: #e9f6fe;}
+.premium .boxFormDeseo { background: #fcfbf6;}
+
+.boxFormDeseo h4 { font-size: 16px; color: #304951; padding: 0 0 5px 0; margin: 10px 0; letter-spacing: 0; border-bottom: 1px solid #bdccd0;}
+.boxFormDeseo.formulario .blockFormCierre { border-top: none; padding: 15px 0 5px 0; margin-bottom: 0;}
+.boxFormDeseo .heLeido { float: left; margin-top: 5px;}
+.edit.premium .boxFormDeseo .heLeido { float: left; margin-top: 0;}
+
+.masOfertas { position: relative; float: left; width: 96%; height: auto; padding: 20px 2%;}
+.masOfertas .btnCerrar { position: absolute; top: 30px; right: 20px;}
+.masOfertas h4 { font-size: 24px; color: #2faef9; padding-bottom: 15px;}
+.masOfertas p { font-size: 15px; padding-right: 60px;}
+.masOfertas .boxBtn .btn { float: right; padding: 0 15px;}
+
+.comentario { position: relative; float: left; width: 100%; border-bottom: 1px #edf0f3 solid; display: table; min-height: 70px;}
+.comentario .contComentario { display: table-cell; vertical-align: middle; padding: 10px; float: left;}
+.comentario .foto { position: relative; float: left; width: 50px; height: 50px; overflow: hidden; margin-right: 10px;}
+.comentario .foto img { width: 100%;}
+.comentario .foto .circle { position: absolute; top: 0; left: 0; width: 50px; height: 50px; background: url(../img/iconFotoUserBorde.png) no-repeat top left;}
+.comentario .txt { float: left; padding: 7px 0 0 0; line-height: 16px; color: #000; letter-spacing: 0; font-family: 'museo500', sans-serif;}
+
+.comentario .txt span, .comentario span.respuesta { font-size: 11px; color: #849295; line-height: 18px; font-family: 'museo500', sans-serif;}
+.comentario .boxBtn { float: right; padding: 18px 20px 20px 0; width: 210px;}
+.comentario .boxBtn .btn { width: 150px;}
+.comentario .starts { float: right; padding: 25px 2% 0 0; text-align: right;}
+.comentario .starts .contStart { margin-left: 10px;}
+.comentario .boxRespuesta { float: left; width: 90%; padding: 0 0 10px 70px; letter-spacing: 0; color: #000;}
+.comentario .respuesta { display: inline-block; background: url(../img/iconRespuesta.png) no-repeat left top; padding: 0 0 2px 16px;}
+.comentario .boxResponder { display: block; padding: 0 2% 0 32px; background: #FFF;}
+.comentario .boxResponder .boxResponderTextarea { position: relative; padding: 20px 0 0 0;}
+.comentario .boxResponder .iconResponder { position: absolute; width: 32px; height: 32px; top: 4px; left: -12px; background: url(../img/iconComentario.png) no-repeat center center;} 
+.comentario .boxResponder .blockFormCierre { margin: 0; padding: 10px 0; border: none;}  
+.comentario .boxResponder .formulario button.jqTransformButton.btn { border: none; padding: 0 30px; height: 26px; line-height: 26px; font-size: 12px;}
+.comentario .btnDesplegar { position: absolute; top: 50%; right: 20px;}
+
+.interes { display: block; float: left; padding: 0 2%; text-align: left;} 
+.interes a { display: inline-block; padding-bottom: 15px;}
+.interes a.on { background: url(../img/bgBtnOnUserInteres.png) no-repeat center bottom; color: #5b6d73;}
+
+.boxFormDeseo.interesInfo { background: #d4eefd;}
+
+.deseoOn .foto .circle { background: url(../img/iconFotoUserVerde.png);}
+.deseoOff { background: #f4f8fb;}
+.deseoOff .foto .circle { background: url(../img/iconFotoUserBordeOff.png);}
+.deseoOff .btn { background-color: #bdccd0; border-bottom: 3px solid #aebcc0;}
+.deseoOff .btn:hover { background-color: #9eadb0; border-bottom: 3px solid #929fa2;}
+
+.deseoDesplegado { background: #d4eefd;}
+.ocre .deseoDesplegado { background: #faf5da;}
+.edit .comentario.deseoDesplegado .foto .circle { background: url(../img/iconFotoUserPBlueDark.png) no-repeat top left;}
+.edit.ocre .comentario.deseoDesplegado .foto .circle { background: url(../img/iconFotoUserOcre.png) no-repeat top left;}
+.edit .comentario.deseoDesplegado .foto { position: absolute; top: 9px; left: 2%; width: 50px; height: 50px; overflow: hidden; margin-right: 10px;}
+
+.comentario .btnDesplegar { position: absolute; width: 40px; height: 40px; right: 5px; top: 15px;}
+.comentario .btnDesplegar.on { background: url(../img/bgFlechasComentarios.png) no-repeat 0 -40px;}
+.comentario .btnDesplegar.off { background: url(../img/bgFlechasComentarios.png) no-repeat 0 0px;}
+.comentario .fecha { position: absolute; right: 20px; top: 25px; letter-spacing: 0; font-size: 11px;}
+
+.edit .comentario { border-bottom: none;}
+.edit .comentario .contComentario { display: table-cell; vertical-align: middle; padding: 10px; float: left; margin: 0;}
+.edit .comentario .contComentario { float: left; width: 100%; padding: 0; margin: 0;}
+
+.edit .comentario .foto .circle { position: absolute; top: 0; left: 0; width: 70px; height: 70px; background: url(../img/iconFotoUserMBlue.png);}
+.edit .comentario.yo .foto .circle { position: absolute; top: 0; left: 0; width: 70px; height: 70px; background: url(../img/iconFotoUserMBlueBorde.png);}
+.edit.ocre .comentario .foto .circle { position: absolute; top: 0; left: 0; width: 70px; height: 70px; background: url(../img/iconFotoUserMOcre.png);}
+.edit.ocre .comentario.yo .foto .circle { position: absolute; top: 0; left: 0; width: 70px; height: 70px; background: url(../img/iconFotoUserMOcreBorde.png);}
+.edit .comentario .foto { position: absolute; left: 1%; top: 10px; width: 70px; height: 70px; overflow: hidden; margin-right: 0;}
+
+.edit .comentario.alert .foto, .edit .comentario.alertOk .foto { position: absolute; left: 1%; top: 50%; width: 70px; height: 70px; overflow: hidden; margin-right: 0; margin-top: -40px;}
+.edit .comentario.alert .txt { background: #ffeba4 url(../img/iconAlert.png) no-repeat 7% center; width: 81%; padding: 40px 0 40px 13%; font-size: 14px;}
+.edit .comentario.alert .foto .circle { position: absolute; top: 0; left: 0; width: 70px; height: 70px; background: url(../img/iconFotoUserMAlertBorde.png);}
+.edit .comentario.alert .fecha, .edit .comentario.alertOk .fecha { position: absolute; right: 20px; top: 42%; letter-spacing: 0; font-size: 11px;}
+
+.edit .comentario.alertOk .txt { background: #d5eb95 url(../img/iconAlertOk.png) no-repeat 7% center; width: 81%; padding: 40px 0 40px 13%; font-size: 14px;}
+.edit .comentario.alertOk .foto .circle { position: absolute; top: 0; left: 0; width: 70px; height: 70px; background: url(../img/iconFotoUserMAlertOkBorde.png);}
+
+.edit .comentario .txt { float: left; width: 87%; margin-left: 6%; padding: 30px 0 30px 7%; letter-spacing: 0; color: #000; border-bottom: 1px #cfd9dc solid;}
+.edit .comentario.anterior .txt { border-bottom: none;}
+.edit .comentario.deseoDesplegado .txt { border-bottom: none; padding: 5px 0 15px 7%; }
+
+.edit .enviado { background: url(../img/bgLine.gif) no-repeat 41px 50px; padding-bottom: 0;}
+.edit .recibido { background: url(../img/bgLine.gif) repeat-y 41px 0; padding: 0;}
+.edit .responder { background: url(../img/bgLine.gif) no-repeat 41px -1850px; padding-bottom: 0;}
+.edit .ultimoComentario { background: url(../img/bgLine.gif) no-repeat 41px -1950px; padding: 0;}
+
+.edit .comentario .boxResponder { float: left;display: block; padding: 15px 2% 0 5%; width: 92%; background: none;}
+.edit .comentario .boxResponder .iconResponder { position: absolute; width: 70px; height: 70px; top: -10px; left: -28px; background: none;} 
+.edit .comentario .boxResponder .iconResponder .foto .circle { position: absolute; top: 0; left: 0; width: 70px; height: 70px; background: url(../img/iconFotoUserMBlueTextarea.png);}
+.edit.ocre .comentario .boxResponder .iconResponder .foto .circle { position: absolute; top: 0; left: 0; width: 70px; height: 70px; background: url(../img/iconFotoUserMOcreTextarea.png);}
+.edit .comentario .boxResponder .iconResponder .foto { position: absolute; left: 0%; top: 0; width: 70px; height: 70px; overflow: hidden; margin-right: 0;}
+
+.comentario .boxResponder .boxResponderTextarea textarea { width: 90%; padding: 2% 2% 2% 8%;}
+
+.boxLinks { margin-top: 5px;}
+.boxLinks span { margin: 0 5px;}
+.boxLinks, .boxLinks a { color: #849295;}
+
+.pag { line-height: 24px; vertical-align: middle; float: right;}
+.pag a { background: #cfd9dc; display: inline-block; height: 24px; width: 24px; border-radius: 2px; text-align: center; font-size: 16px; color: #849295;}
+.pag a.prev { margin-left: 5px;}
+.pag a.next { }
+.pag a:hover { color: #FFF; background-color: #9eadb0;}
+.pag a:active { background-color: #195c83; color: #FFF;}
+
+.pag.bottom { margin: 10px 20px 10px 0;}
+
+.enviado { background: url(../img/bgLine.gif) no-repeat 36px 50px; padding-bottom: 15px;}
+.recibido { background: url(../img/bgLine.gif) repeat-y 36px 0; padding: 15px 0;}
+.responder { background: url(../img/bgLine.gif) no-repeat 36px -1900px; padding-bottom: 15px;}
+.responder.primera { padding: 30px 0 60px 0;}
+.ultimoComentario { background: url(../img/bgLine.gif) no-repeat 36px -1950px; padding: 15px 0;}
+
+.colInfoUser .filters { position: relative; float: left; width: 100%; border-bottom: 1px solid #edf0f3;}
+.colInfoUser .filters .drops { position: relative; float: left; padding: 10px 0px 15px 20px;}
+.colInfoUser .filters .combo { float: left; width: 180px; margin-right: 15px;}
+.colInfoUser .filters .combo .jqTransformSelectWrapper { width: 100%; border: 1px solid #cfd9dc; height: 26px; border-radius: 3px;}
+.colInfoUser .filters .combo .jqTransformSelectWrapper a.jqTransformSelectOpen { height: 26px; background: url(imgForm/select_right_p.gif) no-repeat right center;}
+.colInfoUser .filters .combo .jqTransformSelectWrapper div span { padding: 4px 0 0 7px;}
+.colInfoUser .filters .combo .jqTransformSelectWrapper ul { top: 27px;}
+
+.colInfoUser .filters .search { position: static; float: right; left: auto; right: auto; top: auto; width: 250px; padding: 25px 20px 15px 0; margin: 0; text-align: center;}
+.colInfoUser .filters label { font-size: 11px; padding: 0 5px 2px 0;}
+.colInfoUser .filters .search input { display: inline-block; height: 26px; line-height: 26px;}
+.colInfoUser .filters .search input[type="submit"] { display: inline-block; width: 60px; padding: 0; border-bottom: none; height: 28px; font-size: 13px; background: #adbec3;}
+.colInfoUser .filters .search input[type="text"] { display: inline-block; height: 26px; width: 150px; margin-right: 5px;}
+
+.volver { float: left; padding: 20px 2%;}
+.volver a { background: url(../img/btnAtras.png) no-repeat left center; padding-left: 20px;}
+
+.ninguno { float: left; text-align: center; width: 90%; padding: 40px 5%; background: url(../img/iconLamparaNinguno.png) no-repeat center center;}
+.ninguno h2 { font-family: 'museo500', sans-serif; font-size: 24px; margin-bottom: 200px;}
+.ninguno .btn { padding: 0 30px;}
+
+.facturas { float: left; width: 100%; border-spacing: 0; letter-spacing: 0; font-size: 14px;}
+.facturas th { background: #FAF5DA; height: 40px; border-bottom: 1px solid #edf0f3; font-weight: normal;}
+.facturas td { text-align: center; vertical-align: middle; padding: 10px 0; border-bottom: 1px solid #edf0f3; color: #304951; font-family: 'museo500' ,sans-serif;}
+.facturas .btn { height: 30px; line-height: 30px; padding: 0 20px; border-bottom: 2px solid #2ba0e5; font-size: 13px;}
+.factura.iva { float: right; font-size: 10px; padding: 0 5px;}
+
+.boxDatosEldeseazo { float: left; width: 100%; border-bottom: 1px solid #edf0f3; margin: 30px 0;}
+.boxInfoEldeseazo { float: left; width: 70%; padding-left: 20px; margin-bottom: 30px; }
+
+.btnImprimir { float: right; margin: 90px 40px 0 0;}
+.btnImprimir .btn { width: 90px; height: 34px; line-height: 34px; background: #c9b151; border: 0; font-size: 14px;}
+.boxDatosEmpresa { float: left; width: 100%;}
+.boxDatosEmpresa h2, .boxDatosEldeseazo h2 { font-size: 21px; font-family: 'museo500',sans-serif; color: #5b6d73;}
+.boxDatosEmpresa ul, .boxDatosEldeseazo ul { line-height: 24px;}
+.boxDatosEmpresa strong, .boxDatosEldeseazo strong { color: #304951;}
+.boxNum, .boxCliente { float: left; padding-left: 20px; margin-bottom: 30px;}
+.boxNum { width: 260px;}
+.boxCliente { border-left: 1px solid #cfd9dc;}
+.total .tit, .titTotal { padding-right: 30px; text-align: right;}
+.titTotal { color: #304951; font-family: 'museo500',sans-serif;}
+.total { float: right; margin-top: 60px; width: 400px; border-spacing: 0; letter-spacing: 0; font-size: 14px;}
+.total .caja, .total .destaca { width: 250px; padding: 10px 30px 10px 0; text-align: right; border-top: 1px solid #edf0f3; border-left: 1px solid #edf0f3;}
+.destaca { border-bottom: 1px solid #edf0f3; background: #FAF5DA;}
+
+
+
+/* Mi cuenta --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.fotoUsuario { position: relative; height: 50px; width: 230px; float: left; margin: 20px 10px 0 0;}
+.fotoUsuario .foto { float: left; width: 50px; height: 50px; overflow: hidden; margin-right: 10px;}
+.fotoUsuario .foto img { width: 100%;}
+.fotoUsuario .foto .circle { position: absolute; top: 0; left: 0; width: 50px; height: 50px; background: url(../img/iconFotoUserBlue.png) no-repeat top left;}
+.fotoUsuario .addPhoto { float: left; margin: 15px 0 0 10px; font-family: 'museo500', sans-serif; color: #2faef9;}
+
+.enlaceFb { float: left; width: 100%; margin: 30px 0 20px 0;}
+.enlaceFb .title { display: block; color: #304951; font-size: 16px;}
+.enlaceFb .btn { height: 34px; line-height: 34px; padding: 0 30px 0 50px; background: #2faffa url(../img/bgBtnFacebook.png) no-repeat left top; border-bottom: 2px solid #2ba0e5; cursor: pointer;}
+.enlaceFb .btn:hover { background: #2383ba url(../img/bgBtnFacebook.png) no-repeat left top;}
+
+.modUser .mas { float: left; padding: 0 0 0 25px; background: url(../img/btnAdjuntarMas.png) no-repeat left center; font-family: 'museo500', sans-serif;}
+
+.modUser .blockFormCierre { margin-top: 20px;}
+.modUser .blockFormCierre h4 { text-align: left;}
+.modUser .blockFormCierre p { margin: 0; padding: 0 0 18px 0; text-align: left;}
+
+.contPerfil { position: relative; float: left; width: 96%; height: auto; padding: 10px 2%;}
+.contPerfil .fotoUsuario .foto .circle { position: absolute; top: 0; left: 0; width: 50px; height: 50px; background: url(../img/iconFotoUserYellow.png) no-repeat top left;}
+.contPerfil .map { float: left; margin: 35px 0 0 15px; width: 250px; height: 270px;} 
+.contPerfil.formulario h2 { margin: 50px 0 20px 0; padding: 0 0 15px 0;}
+
+.contPerfil.formulario .blockFormCierre { border-top: none; padding: 15px 0 5px 0; margin-bottom: 0;}
+.contPerfil h4 { font-size: 16px; color: #304951; padding: 0 0 5px 0; margin: 10px 0; letter-spacing: 0; border-bottom: 1px solid #bdccd0;}
+
+
+
+/* Formularios --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.titleForm { float: left; padding: 40px 0 10px 0; width: auto;}
+.titleForm h1 { margin: 0 0 17px 0; font-size: 25px; line-height: 20px; color: #2383ba;}
+.titleForm h1.yellow { color: #c9b151;}
+.titleForm h2 { margin: 0 0 0 0; font-family: 'museo500', sans-serif; padding-bottom: 10px; font-size: 18px; color: #849295;}
+.titleForm p { margin: 0 0 0 0; font-family: 'museo500', sans-serif; font-size: 15px; color: #849295;}
+.titleForm .infoObligatorio {font-size: 12px;}
+
+.form { width: 940px; margin-left: 10px;}
+.form.contacto { width: 600px; margin-left: 10px;}
+.form.contacto .jqTransformInputWrapper, .form.contacto label { margin-left: 4px;}
+.form.contacto label { font-size: 14px;}
+.form.contacto textarea { margin-bottom: 20px;}
+
+.margeAbajo { margin-bottom: 40px;}
+
+input, textarea, select { font-family: 'museo500', sans-serif; color: #849295;}
+
+.formulario h2 { display: block; float: left; width: 100%; padding-bottom: 0; font-family: 'museo500', sans-serif; font-size: 16px; color: #2f4a51; margin: 0 0 20px 0; vertical-align: middle; border-bottom: 1px solid #bdccd0;}
+.formulario h2 strong { font-family: 'Flamenco', sans-serif; font-size: 70px; font-weight: normal; color: #2fadf7; display: inline-block;}
+.formulario h2 span { display: inline-block; font-family: 'Flamenco', sans-serif; font-size: 70px; line-height: 22px; height: 22px; color: #2fadf7; display: inline-block; vertical-align: bottom;}
+
+.boxYellow.formulario h2 {  border-bottom: 1px solid #c9b151;}
+.boxYellow.formulario h2 strong, .boxYellow.formulario h2 span { color: #c9b151;}
+
+.formulario.ayudanos .blockFormCierre { margin: 0; padding: 10px 0 0 0;}
+.formulario.ayudanos .aviso { float: left; width: 100%; padding: 30px 0 7px 0; font-size: 11px; text-align: left;}
+.formulario.ayudanos button.jqTransformButton.btn { border: none; font-size: 13px; padding: 0 15px; height: 26px; line-height: 26px; font-size: 13px;}
+
+.contBoxRadio { margin: 0 0 0 5px;}
+.contBoxRadio div { width: 100%; float: left; margin: 0 0 5px 0;}
+
+.formulario label, .formulario .label { display: block; float: left; width: 99%; padding: 0 0 5px 1%; margin-top: 10px;}
+.formulario label span { display: inline-block; padding-left: 10px; font-size: 11px; letter-spacing: 0;}
+.formulario .boxRadio .label { margin: 15px 0 10px 0;}
+.formulario .boxRadio label { display: block; width: auto; margin: 3px 20px 0 0; padding: 0;}
+.labelPeq { padding: 0; margin: 5px 0 0 0; font-size: 10px; float: left; width: 100%;}
+
+.formulario .blockForm, .formulario .blockFormCierre { float: left; width: 100%; margin-bottom: 20px;}
+.formulario .blockFormCierre { border-top: 1px solid #bdccd0; padding: 15px 0; text-align: right;}
+.formulario .contacto .blockFormCierre .infoObligatorio, .formulario .contacto p { display: inline-block; float: left; padding-top: 5px; color: #879095; font-size: 12px; font-family: 'museo500', sans-serif; margin: 0;}
+.formulario .blockFormCierre a { margin-right: 10px; margin-top: 10px; float: left;}
+button.jqTransformButton.btn { border: none; font-size: 13px; padding: 0 30px;}
+
+.formulario .boxInfo { display: block; float: left; position: relative; width: 240px; padding: 20px; margin: 35px 0 0 70px; background: #c7e3f4; border-radius: 5px; font-size: 13px; line-height: 16px; letter-spacing: 0;}
+.boxInfo .i { position: absolute; width: 32px; height: 32px; left: -16px; top: -16px; background: #FFF; border: 1px solid #d0dadd; border-radius: 16px; color: #d0dadd; font-family: 'museo500', sans-serif; font-size: 18px; line-height: 32px; text-align: center;}
+
+.boxYellow.formulario .boxInfo, .premium .boxFormDeseo .boxInfo { background: #ebdc9a;}
+.boxYellow.formulario .boxInfo .i, .premium .boxInfo .i  { border: 1px solid #c9b151; color: #c9b151;} 
+
+.formulario .rowElem { display: block; float: left; width: 100%;}
+.formulario .rowElem.espacio { display: block; float: left; margin-top: 20px; width: 100%;}
+.formulario .contBlockSG { float: left; width: 100%;}
+.formulario .contBlockG { float: left; width: 500px;}
+.formulario .contBlockM { float: left; width: 400px;}
+.formulario .contBlockPM { float: left; width: 300px;}
+.formulario .contBlockP { float: left; width: 240px;}
+.formulario .contBlockSP { float: left; width: 200px;}
+.formulario .contBlockSP.cif { margin-left: 40px;}
+.formulario .contBlockP.cif { margin-left: 40px;}
+
+.map { float: left; margin: 35px 0 0 20px; width: 260px; height: 270px; } 
+.acepto { margin-top: 25px;}
+.acepto span.heLeido { display: block; padding: 2px 0 0 30px;}
+
+
+.formulario .contBlockG input, .formulario .contBlockG select { float: left; width: 488px;}
+.formulario .contBlockM input, .formulario .contBlockM select { float: left; width: 388px;}
+.formulario .contBlockPM input, .formulario .contBlockPM select { float: left; width: 288px;}
+.formulario .contBlockP input, .formulario .contBlockP select { float: left; width: 228px;}
+.formulario .contBlockSP input, .formulario .contBlockSP select { float: left; width: 168px;}
+
+.formulario .contBlockSG textarea { height: 80px; width: 96%; padding: 2%; border: #cfd9dc 1px solid;}
+.formulario .contBlockG textarea { height: 80px; width: 478px; padding: 10px;}
+.formulario .contBlockM textarea { height: 80px; width: 378px; padding: 10px;}
+.formulario .contBlockPM textarea { height: 80px; width: 278px; padding: 10px;}
+.formulario .contBlockP textarea { height: 80px; width: 218px; padding: 10px;}
+.formulario .first { margin-right: 20px;}
+.formulario .firstTop { margin-top: 20px;}
+
+.formulario .contBlockSG .jqTransformTextarea { width: 100%;}
+.formulario .contBlockG .jqTransformSelectWrapper { width: 100%;}
+.formulario .contBlockM .jqTransformSelectWrapper { width: 100%;}
+.formulario .contBlockPM .jqTransformSelectWrapper { width: 100%;}
+.formulario .contBlockP .jqTransformSelectWrapper { width: 100%;}
+
+.fortaleza { float: left; margin: 30px 0 0 20px;}
+.fortaleza span { display: block; padding-bottom: 7px;}
+.fortaleza .barra { float: left; width: 160px; height: 10px; border: 1px solid #FFF; border-radius: 5px; background: #FFF; box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); -o-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); overflow: hidden;}
+.fortaleza .barra .sizeBarra { float: left; height: 10px; width: 100%; background: #FFF; border-radius: 5px;  -webkit-transition: all 0.2s ease-in; -moz-transition: all 0.2s ease-in; -o-transition: all 0.2s ease-in;}
+
+.boxYellow.formulario .fortaleza .barra .sizeBarra { background: #FFF;}
+.boxYellow.formulario .acepto a { color: #c9b151;}
+
+.boxYellow.formulario .blockFormCierre { border-top: 1px solid #c9b151;}
+.boxYellow.formulario button.jqTransformButton.btn { background: #c9b151; border: none; font-size: 13px; padding: 0 30px;}
+.boxYellow.formulario button.jqTransformButton.btn:hover { background: #8d823d;}
+
+.importe { display: inline-block; margin: 10px 15px 0 0; font-size: 19px; letter-spacing: 0;}
+
+.iva { float: left; margin: 10px 0 0 0; text-align: left; font-size: 19px; letter-spacing: 0; color: #b5b9ba;}
+.iva span { font-size: 13px;}
+
+a.jqTransformCheckbox, a.jqTransformRadio { -webkit-transition: none; -moz-transition: none; -o-transition: none;}
+
+.campoForm.gris input,
+.formulario .contBlockSG.gris textarea,
+.gris textarea,
+.gris .jqTransformInputWrapper { border: 1px solid #cfd9dc;}
+
+.campoForm.orange input,
+.formulario .contBlockSG.orange textarea,
+.orange textarea,
+.orange .jqTransformInputWrapper { border: 1px solid #fcb514;}
+
+.campoForm.blue input,
+.formulario .contBlockSG.blue textarea,
+.blue textarea,
+.blue .jqTransformInputWrapper { border: 1px solid #2faef9;  box-shadow: 0 0 10px #9ecaed;}
+
+.campoForm.red input,
+.formulario .contBlockSG.red textarea,
+.red textarea,
+.red .jqTransformInputWrapper { border: 1px solid #ff5435;}
+
+.red label { color: #ff5435;}
+
+.campoForm.ocre input,
+.formulario .contBlockSG.ocre textarea,
+.ocre textarea,
+.ocre .jqTransformInputWrapper { border: 1px solid #c9b151;}
+
+.jqtransform .campoForm.gris input,
+.jqtransform .campoForm.orange input, 
+.jqtransform .campoForm.blue input,
+.jqtransform .campoForm.ris input,
+.jqtransform .campoForm.ocre input/*, .campoForm.blue input[type="submit"]*/ { border: none;}
+
+.inputClarito { color: #adbec3;} 
+.cajaSeleccionada { 
+    border-color: #2ba0e5 !important;
+    box-shadow: 0 0 10px #9ecaed !important;
+}
+
+.campoForm.gris .jqTransformInputInner div input,
+.campoForm.orange .jqTransformInputInner div input,
+.campoForm.blue .jqTransformInputInner div input,
+.campoForm.red .jqTransformInputInner div input,
+.campoForm.ocre .jqTransformInputInner div input,
+.campoForm.blue .jqTransformInputInner input.cajaSeleccionada { border: none !important; box-shadow: none !important;}
+
+
+
+/* Pedir Deseo --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.boxPedir { position: relative; width: 670px; margin: auto; margin-top: -350px;}
+.boxPedir h1 { margin-bottom: 10px; color: #FFF; font-size: 28px; text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); padding-bottom: 0;}
+.boxPedir.entrar h1 { margin-bottom: 30px;}
+
+.boxPedir.pass { margin-top: -300px; margin-bottom: 500px;}
+.boxPedir.pass h3 { text-align: left; color: #5193c5; margin: 10px 0 30px 0; font-size: 20px;}
+
+.avisaCheck { float: left; width: 640px; padding: 0 15px; margin-bottom: 30px; background: #FFF url(../img/iconCheckVerde.png) no-repeat 97% 50%; border-radius: 4px; font-size: 14px; box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); -o-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);}
+.avisaCheck.gris { background: #FFF url(../img/iconCheckVerde.png) no-repeat 97% 50%;}
+.avisaCheck.blue { background-image: none;}
+.boxForm { float: left; width: 620px; padding: 0 25px; margin-bottom: 10px; background: #FFF; border-radius: 10px; border-top: 3px solid #bdccd0;}
+.boxPedir.entrar .boxForm { margin-bottom: 230px;}
+
+.boxPedir.formulario label { line-height: 18px;}
+.boxPedir.formulario label span { padding-left: 0px;}
+.boxPedir .blockForm { margin-bottom: 20px;}
+.boxPedir .acepto { margin-top: 10px;}
+/*
+.iconCheck { background: url(../img/iconCheckVerde.png) no-repeat center center; float: left; width: 40px; height: 40px; margin-top: 30px;}
+*/
+.jqTransformInput.ida { background: url(../img/iconIda.png) right center no-repeat;}
+.jqTransformInput.vuelta { background: url(../img/iconVuelta.png) right center no-repeat;}
+.jqTransformInput.origen { background: url(../img/iconOrigen.png) right center no-repeat;}
+.jqTransformInput.destino { background: url(../img/iconDestino.png) right center no-repeat;}
+.jqTransformInput.nPersonas { background: url(../img/iconNPersonas.png) right center no-repeat;}
+
+.gris .jqTransformInput.ida { background: url(../img/iconIdaVerde.png) right center no-repeat;}
+.gris .jqTransformInput.vuelta { background: url(../img/iconVueltaVerde.png) right center no-repeat;}
+.gris .jqTransformInput.origen { background: url(../img/iconOrigenVerde.png) right center no-repeat;}
+.gris .jqTransformInput.destino { background: url(../img/iconDestinoVerde.png) right center no-repeat;}
+.gris .jqTransformInput.nPersonas { background: url(../img/iconNPersonasVerde.png) right center no-repeat;}
+
+.boxPedir .contBlockG, .boxPedir .contBlockP { padding-right: 30px;}
+.boxPedir .contBlockG.gris, .boxPedir .contBlockP.gris { background: url(../img/iconCheckVerde.png) right 40px no-repeat;}
+.boxPedir .contBlockG.gris.textForm  { background: url(../img/iconCheckVerde.png) right 75px no-repeat;}
+.boxPedir .contBlockP.gris.campoForm { background: url(../img/iconCheckVerde.png) right 40px no-repeat;}
+
+.entrar h2 { font-size: 22px; margin: 20px 0;}
+.entrar .colDos { float: left; width: 290px; margin-bottom: 20px;}
+.entrar .colDos .rowElem { padding: 4px 0 10px 0;}
+.entrar .colDos { padding: 0 19px 0 0;}
+.entrar .colDos .title { display: block; color: #304951; font-size: 16px; padding-bottom: 16px;}
+.entrar .colDos .blockFormCierre { width: 100%; display: inline-block; margin-top: 15px; text-align: center;}
+.entrar .btn.fbFin { height: 34px; line-height: 34px; padding: 0 30px 0 50px; background: #2faffa url(../img/bgBtnFacebook.png) no-repeat left top; border-bottom: 2px solid #2ba0e5; cursor: pointer;}
+.entrar .btn.fbFin:hover { background: #2383ba url(../img/bgBtnFacebook.png) no-repeat left top;}
+
+.entrar .formulario.colDos { padding: 0 0 0 19px; border-left: 1px solid #bdccd0;}
+.entrar .formulario.colDos label { margin-top: 0;}
+.entrar .formulario.colDos .blockFormCierre { border: none; padding: 15px 0 0 0; margin: 0; text-align: right;}
+.entrar .formulario.colDos .contBlockP { float: left; width: 290px;}
+.entrar .formulario.colDos .contBlockP input { float: left; width: 278px;}
+.entrar .formulario.colDos .contBlockP .jqTransformSelectWrapper { width: 100%;}
+
+.entrar .blockFormCierre { width: 100%; display: inline-block; margin: 15px 0; text-align: right;}
+.entrar .btn { height: 34px; line-height: 34px; border: none; font-size: 13px; padding: 0 30px; cursor: pointer;}
+.entrar strong { color: #5b6d73; font-weight: normal;}
+.entrar .boxRrss { float: left; width: 100%; padding-top: 10px; border-top: 1px solid #bdccd0;}
+.entrar .boxRrss div.txtRrss { float: left; display: block; padding: 10px 10px 0 0; font-size: 15px;}
+.entrar .boxRrss div.btnRrss { float: left; padding-top: 5px;}
+.entrar .gracias { width: 100%; float: left; margin: 0 0 40px 0;}
+.entrar .gracias p { margin-top: 10px; font-size: 15px; letter-spacing: 0; line-height: 20px;}
+.entrar .gracias img { float: left; margin-right: 20px;}
+
+
+
+/* Acceso --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.boxAcceso,
+.boxAccesoRegistro { position: relative; width: 670px; margin: auto; text-align: left;}
+.boxAcceso .boxForm { margin-top: 100px; padding: 40px 20px 15px 20px;}
+.blockFormCierre p { margin-top: 40px; font-size: 12px; text-align: center; letter-spacing: 0;}
+
+.box.crearCuenta { width: 380px; text-align: center;}
+.box.crearCuenta h1 { font-family: 'museo500', sans-serif;  margin: 0 0 30px 0; font-size: 25px; color: #2383ba;}
+.crearCuenta .btn { height: 40px; line-height: 38px; border-bottom: 2px solid #1f73a4; font-size: 15px; padding: 0 30px;}
+
+.boxForm.boxRegistro { margin-top: 120px; padding: 50px 45px 0 45px; width: 580px;}
+.boxForm.boxRegistro h1 { font-size: 22px; color: #2383ba; font-family: 'museo500', sans-serif;}
+.boxForm.boxRegistro .blockFormCierre { border: none; margin: 0; padding: 0 0 30px 0;}
+.boxRegistro label { font-size: 13px; padding: 0 0 10px 0px;}
+.boxRegistro .fortaleza { margin-top: 35px;}
+.boxRegistro .fortaleza .barra { border: 1px solid #cfd9dc;}
+
+.boxAccesoRegistro .boxForm { margin-top: 120px; padding: 0; width: 670px;}
+.entrarRegistro .colDos { float: left; width: 255px; padding: 50px 40px 60px 40px; text-align: center;}
+.entrarRegistro .colDos h2 { color: #2383ba; font-family:  'museo500',sans-serif; font-size: 22px; padding-bottom: 25px;}
+.entrarRegistro .colDos strong { font-family: 'museo500',sans-serif;}
+.entrarRegistro .colDos.grey { width: 295px; padding: 50px 20px 60px 20px; background: #f1f4f4; border-radius: 0 10px 10px 0;}
+.entrarRegistro .btn {  height: 34px; line-height: 34px; padding: 0 15px 0 15px; border-bottom: 2px solid #2ba0e5; font-size: 14px; letter-spacing: 0;}
+.entrarRegistro .btn.fbFin { height: 34px; line-height: 34px; padding: 0 30px 0 50px; background: #2faffa url(../img/bgBtnFacebook.png) no-repeat left top; border-bottom: 2px solid #2ba0e5;}
+.entrarRegistro .btn.fbFin:hover { background: #2383ba url(../img/bgBtnFacebook.png) no-repeat left top;}
+.entrarRegistro .btn.mail { height: 34px; line-height: 34px; padding: 0 30px 0 50px; background: #2faffa url(../img/bgBtnMail.png) no-repeat left top; border-bottom: 2px solid #2ba0e5; margin-bottom: 70px;}
+.entrarRegistro .btn.mail:hover { background: #2383ba url(../img/bgBtnMail.png) no-repeat left top;}
+
+
+
+/* Configuracion Premium --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.confPremium {}
+.landing.confPremium { position: relative; background-image: url(../img/bgConfigurarPremium.jpg); height: 640px; text-align: left;}
+.confPremium .boxDosTercios { padding-top: 80px; float: right;}
+.confPremium .boxDosTercios h2 { color: #FFF; font-size: 30px; margin-left: 30px;}
+.confPremium .boxDosTercios h3 { color: #FFF; font-size: 22px; margin-left: 30px; font-family: 'museo500', sans-serif; text-align: left;}
+.confPremium .boxDosTercios .cif { float: left; padding: 0 30px; width: 500px;}
+.confPremium .boxDosTercios .cif strong { display: block; padding: 0 0 18px 0; font-size: 16px; font-family: 'museo500', sans-serif; color: #FFF; letter-spacing: 0;}
+.confPremium .boxDosTercios .cif input { height: 34px; line-height: 34px;}
+
+.confPremium .boxDosTercios input[type="text"] { width: 200px; margin: 0 10px 0 0;}
+.confPremium .boxDosTercios input[type="submit"] { padding: 0 15px; border: none; background: #c9b151;}
+.confPremium .boxDosTercios input[type="submit"]:hover { background: #b8a248;}
+
+.confPremium .boxTercio { float: left; padding: 80px 0 0 0; width: 300px;}
+.boxTercio .boxCabecera { background: #c9b151; color: #FFF; padding: 20px 20px 0 20px; width: 260px; border-radius: 7px 7px 0 0;}
+.boxTercio .boxCabecera h1 { font-family: 'museo500', sans-serif; font-size: 26px; padding-left: 5px;}
+.boxTercio .boxCabecera h1 strong { font-size: 38px; font-family: 'museo500', sans-serif; padding-left: 35px;}
+.boxTercio .boxCabecera h1 span.euro { font-size: 30px; font-family: 'museo500', sans-serif;}
+.boxTercio .boxCabecera h1 strong span { font-size: 26px; font-family: 'museo500', sans-serif;}
+.boxTercio .boxCabecera p { font-size: 11px; padding-left: 45px; letter-spacing: 0; font-family: 'museo500', sans-serif; line-height: 10px;}
+.boxTercio .boxListado { background: #FFF; color: #849295; width: 300px; padding-bottom: 0; border-radius: 0 0 7px 7px; font-size: 13px;}
+.boxTercio .boxListado ul { padding: 30px 10px 20px 45px; width: 245px; text-align: left;}
+.boxTercio ul li { padding-bottom: 12px; list-style: url(../img/iconCheckMarron.png);}
+.boxTercio ul li strong { font-family: 'museo500', sans-serif; color: #304951;}
+
+p.noIva { display: block; width: 100%; padding: 7px 0 0 0; text-align: right; color: #FFF; font-size: 10px;}
+
+
+
+/* Alta empresas --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.boxAltaEmpresa {}
+.boxAltaEmpresa .box { width: 680px;}
+.boxAltaEmpresa .box .boxTercio { margin: -165px 20px 0 20px; width: 300px; padding: 80px 0 0 0;}
+.boxAltaEmpresa .box .boxTercio.gratis .boxCabecera { background: #bdccd0;}
+.boxAltaEmpresa .box .boxListado { padding-bottom: 20px;}
+.boxAltaEmpresa .box .boxListado ul { height: 320px;}
+.boxAltaEmpresa .box .boxListado a.btn { height: 32px; width: 200px; line-height: 32px; font-size: 13px; font-family: 'museo500', sans-serif; border-bottom: 2px solid #2ba0e5; letter-spacing: 0;}
+.boxAltaEmpresa .box .boxTercio.gratis ul li { list-style: url(../img/iconCheckGris.png);}
+.boxAltaEmpresa .boxCabecera { padding: 25px 20px 0 20px; height: 60px;}
+.boxAltaEmpresa .boxCabecera h3 { font-size: 34px; font-family: 'museo500', sans-serif; text-transform: uppercase; margin: 0; color: #FFF;}
+.boxAltaEmpresa .infoPrecio { height: 70px; background: #c9b151; margin: 0 0 15px 0; color: #FFF;}
+.boxAltaEmpresa .boxTercio.gratis .infoPrecio {background: #bdccd0;}
+.boxAltaEmpresa h4 { font-family: 'museo500', sans-serif; font-size: 26px; padding: 5px 0 0 0;}
+.boxAltaEmpresa .gratis h4 { padding: 10px 0 0 0;}
+.boxAltaEmpresa h4 b { font-size: 38px; font-family: 'museo500', sans-serif;}
+.boxAltaEmpresa h4 span.euro { font-size: 30px; font-family: 'museo500', sans-serif;}
+.boxAltaEmpresa h4 b span { font-size: 26px; font-family: 'museo500', sans-serif;}
+.boxAltaEmpresa p { font-size: 11px; letter-spacing: 0; font-family: 'museo500', sans-serif; line-height: 10px;}
+
+.tpv { float: left; padding: 20px 0; width: 100%; text-align: center;}
+
+.boxPedir.altaEmpresa { position: relative; width: 670px; margin: auto; margin: 30px auto;}
+
+
+
+/* Contacto Gracias --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.contactoGracias { float: left; width: 100%; padding: 50px 0 200px 0;}
+.contactoGracias h1 { color: #2383ba; font-size: 24px; padding: 25px 0; letter-spacing: 0;}
+.contactoGracias p.gracias { font-size: 16px; margin-bottom: 20px;}
+.contactoGracias .boxWhite { margin-bottom: 60px;}
+.contactoGracias .alert .btn { border-bottom: 2px solid #2ba0e5; width: 180px; padding: 0; top: 22px;} 
+.boxBlue { float: left; width: 100%;  background: #afd5e7; padding: 30px 0 30px; position: relative;}
+.boxBlue .boxSearch { padding-top: 10px; text-align: center;}
+.contactoGracias .boxSearch { padding-top: 10px; text-align: center;}
+.contactoGracias .boxSearch h2 { margin-bottom: 30px; color: #2383ba; font-size: 24px; font-weight: bold; text-shadow: none; padding-bottom: 0;  letter-spacing: 0;}
+
+
+
+/* Contacto Gracias --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.boxError { text-align: center;}
+.boxError .error { position: relative; width: 500px; height: 280px; background: url(../img/404.png) no-repeat center top;}
+.boxError .error p { position: absolute; top: 20px; left: 35px; font-size: 17px; font-family: 'museo500', sans-serif; color: #2383ba; text-align: left;}
+.boxError .error h1 { position: absolute; top: 230px; left: 210px; font-size: 26px; color: #2383ba;}
+
+.bordeTop { border-top: 1px solid #cfd9dc;}
+.boxError .boxSearch { padding: 30px 0;}
+.boxError .boxSearch h2 { font-size: 25px; color: #2383ba; letter-spacing: 0; text-shadow: none;}
+.boxError .boxSearch p { font-size: 22px; font-family: 'Maven Pro', sans-serif; color: #5b6d73;}
+
+
+
+/* Prensa --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.boxSalaPrensa { }
+.boxSalaPrensa .itemPress { float: left; width: 100%; margin-bottom: 20px; letter-spacing: 0;}
+
+.boxSalaPrensa .itemPress .logoPress { width: 280px; height: 160px; margin: 0 0 0 10px; background: url(../img/bgBocadilloPrensa.png) no-repeat 265px center; border-right: 0; overflow: hidden; border-radius: 0;}
+.boxSalaPrensa .itemPress .txtPress { float: right; width: 620px; height: 120px; margin: 0 10px 0 0; padding: 20px; color: #9fa7aa; display: table; background: #FFF; border-radius: 5px;}
+.boxSalaPrensa .itemPress:nth-child(even) .logoPress { float: right; margin: 0 10px 0 0; background: url(../img/bgBocadilloPrensa.png) no-repeat -15px center; border-right: 0; overflow: hidden; border-radius: 0;}
+.boxSalaPrensa .itemPress:nth-child(even) .txtPress { float: left; width: 620px; height: 120px; margin: 0 0 0 10px;}
+
+.boxSalaPrensa .txtPress .txtDate { font-size: 12px; font-family: 'museo500', sans-serif; color: #a4b1b5;}
+.boxSalaPrensa .txtPress .txtInfo { color: #5b6d73; padding-bottom: 15px; font-size: 13px;}
+.boxSalaPrensa .txtPress .masInfo { color: #2faef9; font-size: 14px; padding-left: 10px; background: url(../img/iconFlechaPeqDer.png) no-repeat center left;}
+
+.boxSalaPrensa .txtPress strong { color: #304951; font-family: 'museo500', sans-serif;}
+
+
+
+/* Como Funciona --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.comoFunciona { }
+.comoFunciona .box { position: relative;}
+.comoFunciona .btnVideo { position: absolute; top: 190px; left: 260px; width: 100px; height: 100px; background: url(../img/btnVideo.png) no-repeat 0 0; -webkit-transition: none; -moz-transition: none; -o-transition: none;}
+.comoFunciona .btnVideo:hover { background: url(../img/btnVideo.png) no-repeat -100px 0;}
+.comoFunciona .btnVideo:active { background: url(../img/btnVideo.png) no-repeat -200px 0;}
+.comoFunciona .boxTercio { float: right; width: 300px; padding: 0; margin: 100px 10px 0 0; text-align: left; color: #FFF;}
+.comoFunciona .boxTercio p { font-size: 16px; font-family: 'museo500', sans-serif;}
+.comoFunciona .boxTercio p strong, .comoFunciona .boxTercio h1 { font-family: 'museo500', sans-serif;}
+.comoFunciona .boxTercio h1 { font-size: 24px; letter-spacing: 0; padding-bottom: 18px;}
+
+.comoFunciona .titPasos { width: 700px; margin: auto; letter-spacing: 0; padding-bottom: 30px;}
+.comoFunciona .titPasos p { font-size: 16px;  font-family: 'museo500', sans-serif;}
+.comoFunciona .paso { margin-bottom: 10px; padding-bottom: 10px;}
+
+.boxBorde.dos .box, .boxGrey.comoFunciona { text-align: center;}
+.comoFunciona .boxSearch h2 { margin-bottom: 30px; color: #FFF; font-size: 24px; font-weight: bold; text-shadow: none; padding-bottom: 0;  letter-spacing: 0;}
+.comoFunciona .boxSearch h2 span { color: #2383ba;}
+.boxGrey.comoFunciona p { text-align: center; font-size: 18px; line-height: 30px; color: #849295;}
+.boxWhite.comoFunciona .box { font-family: 'museo500', sans-serif; font-size: 20px; text-align: center; margin-bottom: 30px;}
+.boxWhite.comoFunciona .box.txt span { color: #304951;}
+
+.comoFunciona .boxVideos { float: left; width: 100%; margin: 10px 0;}
+.comoFunciona .boxVideos .itemVideo { width: 20%; float: left; position: relative;}
+.comoFunciona .boxVideos .itemVideo img { width: 100%;}
+.comoFunciona .boxVideos .itemVideo span { position: absolute; top: 50%; left: 50%; width: 40px; height: 40px; margin: -20px 0 0 -20px; background-image: url(../img/btnVideo.png); background-repeat: no-repeat; background-position: 0px 0px; background-size: 120px 40px;}
+.comoFunciona .boxVideos .itemVideo:hover span { background-position: -40px 0;}
+.comoFunciona .boxVideos .itemVideo:active span { background-position: -80px 0;}
+
+
+
+/* Adjuntar --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+
+.adjuntar { float: left;}
+.adjuntar a.cerrar { float: left; display: block; width: 20px; height: 20px; margin-left: 30px; background: url(../img/btnCerrar.png) no-repeat center center;}
+.adjuntar span.btnAdjuntar { font-family: 'museo500', sans-serif; display: inline-block; float: left; height: 20px; line-height: 20px; padding: 0 0 0 20px; letter-spacing: 0; color: #bdccd0; font-size: 12px; background: url(../img/btnAdjuntar.png) no-repeat left center;}
+.adjuntar span.btnAdjuntar.up { font-family: 'museo500', sans-serif; display: inline-block; float: left; height: 20px; line-height: 20px; padding: 0 0 0 20px; letter-spacing: 0; color: #bdccd0; font-size: 12px; background: url(../img/btnAdjuntarBlue.png) no-repeat left center;}
+
+.boxTercio .adjuntar { float: left; border-top: 1px solid #e2e8ea; margin-top: 20px;}
+.boxTercio .adjuntar a.btnAdjuntar { margin-top: 20px; font-family: 'museo500', sans-serif; display: inline-block; float: left; height: 20px; line-height: 20px; padding: 0 0 0 20px; letter-spacing: 0; color: #bdccd0; font-size: 12px; background: url(../img/btnAdjuntar.png) no-repeat left center;}
+.boxTercio .adjuntar a.btnAdjuntar:hover { color: #2383ba;}
+.bosTercio .adjuntar a.btnAdjuntar:active { color: #5b6d73;}
+
+.boxTercio .adjuntar a.cerrar { margin-top: 20px; float: right; display: block; width: 20px; height: 20px; background: url(../img/btnCerrar.png) no-repeat center center;}
+.boxTercio .adjuntarMas { float: left; width: 100%; margin: 20px 0 0 0; padding: 10px 0 0 0; border-top: 1px solid #cfd9db;}
+
+.adjuntar .boxBarra { float: left; margin: 5px 0 0 20px; width: 100%;}
+.boxBarra .barra { float: left; width: 220px; height: 4px; border: 1px solid #FFF; border-radius: 5px; background: #FFF; box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); -o-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); overflow: hidden;}
+.boxBarra .barra .sizeBarra { float: left; height: 4px; width: 32%; background: #2faef9; border-radius: 2px;}
+
+form.jqtransformdone div.rowElem .adjuntarMas { float: left; margin: 10px 0 0 0; padding: 10px 0 0 0; border-top: 1px solid #cfd9db;}
+.adjuntarMas .btnAdjuntar { font-family: 'museo500', sans-serif; display: inline-block; float: left; height: 20px; line-height: 20px; padding: 0 0 0 25px; letter-spacing: 0; color: #bdccd0; font-size: 12px; background: url(../img/btnAdjuntarMas.png) no-repeat left center;}
+
+
+
+/* Textos planos --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.textoPlano p, .textoPlano ul, .textoPlano h2, .textoPlano h3 { font-size: 14px; width: 740px; margin-left: 20px;}
+.textoPlano h2, .textoPlano h3 { margin-top: 20px; margin-bottom: 18px; padding: 0 0 5px 0; font-family: 'museo500', sans-serif;  border-bottom: 1px solid #e2e8ea; }
+.textoPlano ul { margin-left: 40px; margin-bottom: 32px;}
+.textoPlano ul li { padding-bottom: 5px;}
+
+
+
+/* Acordeon --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.pestanhas { position: relative; float: left; width: 700px; height: 40px; margin-left: 120px; z-index: 10;}
+.pestanha { position: absolute; top: 0; font-size: 16px; color: #5b6d73; height: 40px; line-height: 40px; width: 348px; text-align: center;}
+.iz { left: 0; border-radius: 5px 0 0 0;}
+.dr { right: 0; border-radius: 0 5px 0 0;}
+.pestanha.on { background: #FFF; color: #2faef9; border-left: 1px solid #edf0f3; border-top: 1px solid #edf0f3; border-right: 1px solid #edf0f3;}
+.pestanha.off { background: #edf0f3; border-left: 1px solid #edf0f3; border-top: 1px solid #edf0f3; border-right: 1px solid #edf0f3;}
+
+.bordeSoft { border-top: 1px solid #edf0f3;}
+
+.accordeon { float: left; width: 700px; margin: 30px 0  30px 120px;}
+.accordeon h3:first-child { border-top: none;}
+.accordeon h3 { position: relative; font-size: 14px; color: #304951; margin: 0; padding: 20px 0 21px 50px; text-align: left; font-family: 'museo500', sans-serif; border-top: 1px solid #bdccd0; cursor: pointer; background: url(../img/iconInterrogante.png) no-repeat 5px 12px;}
+.accordeon div { color: #5b6d73; font-family: 'museo500', sans-serif; padding: 0 50px 10px 50px; }
+.accordeon h3.ui-state-active, .accordeon h3.ui-state-hover { color: #2faef9;}
+.ui-accordion-header-icon { position: absolute; width: 20px; height: 10px; top: 22px; right: 30px; background: url(../img/bgFlechasAccordeon.png) no-repeat 0px 0px; }
+.accordeon h3.ui-state-active .ui-accordion-header-icon, .accordeon h3.ui-state-hover .ui-accordion-header-icon { background: url(../img/bgFlechasAccordeon.png) no-repeat 0px -10px; }
+
+.contact { text-align: center; }
+.contact h2 { color: #2383ba; font-size: 21px; margin-bottom: 20px; font-family: 'museo500', sans-serif;}
+
+
+
+/* Estadisticas --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.estadisticas { float: left; width: 100%; border-spacing: 0; letter-spacing: 0; font-size: 21px; font-family: 'museo500', sans-serif;}
+
+.estadisticas td { text-align: center; vertical-align: middle; padding: 2% 0; border-bottom: 1px solid #eceff3; border-left: 1px solid #eceff3;}
+.estadisticas td.date { border-left: none;}
+.estadisticas td.tit { border-bottom: none; font-size: 18px; font-family: 'museo500', sans-serif;}
+.estadisticas td.tit.empresa { color: #c9b151;}
+.estadisticas td.tit.sector { color: #cedbdd;}
+
+.dark { font-size: 18px;}
+.estadisticas .empresa { background: #fcfbf6; width: 9%;}
+.estadisticas .empresa.dark, .estadisticas .empresa.dark .peq { background: #FAF5DA; color: #849295;}
+.estadisticas .sector { background: #f9fbfc; width: 9%;}
+.estadisticas .sector.dark, .estadisticas .sector.dark .peq { background: #f4f7fa;  color: #849295;}
+.estadisticas .sector.dark .peq, .estadisticas .empresa.dark .peq  { display: inline-block; vertical-align: middle;}
+.peq { font-size: 10px; color: #cedbdd;}
+
+.estadisticas .ok { display: inline-block; vertical-align: middle; width: 30px; height: 24px; background: url(../img/btnManoOk.png) no-repeat 5px -50px;}
+
+td.ver { width: 38%; padding: 1% 3%; font-size: 14px; text-align: left;}
+td.ver span.tit { display: block; float: left; width: 100%; padding: 0 0 10px 0;}
+.estadisticas .ver .comboP { float: left; width: 140px; margin-right: 15px;}
+.estadisticas .ver .comboP .jqTransformSelectWrapper { width: 100%;}
+.estadisticas .ver .comboP .jqTransformSelectWrapper { width: 100%; border: 1px solid #cfd9dc; height: 26px; border-radius: 3px;}
+.estadisticas .ver .comboP .jqTransformSelectWrapper a.jqTransformSelectOpen { height: 26px; background: url(imgForm/select_right_p.gif) no-repeat right center;}
+.estadisticas .ver .comboP .jqTransformSelectWrapper div span { padding: 4px 0 0 7px;}
+.estadisticas .ver .comboP .jqTransformSelectWrapper ul { top: 27px;}
+.estadisticas td.ver input[type="submit"], .estadisticas td.ver button.jqTransformButton { background: #c9b151; width: 110px; height: 26px; padding: 0; line-height: 26px; font-size: 13px; float: right;}
+.estadisticas td.ver input[type="submit"]:hover, .estadisticas td.ver button.jqTransformButton:hover { background: #b8a248;}
+
+.filters.estad .combo { padding-right: 30px; margin-right: 25px; background: url(../img/iconCalendario.png) no-repeat right center;}
+.filters.estad .txt { float: left; padding: 7px 15px 0 0;}
+.filters.estad .infoPeriodo { float: right; padding: 20px 15px 0 0;}
+.filters.estad .infoPeriodo strong { font-family: 'museo500', sans-serif; color: #304951;}
+
+
+td.tdEstadistica { padding: 20px 0; background: #fcfbf6; text-align: left;}
+.chart { float: left; width: 650px; margin: 0 3%;}
+.chart .titChart { float: left; width: 100%; border-top: 1px solid #dcdcdc; border-left: 1px solid #dcdcdc; border-right: 1px solid #dcdcdc; }
+.chart .titChart h3 { padding: 0; margin: 10px 0 3px 15px; font-size: 18px; font-family: 'museo500', sans-serif; color: #c9b151; text-align: left;}
+.chart .titChart p { margin: 0 0 0 15px; font-size: 12px; font-family: 'museo500', sans-serif; color: #849295;}
+.titInfoChart { width: 60%; float: left; }
+
+.chart .btnsChart { float: right; margin: 2% 2% 0 0;}
+.chart .btnActualizar { float: left; height: 30px; line-height: 30px; background: #FFF url(../img/btnActualizar.png) no-repeat 5px 5px; padding: 0 10px 0 30px; margin-right: 10px; color: #c9b151; font-size: 14px;}
+.chart .btnX { float: left; display: block; width: 30px; height: 30px; background: #FFF url(../img/btnX.png) no-repeat center center;}
+.chart .grafica { background: #FFF; padding: 10px 0 20px 0; border: 1px solid #dcdcdc;}
+
+.tdEstadistica .boxCheck { float: left; font-size: 14px; margin: 20px 0 0 20px;}
+.tdEstadistica .boxCheck .heLeido { font-size: 14px; margin: 2px 0 0 5px;}
+.tdEstadistica .btns { float: right; margin: 15px 30px 0 0;}
+.tdEstadistica .btns .btn { height: 35px; line-height: 35px; border: none; padding: 0 10px; font-size: 14px;}
+.estadisticas td.ver button.jqTransformButton.btnVerGrafico { padding-left: 30px; background: #c9b151 url(../img/btnEstadisticas.png) no-repeat 5px 2px;}
+
+.nube { float: left; width: 94%; margin: 3%; font-size: 14px;}
+.nube h5 { font-size: 14px; margin: 0 0 3% 2%;}
+.nube .contNube { background: #edf0f3; color: #304951; padding: 2%; width: 96%; min-height: 90px;}
+
+
+
+/* PopUp --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.popUp { padding-bottom: 50px; text-align: center; width: 500px;}
+.popUp h1 { float: left; width: 500px; height: 110px; padding: 35px 0; font-size: 29px; color: #FFF; background: url(../img/bgTitlePopUp.jpg) no-repeat top left;}
+.popUp ul { float: left; display: block; text-align: left; margin: 0 0 20px 70px; font-size: 16px; color: #849295;}
+.popUp ul li { list-style-image: url(../img/iconCheckMarron.png); padding-bottom: 20px;}
+.popUp strong { color: #304951;}
+.popUp a { font-size: 14px; padding: 0 20px;}
+
+
+
+/* Password Fortaleza --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.fortaleza .barra .sizeBarra.poorPass { width: 20%; background: #ff5435;}
+.fortaleza .barra .sizeBarra.weakPas { width: 45%; background: #fcb514;}
+.fortaleza .barra .sizeBarra.goodPass { width: 65%; background: #2faef9;}
+.fortaleza .barra .sizeBarra.strongPass { width: 100%; background: #afdb2c;}
+.menssages { float: left; margin-top: 5px; font-size: 11px;}
+
+.boxYellow.formulario .fortaleza .barra .sizeBarra.poorPass { background: #ff5435;}
+.boxYellow.formulario .fortaleza .barra .sizeBarra.weakPas { background: #fcb514;}
+.boxYellow.formulario .fortaleza .barra .sizeBarra.goodPass { background: #c9b151;}
+.boxYellow.formulario .fortaleza .barra .sizeBarra.strongPass { background: #afdb2c;}
+
+

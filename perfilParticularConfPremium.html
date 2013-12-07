@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">  
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Language" content="es" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Incremeta el número de potenciales clientes para tu negocio." />
+
+    <title>Actualizate al plan premium | Eldeseazo</title>
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+ 
+    <!-- CSS -->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/jqtransform.css" rel="stylesheet" type="text/css" />
+    
+    <!-- JS -->
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script> 
+    <script src="js/jquery.jqtransform.js" type="text/javascript"></script>
+        
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript">
+        $(window).load(function(){
+            
+            $('.campoForm').focusin(function(){ $(this).removeClass('gris'); $(this).addClass('ocre'); });
+            $('.campoForm').focusout(function(){ $(this).removeClass('ocre'); if($(this).find('input').val()==''){ $(this).addClass('gris'); } });
+            
+            $(function() { $("form.jqtransform").jqTransform();});
+            elpie();
+            landing();
+        });
+        $(window).resize(function(){
+            elpie();
+            landing();
+        }); 
+        function elpie() { if($(window).height() > $('.header').height() + $('.content').height() + $('.footer').height() ){ $('.footer').css({position: 'absolute', bottom : '0', left : '0'});} else{  $('.footer').css({position: 'relative'});}}
+        function landing() { var altura = 640; if($(window).height() > $('.header').height() + altura + $('.footer').height() ){ $('.landing').height( $(window).height() - $('.header').height() - $('.footer').height() );} else {$('.landing').height(altura);}}
+    </script>
+
+</head>
+<body>
+
+    <header class="header">
+        <nav class="menu">
+            <ul class="box">
+                <li class="btnHome"><a href="home.html" title="Inicio" class="on">Volver a inicio</a></li>
+            </ul>
+        </nav>
+        <div class="box">
+            <div id="logo"><a href="home.html" title="Eldeseazo"><img src="img/logo_el_deseazo.jpg" title="Eldeseazo, el genio de tus compras." alt="Logotipo de Eldeseazo" /></a></div>
+            <div class="telefono">
+                <span>¿Necesitas ayuda?</span><br />
+                <strong>902 000 000</strong>
+            </div>
+        </div>
+    </header>
+    
+    <section class="content">
+        
+        <div class="landing confPremium">
+            
+            <div class="box">
+                <div class="boxDosTercios">
+                    <h2>Actualización al plan premium</h2>
+                    <h3>Incrementa el número de potenciales clientes<br />para tu negocio y disfruta de ventajas exclusivas.</h3>
+                    <div class="cif">
+                        <strong>Sólo necesitamos tu CIF para actualizar al plan premium</strong>
+                        <form class="campoForm">
+                            <input type="text" value=" " /><input type="submit" value="realizar pago" />
+                        </form>
+                    </div>
+                </div>
+                <div class="boxTercio">
+                    <div class="boxCabecera">
+                        <h1>Por sólo<br /><strong>39,99<span class="euro">€</span><span>/mes*</span></strong></h1>
+                        <p>Sin compromiso de permanencia</p>
+                    </div>
+                    <div class="boxListado">
+                        <ul>
+                            <li><strong>Recibe clientes</strong> en tu email<br />
+                            de forma <strong>ilimitada</strong>.</li>
+                            <li>Respuestas <strong>ilimitadas</strong> a tus<br />
+                            potenciales clientes.</li>
+                            <li>Recibe los deseos de los<br />
+                            usuarios <strong>inmediatamente</strong>.</li>
+                            <li>Publica en tu escaparate ofertas<br />
+                            de forma <strong>ilimitada</strong>.</li>
+                            <li>Página de empresa <strong>personalizada</strong><br />
+                            (Logo, imágenes,...)</li>
+                            <li>Aparece <strong>primero</strong> en los<br />
+                            resultados de búsqueda.</li>
+                            <li>Asesoramiento <strong>personalizado</strong>.</li>
+                            <li>Clientes potenciales garantizados<br />
+                            o el mes siguiente <strong>gratis</strong>.</li>
+                        </ul>
+                    </div>
+                    <p class="noIva">IVA no incluido*</p>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+    
+    <footer class="footer">
+        <div class="close">
+            <div class="box">
+                <div class="copy">Eldeseazo el genio de tus compras 2013. Todos los derechos reservados · <a href="politicaDePrivacidad.html" title="Política de privacidad">Política de privacidad</a> · <a href="#" title="">Condiciones de uso</a></div>
+                <div class="logos">&nbsp;</div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

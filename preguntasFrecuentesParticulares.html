@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">  
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Language" content="es" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Ponte en contacto con Eldeseazo a través del formulario de contacto o vía telefónica. " />
+
+    <title>Preguntas frecuentes | Eldeseazo</title>
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+ 
+    <!-- CSS -->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/jqtransform.css" rel="stylesheet" type="text/css" />
+    
+    <!-- JS -->
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script> 
+    <script src="js/jquery.jqtransform.js" type="text/javascript"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+    
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript">
+        $(window).load(function(){
+            
+            $(function() {  $( ".accordeon" ).accordion({ heightStyle: "content" }); });
+            
+            $('input[type="text"]').focusin(function () { if ($(this).val() == $(this).attr('value') ) { $(this).val(''); $(this).removeClass('inputClarito');$(this).addClass('cajaSeleccionada');} });
+            $('input[type="text"]').focusout(function () { if ($(this).val() == '') {  $(this).val($(this).attr('value')); $(this).addClass('inputClarito');$(this).removeClass('cajaSeleccionada');} });
+            
+            $(function() { $("form.jqtransform").jqTransform();});
+            
+            $('.siteMap .boxCuarto span').click(function(){
+                if($(window).width()<=1024){ $(this).parent().find("ul").slideToggle(); }    
+            });
+            elpie();
+        });
+        $(window).resize(function(){
+            elpie();
+        }); 
+        function elpie() {
+            if($(window).height() > $('.header').height() + $('.content').height() + $('.footer').height() ){ $('.footer').css({position: 'absolute', bottom : '0', left : '0'});} else{  $('.footer').css({position: 'relative'});}
+        }
+    </script>
+
+</head>
+<body>
+
+    <header class="header">
+        <nav class="menu">
+            <ul class="box">
+                <li class="btnHome"><a href="home.html" title="Inicio">Inicio &nbsp;&nbsp;|</a></li>
+                <li><a href="homeViajes.html" title="Viajes">Viajes</a></li>
+                <li><a href="homeElectronica.html" title="Electrónica">Electrónica</a></li>
+                <li><a href="homeMotor.html" title="Motor">Motor</a></li>
+                <li><a href="homeVivienda.html" title="Vivienda">Vivienda</a></li>
+                <li><a href="homeModa.html" title="Moda">Moda</a></li>
+                <li><a href="homeRestaurantes.html" title="Restaurantes">Restaurantes</a></li>
+                <li><a href="homeOcio.html" title="Ocio">Ocio</a></li>
+                <li><a href="homeBienestar.html" title="Bienestar">Bienestar</a></li>
+                <li><a href="homeCursos.html" title="Cursos">Cursos</a></li>
+                <li><a href="homeServicios.html" title="Servicios">Servicios</a></li>
+                <li><a href="homeCategorias.html" title="Más">Más</a></li>
+            </ul>
+        </nav>
+        <div class="box">
+            <div id="logo"><a href="home.html" title="Eldeseazo"><img src="img/logo_el_deseazo.jpg" title="Eldeseazo, el genio de tus compras." alt="Logotipo de Eldeseazo" /></a></div>
+            <div class="registro">
+                <a href="registro.html" title="Registro">Regístrate</a>
+                <a href="acceso.html" title="Entrar" class="btnIn">Entrar</a>
+            </div>
+            <div class="search"><input type="text" value="¿Qué quieres comprar y a qué precio?" /><input type="submit" value="Pide tu deseo" title="Pide tu deseo" /></div>
+            <a href="#" title="Botón Menu" class="btnMenu">&nbsp;</a>
+        </div>
+    </header>
+    
+    <section class="content">
+        <div class="breadcrumb">
+            <div class="box">
+                <p><b>Estás en:</b> <a href="home.html" title="Inicio">Inicio</a> <span>Contacto</span></p>
+            </div>
+        </div>
+        <div class="boxWhite">
+            <div class="box">   
+                <div class="titleForm boxDosTercios">
+                    <h1>Preguntas frecuentes</h1>
+                    <p>Mira las preguntas más habituales que hacen nuestros usuarios</p>
+                </div>
+            </div>
+        </div>
+        <div class="box"><div class="pestanhas"><a href="preguntasFrecuentesParticulares.html" title="Particulares" class="pestanha iz on">Particulares</a><a href="preguntasFrecuentesEmpresas.html" title="Empresas" class="pestanha dr off">Empresas</a></div></div>
+        <div class="boxWhite bordeSoft">
+            <div class="box">
+                <div class="accordeon">
+                    <h3>¿Qué es y para qué sirve Eldeseazo?</h3>
+                    <div><p>Eldeseazo es el localizar por excelencia de tus deseos. Pide lo que quieres, al precio que puedas y haremos todo lo posible por cumplir tu deseo. Para localizar cualquier producto o servicio. Por ejemplo: mecánicos, constructores, coches, casas, relojes, fontaneros, un restaurante, un viaje, un seguro de automóvil, lo que sea lo buscamos para ti.</p></div>
+                    
+                    <h3>¿Cómo funciona?</h3>
+                    <div><p>Muy simple. Tan sencillo como explicar con tus propias palabras qué es lo que deseas. Recuerda cuanto más información nos facilites, mejor.</p></div>
+                    
+                    <h3>¿Tengo que registrarme si sólo quiero buscar servicios?</h3>
+                    <div><p>Siempre es necesario que nos des tu email, de otra forma no nos es posible prestarte el servicio.</p></div>
+                    
+                    <h3>¿Qué uso se le dará a mi email?</h3>
+                    <div><p>El único uso que se dará a tu email, es para contestar a los deseos que nos formulas, nada más. EN NINGUN CASO LE DAMOS TU EMAIL A NADIE. El deseazo cumple escrupulosamente todas las disposiciones de protección de datos.</p></div>
+                    
+                    <h3>¿Puedo invitar a mis amigos?</h3>
+                    <div><p>Por supuesto, es más, te recomendamos que lo hagas a través de Facebook, twitter y G+. Utiliza nuestra plataforma para compartir tus deseos con tus amigos y a lo mejor encuentras lo que necesitas dentro de tu red de conocidos.</p></div>
+
+                    <h3>¿Qué ventajas tiene para el usuario?</h3>
+                    <div><p>Tiene muchas ventajas, dentro de las cuales podemos destacar tres: 1. El usuario no pierde tiempo, nos pide su deseo y lo localizamos por él, así de fácil. 2. El usuario recibe ofertas acordes a su deseo, nada más. Le mandamos las respuestas coherentes, sobre estas ofertas decide la más conveniente. 3. Evitamos el spam, al 100%, sólo te mandamos lo que quieres.</p></div>
+
+                    <h3>¿Quienes son los usuarios de Eldeseazo?</h3>
+                    <div><p>Todas las personas, todas las empresas, todo el mundo. Imaginemos una persona particular que necesita comprar una casa, localizamos quien ofrezca lo que la persona demanda, sin embargo dicha persona necesita un servicio de limpieza, para limpiar la casa antes de enseñarla al cliente, al mismo tiempo la empresa de limpieza necesita ciertos productos que no tiene... Todas las personas y empresas que intervienen en este ejemplo, pueden usar el deseazo, el usuario para localizar la casa de sus sueños, el vendedor para localizar una empresa de limpieza, la empresa de limpieza, para localizar proveedores de productos y servicios, etc. Y en todos los casos recibirán múltiples alternativas, para decidir la que mejor se adapta a sus necesidades.</p></div>
+
+                    <h3>¿Que pasa si pido deseos de productos o servicios con precios “imposibles”?</h3>
+                    <div><p>La respuesta es muy sencilla, no recibirás ofertas para ese deseo. En cualquier caso, si ha sido un error recuerda que siempre mandamos emails de confirmación respecto a la solicitud y que siempre podrás editar tus deseos desde tu menú.</p></div>
+
+
+                </div>
+                
+            </div>
+        </div>
+        <div class="boxWhite contact bordeSoft">
+            <div class="box">
+                <h2>¿Sigues teniendo dudas o alguna pregunta?<br />No dudes en consultarnos</h2>
+                <a href="contacto.html" title="Contacta con nosotros" class="btn">Contacta con nosotros</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="subMenu">
+            <div class="box">
+                <div class="siteMap">
+                    <div class="boxCuarto">
+                        <span>Eldeseazo</span>
+                        <ul>
+                            <li><a href="home.html" title="Inicio">Inicio</a></li>
+                            <li><a href="listadoDeseos.html" title="Últimos deseos">Últimos deseos</a></li>
+                            <li><a href="listadoOfertas.html" title="Últimas ofertas">Últimas ofertas</a></li>
+                            <li><a href="listadoGenios.html" title="Directorio de genios">Directorio de genios</a></li>
+                        </ul>
+                    </div>
+                    <div class="boxCuarto">
+                        <span>Sobre Nosotros</span>
+                        <ul>
+                            <li><a href="comoFunciona.html" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+                            <li><a href="contacto.html" title="Contacto">Contacto</a></li>
+                            <li><a href="#" title="Blog">Blog</a></li>
+                            <li><a href="prensa.html" title="Sala de prensa">Sala de prensa</a></li>
+                        </ul>
+                    </div>
+                    <div class="boxCuarto">
+                        <span>Acceso</span>
+                        <ul>
+                            <li><a href="acceso.html" title="Mi cuenta">Mi cuenta</a></li>
+                            <li><a href="altaEmpresa.html" title="¿Tienes una empresa?">¿Tienes una empresa?</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="boxCuarto rrss">
+                    <span>Síguenos</span>
+                    <a href="#" title="facebook" target="_blank" class="btnF">&nbsp;</a><a href="#" title="twitter" target="_blank" class="btnT">&nbsp;</a><a href="#" title="Google+" target="_blank" class="btnG">&nbsp;</a><a href="#" title="Rss" target="_blank" class="btnRss">&nbsp;</a>
+                </div>
+            </div>
+        </div>
+        <div class="close">
+            <div class="box">
+                <div class="copy">Eldeseazo el genio de tus compras 2013. Todos los derechos reservados · <a href="politicaDePrivacidad.html" title="Política de privacidad">Política de privacidad</a> · <a href="condicionesDeUso.html" title="Condciones de uso">Condiciones de uso</a></div>
+                <div class="logos">&nbsp;</div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

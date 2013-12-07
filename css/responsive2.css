@@ -1,0 +1,384 @@
+
+@media screen and (max-width: 959px) {
+	.content{
+	
+	/*background: green;*/
+	overflow: hidden;
+	display: inherit;
+
+	
+}
+.boxGrey{
+	/*background: green;*/
+	width: 100%;
+	margin-right: 20px;
+}
+.boxPedir{
+	/*background: pink;*/
+	width: 50%;
+}
+.avisaCheck{
+	width:103%;
+}
+.boxForm{
+	/*background: blue;*/
+}
+.contBlockG{
+	width: auto;
+	/*background: red;*/
+}
+.rowElem{
+	/*background: red;*/
+	width: 30px
+	;
+}
+.boxForm { float: left; width: 100%; padding: 0 25px; margin-bottom: 10px; background: #FFF; border-radius: 10px; border-top: 3px solid #bdccd0;}
+.jqtransform{
+	/*background: silver;*/
+	width: 100%;
+}
+.formulario .contBlockG{
+	width: 90%;
+}
+.formulario .contBlockG textarea{
+	width: 320px;
+	overflow: hidden;
+
+}
+.jqTransformSelectWrapper div span {
+		
+		font-size: 10px;
+		overflow: hidden;
+		position: none;
+		
+	}
+.formulario .contBlockP{
+
+}
+.formulario .contBlockP input{
+	
+	width: 95%;
+}
+
+/**********************************************************************************************************************/
+
+
+
+
+
+
+.header{
+	width: 100%;
+	/*background: red;*/
+}
+
+.card{
+	width: auto;
+}
+.breadcrumb{
+	margin-top:0px;
+}
+.header .box{
+	/*background: pink;*/
+	width: 80%;
+	height: 100px;
+
+}
+.header .search{
+	margin-top:50px; 
+}
+.header .box {
+	margin-top: 0px;
+}
+.boxWhite{
+	width: 100%;
+	
+
+}
+.boxTercio{
+	background:silver;
+	width:25%;
+	
+}
+.boxDosTercios{
+	/*background: red;*/
+	width: 65%;	
+}
+.card{
+	background:inherit;
+	/*width: auto;*/
+}
+/*.boxThumb .txt {
+	width: auto;
+	background: grey;
+}*/
+/*.boxThumb .thumbP{
+	width: auto;
+	background: red;
+}*/
+.boxObj{
+	
+	background: red;
+}
+.boxG{
+	width: 100%;
+	
+}
+
+div.btnRrss {
+	width: 100%;
+}
+
+.box{
+	width: 80%;
+}
+
+
+.menu{
+	display: none;
+}
+.boxThumb .txt{
+	float: left;
+	width: 100%;
+}
+
+
+
+
+
+/**********************************************************************************************************************/
+}
+
+/*smartphone*/
+
+@media screen and (max-width: 767px) {
+.header .box { height: 60px;}
+#logo { margin-top: 13px; margin-left: 10px;} 
+#logo img { width: 146px; height: 32px;}
+
+.boxPedir{
+	/*background: green;*/
+}
+
+.formulario .contBlockG textarea{
+	width: 270px;
+	
+}
+.boxPedir .contBlockG.gris.textForm label{
+	margin-top: 1px;
+}
+
+/**************************************************************************************/
+
+
+.header{
+	width: 100%;
+	background:yellow;
+}
+
+
+/**************************************************************************************/
+
+
+}
+
+@media screen and (max-width: 720px){
+
+	.boxPedir{
+	/*background: blue;*/
+	}
+	.formulario .contBlockG textarea{
+	width: 250px;
+	}
+
+	.header{
+	width: 100%;
+	background: brown;
+}
+	
+}
+@media screen and (max-width: 680px){
+
+	.boxPedir{
+	/*background: orange;*/
+	}
+	.formulario .boxPedir .contBlockP.gris{
+	width: 230px;
+	background-image: none;
+	}
+	.formulario .contBlockG textarea{
+	width: 230px;
+
+	}
+	.header{
+	width: 100%;
+	background: silver;
+}
+	
+}
+@media screen and (max-width: 650px){
+
+	.boxPedir{
+	/*background: silver;*/
+	}
+	
+	.formulario .contBlockG textarea{
+	width: 200px;
+
+	}
+	.formulario .contBlockP{
+		width: 160px;
+
+	}
+	.formulario .contBlockP input{
+		width:100%;
+	}
+	.boxPedir .contBlockP.gris.campoForm{
+		width:80%;
+		/*border:solid 1px red;*/
+
+	}
+	.header{
+	width: 100%;
+	background: green;
+	}
+	.boxDes h1{
+	font-size: 20px;
+	}
+}
+@media screen and (max-width: 550px){
+	.formulario{
+		font-size: 10px;
+	}
+	.boxPedir{
+	/*background:brown;*/
+	}
+
+	.boxPedir h1 {
+		font-size: 22px;
+	}
+	
+	.formulario .contBlockG textarea{
+	width: 180px;
+
+	}
+	.formulario .contBlockP{
+		width: 160px;
+
+	}
+	.formulario .contBlockP input{
+		width:90%;
+	}
+	.boxPedir .contBlockP.gris.campoForm{
+		width:80%;
+		/*border:solid 1px red;*/
+
+	}
+	.boxPedir .contBlockP.gris.campoForm label{
+		height: 20px;
+		width: 170px;
+		margin: 0px;
+		position: relative;
+		
+	}
+	/*.boxPedir .contBlockG.gris.textForm label{
+		height: 20px;
+		width: 100%;
+		margin: 0px;
+		position: relative;
+		top: 0px;
+		bottom: 20px;
+		background: blue;
+		margin-bottom: 50px;
+
+	}*/
+	.formulario span{
+		height:auto;
+		width: 100%;
+		margin: 0px;
+		position: relative;
+		margin-top:0px;
+
+	}
+	.header{
+	width: 100%;
+	background:blue;
+	}
+	.registro{
+		margin-top: 0px;
+		float: right;
+		display: none;
+	}
+	.header .search{
+	margin-top:60px; 
+	}
+	.header .search input{
+	width:auto;
+	}
+	.btnMenu{
+	display: none;
+	}
+.boxDes h1{
+	font-size: 20px;
+	margin-top: 100px;
+	}
+
+
+}
+@media screen and (max-width: 400px){
+	.formulario{
+		font-size: 10px;
+	}
+	.boxPedir{
+	/*background:yellow;*/
+	width: 200px;
+	}
+	.boxPedir h1 {
+		font-size: 20px;
+	}
+	
+	.formulario .contBlockG textarea{
+	width: 140px;
+
+	}
+	.formulario .contBlockP{
+		width: 160px;
+
+	}
+	.formulario .contBlockP input{
+		width:90%;
+	}
+	.boxPedir .contBlockP.gris.campoForm{
+		width:80%;
+		/*border:solid 1px red;*/
+
+	}
+	.boxPedir .contBlockP.gris.campoForm label{
+		height: 20px;
+		width: 170px;
+		margin: 0px;
+		position: relative;
+		
+	}
+	/*.boxPedir .contBlockG.gris.textForm label{
+		height: 20px;
+		width: 100%;
+		margin: 0px;
+		position: relative;
+		top: 0px;
+		bottom: 20px;
+		background: blue;
+		margin-bottom: 50px;
+
+	}*/
+	.formulario span{
+		height:auto;
+		width: 100%;
+		margin: 0px;
+		position: relative;
+		margin-top:0px;
+
+	}
+
+}
+/***************************************************************************/

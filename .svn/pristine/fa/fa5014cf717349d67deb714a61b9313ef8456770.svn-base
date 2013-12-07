@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">  
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Language" content="es" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Cuéntanos qué quieres comprar, a qué precio y desde dónde. Eldeseazo lo busca por ti." />
+
+    <title>Todas las Categorías | Eldeseazo</title>
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+ 
+    <!-- CSS -->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <!-- JS -->
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript">
+        $(window).load(function(){            
+            $('.siteMap .boxCuarto span').click(function(){
+                if($(window).width()<=1024){ $(this).parent().find("ul").slideToggle(); }    
+            });
+            elpie();
+        });
+        $(window).resize(function(){
+            elpie();
+        }); 
+        function elpie() {
+            if($(window).height() > $('.header').height() + $('.content').height() + $('.footer').height() ){ $('.footer').css({position: 'absolute', bottom : '0', left : '0'});} else{  $('.footer').css({position: 'relative'});}
+        }
+    </script>
+
+</head>
+<body>
+
+    <header class="header">
+        <nav class="menu">
+            <ul class="box">
+                <li class="btnHome"><a href="home.html" title="Inicio">Inicio &nbsp;&nbsp;|</a></li>
+                <li><a href="homeViajes.html" title="Viajes">Viajes</a></li>
+                <li><a href="homeElectronica.html" title="Electrónica">Electrónica</a></li>
+                <li><a href="homeMotor.html" title="Motor">Motor</a></li>
+                <li><a href="homeVivienda.html" title="Vivienda">Vivienda</a></li>
+                <li><a href="homeModa.html" title="Moda">Moda</a></li>
+                <li><a href="homeRestaurantes.html" title="Restaurantes">Restaurantes</a></li>
+                <li><a href="homeOcio.html" title="Ocio">Ocio</a></li>
+                <li><a href="homeBienestar.html" title="Bienestar">Bienestar</a></li>
+                <li><a href="homeCursos.html" title="Cursos">Cursos</a></li>
+                <li><a href="homeServicios.html" title="Servicios">Servicios</a></li>
+                <li><a href="#" title="Más" class="on">Más</a></li>
+            </ul>
+        </nav>
+        <div class="box">
+            <div id="logo"><a href="#" title="Eldeseazo"><img src="img/logo_el_deseazo.jpg" title="Eldeseazo, el genio de tus compras." alt="Logotipo de Eldeseazo" /></a></div>
+            <div class="registro">
+                <a href="registro.html" title="Registro">Regístrate</a>
+                <a href="acceso.html" title="Entrar" class="btnIn">Entrar</a>
+            </div>
+            <a href="#" title="Botón Menu" class="btnMenu">&nbsp;</a>
+        </div>
+    </header>
+    
+    <section class="content">
+        <div class="boxWhite">
+            <div class="box">   
+                <div class="titleForm boxDosTercios">
+                    <h1>Todas las categorías</h1>
+                </div>
+            </div>
+        </div>
+        <div class="boxGrey categorias">
+            <div class="box">
+                <h2 class="boxTercio">
+                    <a href="homeViajes.html" class="viajes" title="viajes">
+                        <span class="img"></span>
+                        <span>
+                            <strong>Viajes</strong>
+                            Turismo, Escapadas, Hoteles, Vuelos, Estancias
+                        </span>
+                    </a>
+                </h2>
+                <h2 class="boxTercio">
+                    <a href="homeElectronica.html" class="electronica" title="electronica">
+                        <span class="img"></span>
+                        <span>
+                            <strong>Electrónica</strong>
+                            Informática, Electrodomésticos
+                        </span>
+                    </a>
+                </h2>
+                <h2 class="boxTercio">
+                    <a href="homeMotor.html" class="motor" title="motor">
+                        <span class="img"></span>
+                        <span>
+                            <strong>Motor</strong>
+                            Coches, Motos
+                        </span>
+                    </a>
+                </h2>
+                <h2 class="boxTercio">
+                    <a href="homeVivienda.html" class="vivienda" title="vivienda">
+                        <span class="img"></span>
+                        <span>
+                            <strong>vivienda</strong>
+                            Pisos, Inmobiliaria, Alquiler, Compra
+                        </span>
+                    </a>
+                </h2>
+                <h2 class="boxTercio">
+                    <a href="homeModa.html" class="moda" title="Moda">
+                        <span class="img"></span>
+                        <span>
+                            <strong>Moda</strong>
+                            Complementos, Ropa, Zapatos
+                        </span>
+                    </a>
+                </h2>
+                <h2 class="boxTercio">
+                    <a href="homeServicios.html" class="servicios" title="servicios">
+                        <span class="img"></span>
+                        <span>
+                            <strong>servicios</strong>
+                            Escapadas, Vuelos
+                        </span>
+                    </a>
+                </h2>
+                <h2 class="boxTercio">
+                    <a href="homeOcio.html" class="ocio" title="ocio">
+                        <span class="img"></span>
+                        <span>
+                            <strong>ocio</strong>
+                            Deporte, Aventura
+                        </span>
+                    </a>
+                </h2>
+                <h2 class="boxTercio">
+                    <a href="homeHogar.html" class="hogar" title="hogar">
+                        <span class="img"></span>
+                        <span>
+                            <strong>hogar</strong>
+                            Decoración
+                        </span>
+                    </a>
+                </h2>
+                <h2 class="boxTercio">
+                    <a href="homeBienestar.html" class="bienestar" title="bienestar">
+                        <span class="img"></span>
+                        <span>
+                            <strong>bienestar</strong>
+                            Belleza, Salud, Relax
+                        </span>
+                    </a>
+                </h2>
+                <h2 class="boxTercio">
+                    <a href="homeRestaurantes.html" class="restaurantes" title="Restaurantes">
+                        <span class="img"></span>
+                        <span>
+                            <strong>Restaurantes</strong>
+                        </span>
+                    </a>
+                </h2>
+                <h2 class="boxTercio">
+                    <a href="#" class="alimentacion" title="alimentación">
+                        <span class="img"></span>
+                        <span>
+                            <strong>alimentación</strong>
+                            Gourmet
+                        </span>
+                    </a>
+                </h2>
+                <h2 class="boxTercio">
+                    <a href="homeCursos.html" class="cursos" title="Cursos">
+                        <span class="img"></span>
+                        <span>
+                            <strong>Cursos</strong>
+                            Formación, Enseñanza
+                        </span>
+                    </a>
+                </h2>
+                <h2 class="boxTercio">
+                    <a href="#" class="mascotas" title="mascotas">
+                        <span class="img"></span>
+                        <span>
+                            <strong>mascotas</strong>
+                            Animales
+                        </span>
+                    </a>
+                </h2>
+                <h2 class="boxTercio">
+                    <a href="#" class="seguros" title="seguros">
+                        <span class="img"></span>
+                        <span>
+                            <strong>seguros</strong>
+                            Finanzas
+                        </span>
+                    </a>
+                </h2>
+                
+            </div>
+        </div>
+        <div class="boxWhite">
+            <div class="box">
+                <div class="logoPress"><img src="img/iconExpansion.jpg" alt="logotipo Expansión" title="Expansión" /></div>
+                <div class="txtPress"><p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique."</p></div>
+                <div class="viewPress"><a href="prensa.html" title="ver sala de prensa" class="btnPress">ver sala de prensa
+                    <span id="verSalaPrensaFlecha">Flecha</span>
+                </a></div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="subMenu">
+            <div class="box">
+                <div class="siteMap">
+                    <div class="boxCuarto">
+                        <span>Eldeseazo</span>
+                        <ul>
+                            <li><a href="home.html" title="Inicio">Inicio</a></li>
+                            <li><a href="listadoDeseos.html" title="Últimos deseos">Últimos deseos</a></li>
+                            <li><a href="listadoOfertas.html" title="Últimas ofertas">Últimas ofertas</a></li>
+                            <li><a href="listadoGenios.html" title="Directorio de genios">Directorio de genios</a></li>
+                        </ul>
+                    </div>
+                    <div class="boxCuarto">
+                        <span>Sobre Nosotros</span>
+                        <ul>
+                            <li><a href="comoFunciona.html" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+                            <li><a href="contacto.html" title="Contacto">Contacto</a></li>
+                            <li><a href="#" title="Blog">Blog</a></li>
+                            <li><a href="prensa.html" title="Sala de prensa">Sala de prensa</a></li>
+                        </ul>
+                    </div>
+                    <div class="boxCuarto">
+                        <span>Acceso</span>
+                        <ul>
+                            <li><a href="acceso.html" title="Mi cuenta">Mi cuenta</a></li>
+                            <li><a href="altaEmpresa.html" title="¿Tienes una empresa?">¿Tienes una empresa?</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="boxCuarto rrss">
+                    <span>Síguenos</span>
+                    <a href="#" title="facebook" target="_blank" class="btnF">&nbsp;</a><a href="#" title="twitter" target="_blank" class="btnT">&nbsp;</a><a href="#" title="Google+" target="_blank" class="btnG">&nbsp;</a><a href="#" title="Rss" target="_blank" class="btnRss">&nbsp;</a>
+                </div>
+            </div>
+        </div>
+        <div class="close">
+            <div class="box">
+                <div class="copy">Eldeseazo el genio de tus compras 2013. Todos los derechos reservados · <a href="politicaDePrivacidad.html" title="Política de privacidad">Política de privacidad</a> · <a href="condicionesDeUso.html" title="Condiciones de uso">Condiciones de uso</a></div>
+                <div class="logos">&nbsp;</div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

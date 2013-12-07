@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">  
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Language" content="es" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Ponte en contacto con Eldeseazo a través del formulario de contacto o vía telefónica. " />
+
+    <title>Política de privacidad | Eldeseazo</title>
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+ 
+    <!-- CSS -->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/jqtransform.css" rel="stylesheet" type="text/css" />
+    
+    <!-- JS -->
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script> 
+    <script src="js/jquery.jqtransform.js" type="text/javascript"></script>
+    
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript">
+        $(window).load(function(){
+            
+            $('input[type="text"]').focusin(function () { if ($(this).val() == $(this).attr('value') ) { $(this).val(''); $(this).removeClass('inputClarito');$(this).addClass('cajaSeleccionada');} });
+            $('input[type="text"]').focusout(function () {  if ($(this).val() == '') {  $(this).val($(this).attr('value')); $(this).addClass('inputClarito');$(this).removeClass('cajaSeleccionada');} });
+            
+            $(function() { $("form.jqtransform").jqTransform();});
+            
+            $('.siteMap .boxCuarto span').click(function(){
+                if($(window).width()<=1024){ $(this).parent().find("ul").slideToggle(); }    
+            });
+            elpie();
+        });
+        $(window).resize(function(){
+            elpie();
+        }); 
+        function elpie() {
+            if($(window).height() > $('.header').height() + $('.content').height() + $('.footer').height() ){ $('.footer').css({position: 'absolute', bottom : '0', left : '0'});} else{  $('.footer').css({position: 'relative'});}
+        }
+    </script>
+
+</head>
+<body>
+
+    <header class="header">
+        <nav class="menu">
+            <ul class="box">
+                <li class="btnHome"><a href="home.html" title="Inicio">Inicio &nbsp;&nbsp;|</a></li>
+                <li><a href="homeViajes.html" title="Viajes">Viajes</a></li>
+                <li><a href="homeElectronica.html" title="Electrónica">Electrónica</a></li>
+                <li><a href="homeMotor.html" title="Motor">Motor</a></li>
+                <li><a href="homeVivienda.html" title="Vivienda">Vivienda</a></li>
+                <li><a href="homeModa.html" title="Moda">Moda</a></li>
+                <li><a href="homeRestaurantes.html" title="Restaurantes">Restaurantes</a></li>
+                <li><a href="homeOcio.html" title="Ocio">Ocio</a></li>
+                <li><a href="homeBienestar.html" title="Bienestar">Bienestar</a></li>
+                <li><a href="homeCursos.html" title="Cursos">Cursos</a></li>
+                <li><a href="homeServicios.html" title="Servicios">Servicios</a></li>
+                <li><a href="homeCategorias.html" title="Más">Más</a></li>
+            </ul>
+        </nav>
+        <div class="box">
+            <div id="logo"><a href="home.html" title="Eldeseazo"><img src="img/logo_el_deseazo.jpg" title="Eldeseazo, el genio de tus compras." alt="Logotipo de Eldeseazo" /></a></div>
+            <div class="registro">
+                <a href="registro.html" title="Registro">Regístrate</a>
+                <a href="acceso.html" title="Entrar" class="btnIn">Entrar</a>
+            </div>
+        <form action="pedirDeseo.html">
+            <div class="search"><input type="text" value="¿Qué quieres comprar y a qué precio?" /><input type="submit" value="Pide tu deseo" title="Pide tu deseo" /></div>
+        </form>
+            <a href="#" title="Botón Menu" class="btnMenu">&nbsp;</a>
+        </div>
+    </header>
+    
+    <section class="content">
+        <div class="breadcrumb">
+            <div class="box">
+                <p><b>Estás en:</b> <a href="home.html" title="Inicio">Inicio</a> <span>Contacto</span></p>
+            </div>
+        </div>
+        <div class="boxWhite">
+            <div class="box">   
+                <div class="titleForm boxDosTercios">
+                    <h1>Política de privacidad</h1>
+                </div>
+            </div>
+        </div>
+        <div class="boxGrey">
+            <div class="box textoPlano">
+                <p>Los términos definidos que se empleen en el presente documento tendrán el sentido que se les da en las Condiciones de Uso de la Plataforma elDeseazo publicadas en la URL [www.eldeseazo.com] (la "Plataforma").</p>
+                <h2>Datos personales</h2>
+                <p>Los datos personales que el Usuario facilite a elDeseazo conforme a lo previsto en la Plataforma serán objeto de tratamiento bajo la responsabilidad de elDeseazo e incorporados en ficheros de su titularidad. “elDeseazo” es la denominación comercial correspondiente a la sociedad española Next Chance Assets, S.L. que dispone de C.I.F. [B-86079407] y que está inscrita en el Registro Mercantil de MADRID, al tomo 28.312, folio 0, hoja 61, sección 8 y cuyos datos de contacto son:</p>
+                <ul>
+                    <li>Domicilio: Paseo de la Castellana, 259 –D Planta 43 Sur. 28046 - Madrid</li>
+                    <li>Dirección de correo electrónico: info (arroba) eldeseazo (punto) com</li>
+                </ul>
+                <p>Es posible que la Plataforma ofrezca herramientas que permitan a los Usuarios compartir información sobre Solicitudes de Oferta, Ofertas, Anuncios u otros Contenidos de Usuario con terceros de su elección o participar conjuntamente en determinados servicios (p.e., servicios que permitan al Usuario y a los terceros realizar Solicitudes de Oferta conjuntas y/o beneficiarse de Ofertas especiales). Si el Usuario decide utilizar alguna herramienta que implique la cesión de algún dato personal de dichos terceros a elDeseazo, el Usuario queda informado de que cualquier información respecto de dichos terceros que facilite se tratará conforme a lo previsto en esta Política de Privacidad y se compromete a no facilitar ningún dato personal de terceros sin haberles informado previamente de los términos de esta Política de Privacidad y sin haber obtenido previamente su consentimiento.</p>
+                <p>Los datos que aportas a ELDESEAZO son incluidos en nuestros ficheros registrados ante la Agencia Española de Protección de Datos (en adelante, “AEPD”). La AEPD se encarga de velar por el cumplimiento de las leyes españolas sobre privacidad y protección de datos, y de garantizar la seguridad, y privacidad de tus datos personales.</p>
+                <p>Salvo que se indique otra cosa en los formularios de recogida de datos contenidos en la Plataforma, la recogida y tratamiento de los datos personales tendrá como únicas finalidades:</p>
+                <ul>
+                    <li>la gestión, cumplimiento y control del cumplimiento de la Relación Contractual correspondiente a las Condiciones de Uso y a las Condiciones Generales y Condiciones Particulares que el Usuario haya aceptado en cada momento en relación con su utilización de la Plataforma;</li>
+                    <li>la gestión, cumplimiento y control de las Solicitudes de Ofertas, envío y tramitación de Ofertas;</li>
+                    <li>atender las solicitudes, consultas o sugerencias que, en su caso, el Usuario realice a elDeseazo a través de la Plataforma;</li>
+                    <li>gestionar las preferencias de publicidad del Usuario y</li>
+                    <li>cumplir las obligaciones legales correspondientes a elDeseazo.</li>
+                </ul>
+                <p>Los datos que se soliciten al Usuario en los formularios de recogida tendrán carácter obligatorio salvo que se indique lo contrario en el formulario correspondiente. En el caso de que el Usuario no facilite los datos solicitados con carácter obligatorio, elDeseazo no podrá tramitar el formulario de que se trate ni, en consecuencia, prestar el servicio o funcionalidad a él relativos.</p>
+                <p>Las solicitudes de acceso, rectificación, cancelación y oposición del titular de los datos (el Usuario) deberán realizarse por escrito con la indicación "Comunicación relativa a Datos de Carácter Personal" por el Usuario a cualquiera de las direcciones indicadas anteriormente en el presente apartado 1 de [eldeseazo] y adjuntar acreditación de su identidad como persona física.</p>
+                <p>Una cookie es un fragmento de información que se almacena en el disco duro del visitante de una página web a través de su navegador, a petición del servidor de la página</p>
+                <h2>Revelación de datos con motivo del funcionamiento de la Plataforma</h2>
+                <p>Revelación de datos de los Usuarios Comerciantes</p>
+                <p>Con carácter general y salvo que otra cosa se disponga en el formulario correspondiente, las Ofertas, los datos en ellas contenidos y los de identificación del Usuario Comerciante oferente podrán ser comunicados por la Plataforma a los Usuarios Particulares que hayan emitido la correspondiente Solicitud de Oferta y/o a aquellos otros Usuarios Particulares que, en principio, puedan estar interesados en aceptarlas o en conocerlas a los efectos de su tramitación conforme a la relación contractual. Con carácter general y salvo que otra cosa se disponga en el formulario correspondiente, los Anuncios serán publicados en la Plataforma y podrán ser conocidos por todos los Usuarios.</p>
+                <p>Utilización por los Usuarios destinatarios de los datos comunicados</p>
+                <p>Si, como consecuencia de su uso de la Plataforma, el Usuario comunica datos personales a cualquier otro Usuario, el Usuario queda informado de que la Política de Privacidad de elDeseazo no será aplicable a dicha comunicación y, por tanto, que ésta se realizará sin que elDeseazo tenga ninguna responsabilidad por su eventual tratamiento por el Usuario al que se comuniquen los datos.</p>
+                <p>Lo mismo ocurrirá si como consecuencia del interés de un Usuario en alguna Solicitud de Oferta, Oferta o Anuncio, el Usuario decide ponerse en contacto directamente con un Usuario Comerciante (utilizando alguna de las herramientas facilitadas por la Plataforma o cualquier otro medio de contacto). En tal caso, el Usuario queda informado de que cualquier información que facilite al Usuario Comerciante a partir de ese momento, el Usuario Comerciante la tratará conforme a sus propias políticas de protección de datos, sin que elDeseazo tenga ninguna responsabilidad por dicho tratamiento ni relación contractual posterior. Recomendamos a los Usuarios que, antes de facilitar sus datos personales a los Usuarios Comerciantes, revisen y acepten los términos de sus políticas de protección de datos.</p>
+                <p>Cookies e información no personal</p>
+                <p>Una cookie es un fragmento de información que se almacena en el disco duro del visitante de una página web a través de su navegador, a petición del servidor de la página</p>
+                <p>La Plataforma utiliza:</p>
+                <p>cookies que recaban información acreditativa de la aceptación por el Usuario de la Relación Contractual para probar tal aceptación, y que tienen validez y duración indefinida, hasta que el Usuario se dé de baja en la Plataforma; y cookies que recaban la dirección IP del ordenador del Usuario e información relativa al comportamiento del Usuario en la Plataforma, para asegurarnos de que el Usuario tenga acceso a la información relativa a las selecciones realizadas así como para identificar las preferencias de nuestros Usuarios mejorar nuestras prestaciones, y que tienen validez y duración indefinida, hasta que el Usuario se dé de baja en la Plataforma.</p>
+                <p>Las cookies empleadas en este sitio web se asocian únicamente con un Usuario anónimo y su ordenador y no proporcionan referencias que permitan deducir el nombre y apellidos del Usuario.</p>
+                <p>En la sección de ayuda de su navegador se establece el procedimiento a seguir para aceptar o rechazar por defecto las cookies, para eliminarlas o para recibir un aviso en pantalla de la recepción de cada cookie y decidir en ese momento su instalación o no en su disco duro. Si el Usuario configurase su navegador para rechazar todas las cookies o rechazase expresamente nuestras cookies, podría no disfrutar de todas o algunas de las funcionalidades o de los servicios ofrecidos en la Plataforma o, incluso, podría no disfrutar de los servicios ofrecidos a través de la Plataforma (incluyendo la posibilidad de que el Usuario no pueda emitir o recibir en modo alguno las Solicitud de Oferta, Ofertas, Anuncios y otros Contenidos).</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="subMenu">
+            <div class="box">
+                <div class="siteMap">
+                    <div class="boxCuarto">
+                        <span>Eldeseazo</span>
+                        <ul>
+                            <li><a href="home.html" title="Inicio">Inicio</a></li>
+                            <li><a href="listadoDeseos.html" title="Últimos deseos">Últimos deseos</a></li>
+                            <li><a href="listadoOfertas.html" title="Últimas ofertas">Últimas ofertas</a></li>
+                            <li><a href="listadoGenios.html" title="Directorio de genios">Directorio de genios</a></li>
+                        </ul>
+                    </div>
+                    <div class="boxCuarto">
+                        <span>Sobre Nosotros</span>
+                        <ul>
+                            <li><a href="comoFunciona.html" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+                            <li><a href="contacto.html" title="Contacto">Contacto</a></li>
+                            <li><a href="#" title="Blog">Blog</a></li>
+                            <li><a href="prensa.html" title="Sala de prensa">Sala de prensa</a></li>
+                        </ul>
+                    </div>
+                    <div class="boxCuarto">
+                        <span>Acceso</span>
+                        <ul>
+                            <li><a href="acceso.html" title="Mi cuenta">Mi cuenta</a></li>
+                            <li><a href="altaEmpresa.html" title="¿Tienes una empresa?">¿Tienes una empresa?</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="boxCuarto rrss">
+                    <span>Síguenos</span>
+                    <a href="#" title="facebook" target="_blank" class="btnF">&nbsp;</a><a href="#" title="twitter" target="_blank" class="btnT">&nbsp;</a><a href="#" title="Google+" target="_blank" class="btnG">&nbsp;</a><a href="#" title="Rss" target="_blank" class="btnRss">&nbsp;</a>
+                </div>
+            </div>
+        </div>
+        <div class="close">
+            <div class="box">
+                <div class="copy">Eldeseazo el genio de tus compras 2013. Todos los derechos reservados · <a href="politicaDePrivacidad.html" title="Política de privacidad">Política de privacidad</a> · <a href="condicionesDeUso.html" title="Condiciones de uso">Condiciones de uso</a></div>
+                <div class="logos">&nbsp;</div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">  
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Language" content="es" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Ponte en contacto con Eldeseazo a través del formulario de contacto o vía telefónica. " />
+
+    <title>Condiciones de uso | Eldeseazo</title>
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+ 
+    <!-- CSS -->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/jqtransform.css" rel="stylesheet" type="text/css" />
+    
+    <!-- JS -->
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script> 
+    <script src="js/jquery.jqtransform.js" type="text/javascript"></script>
+    
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript">
+        $(window).load(function(){
+            
+            $('input[type="text"]').focusin(function () { if ($(this).val() == $(this).attr('value') ) { $(this).val(''); $(this).removeClass('inputClarito');$(this).addClass('cajaSeleccionada');} });
+            $('input[type="text"]').focusout(function () {  if ($(this).val() == '') {  $(this).val($(this).attr('value')); $(this).addClass('inputClarito');$(this).removeClass('cajaSeleccionada');} });
+            
+            $(function() { $("form.jqtransform").jqTransform();});
+            
+            $('.siteMap .boxCuarto span').click(function(){
+                if($(window).width()<=1024){ $(this).parent().find("ul").slideToggle(); }    
+            });
+            elpie();
+        });
+        $(window).resize(function(){
+            elpie();
+        }); 
+        function elpie() {
+            if($(window).height() > $('.header').height() + $('.content').height() + $('.footer').height() ){ $('.footer').css({position: 'absolute', bottom : '0', left : '0'});} else{  $('.footer').css({position: 'relative'});}
+        }
+    </script>
+
+</head>
+<body>
+
+    <header class="header">
+        <nav class="menu">
+            <ul class="box">
+                <li class="btnHome"><a href="home.html" title="Inicio">Inicio &nbsp;&nbsp;|</a></li>
+                <li><a href="homeViajes.html" title="Viajes">Viajes</a></li>
+                <li><a href="homeElectronica.html" title="Electrónica">Electrónica</a></li>
+                <li><a href="homeMotor.html" title="Motor">Motor</a></li>
+                <li><a href="homeVivienda.html" title="Vivienda">Vivienda</a></li>
+                <li><a href="homeModa.html" title="Moda">Moda</a></li>
+                <li><a href="homeRestaurantes.html" title="Restaurantes">Restaurantes</a></li>
+                <li><a href="homeOcio.html" title="Ocio">Ocio</a></li>
+                <li><a href="homeBienestar.html" title="Bienestar">Bienestar</a></li>
+                <li><a href="homeCursos.html" title="Cursos">Cursos</a></li>
+                <li><a href="homeServicios.html" title="Servicios">Servicios</a></li>
+                <li><a href="homeCategorias.html" title="Más">Más</a></li>
+            </ul>
+        </nav>
+        <div class="box">
+            <div id="logo"><a href="home.html" title="Eldeseazo"><img src="img/logo_el_deseazo.jpg" title="Eldeseazo, el genio de tus compras." alt="Logotipo de Eldeseazo" /></a></div>
+            <div class="registro">
+                <a href="registro.html" title="Registro">Regístrate</a>
+                <a href="acceso.html" title="Entrar" class="btnIn">Entrar</a>
+            </div>
+            <div class="search"><input type="text" value="¿Qué quieres comprar y a qué precio?" /><input type="submit" value="Pide tu deseo" title="Pide tu deseo" /></div>
+            <a href="#" title="Botón Menu" class="btnMenu">&nbsp;</a>
+        </div>
+    </header>
+    
+    <section class="content">
+        <div class="breadcrumb">
+            <div class="box">
+                <p><b>Estás en:</b> <a href="home.html" title="Inicio">Inicio</a> <span>Condiciones de uso</span></p>
+            </div>
+        </div>
+        <div class="boxWhite">
+            <div class="box">   
+                <div class="titleForm boxDosTercios">
+                    <h1>Condiciones de uso</h1>
+                </div>
+            </div>
+        </div>
+        <div class="boxGrey">
+            <div class="box textoPlano">
+                <h2>Introducción e información sobre Eldeseazo</h2>
+                <p>Estas condiciones generales regulan el uso de la plataforma web denominada accesible en www.eldeseazo.com (las "Condiciones de Uso" y la "Plataforma", respectivamente) que Next Chance Assets, S.L. (en adelante, designada como "eldeseazo") pone a disposición de los usuarios de dicha Plataforma (los “Usuarios”).</p>
+                <p>Eldeseazo (Next Chance Assets, S.L.) dispone de C.I.F. B-86079407 y está inscrita en el Registro Mercantil de MADRID, al tomo 28.312, folio 0, hoja 61, sección 8.</p>
+                <ul>
+                    <li>Domicilio: Paseo de la Castellana, 259 –D Planta 43 Sur. 28046 - Madrid</li>
+                    <li>Dirección de correo electrónico: info (arroba) eldeseazo (punto) com</li>
+                </ul>
+                <p>La mera utilización de la Plataforma atribuye la condición de “Usuario” de la misma y expresa la aceptación plena y sin reserva por el Usuario de todas y cada una de las presentes Condiciones de Uso en la versión publicada por eldeseazo en el momento mismo en que el Usuario accede a la Plataforma. En consecuencia, el Usuario debe leer atentamente las Condiciones de Uso en cada una de las ocasiones en que se proponga usar la Plataforma para conocer sus variaciones.</p>
+                <p>Además de las Condiciones de Uso, resultarán de aplicación a los Usuarios aquellas otras condiciones generales y/o particulares que suscriban en relación con la utilización de determinados recursos puestos a su disposición en la Plataforma. Al conjunto de términos y condiciones que resulte de las Condiciones de Uso y las diversas condiciones generales y particulares aplicables a cada Usuario en relación con la Plataforma se denominará la "Relación Contractual". Las Condiciones de Uso serán de aplicación subsidiaria a las condiciones generales o particulares suscritas por los Usuarios en todos aquellos aspectos no regulados por éstas. En caso de contradicción entre las condiciones generales y las Condiciones de Uso, prevalecerán aquéllas sobre éstas. En caso de contradicción entre las condiciones particulares y las generales, prevalecerán aquéllas sobre éstas.</p>
+                <p>Sin perjuicio del cumplimiento de lo anterior, las relaciones entre los Usuarios quedarán reguladas por las condiciones y pactos establecidos directa y libremente entre ellos, siendo eldeseazo completamente ajena a las mismas y no pudiendo ser considerada intermediaria, representante o responsable de ninguna de las partes interesadas.</p>
+                <p>Los Usuarios serán "Usuarios Particulares" y/o "Usuarios Comerciantes". Los primeros (Usuarios Particulares) son aquellos Usuarios que utilizan las herramientas de la Plataforma puestas a disposición de cualquier Usuario que se registre en ella como no comerciante (por ejemplo, para conocer Anuncios, efectuar Solicitudes de Ofertas y acceder a los Contenidos de Usuarios que resulten accesibles, etc.). Los segundos (Usuarios Comerciantes) son aquellos empresarios que se registren como tales mediante los formularios correspondientes y utilicen la Plataforma para ofrecer en ella sus productos o servicios, por ejemplo, publicando Anuncios o respondiendo con Ofertas a las Solicitudes de Oferta emitidas por los Usuarios Particulares.</p>
+                
+                <h2>La plataforma y los servicios puestos a disposición del usuario</h2>
+                <p>Mediante la puesta de la Plataforma a disposición de los Usuarios, eldeseazo actúa y actuará como proveedor de servicios de intermediación consistentes en el almacenamiento de contenidos de los Usuarios y en la provisión de instrumentos de búsqueda, acceso, recopilación y enlace a tales contenidos de manera que los Usuarios, bajo su sola responsabilidad, puedan llevar a cabo aquellos actos que resulten de su interés como los que se indican a continuación:</p>
+                <p>Los Usuarios Particulares podrán solicitar ofertas de los Usuarios Comerciantes (las "Solicitudes de Ofertas") y tomar conocimiento de Ofertas de los Usuarios Comerciantes (las "Ofertas") para obtener información o llevar a cabo la contratación de productos o servicios ofrecidos por aquéllos.</p>
+                <p>Los Usuarios Comerciantes podrán tomar conocimiento de las Solicitudes de Ofertas de Usuarios Particulares y dar respuesta mediante el envío de ofertas ajustadas a aquéllas (las "Ofertas"), así como publicar en la Plataforma anuncios sobre sus productos y servicios (los "Anuncios").</p>
+                <p>La contratación de los productos y servicios a los que se refieran las Solicitudes de Oferta y la Oferta no se perfeccionará por el mero hecho del cruce de Solicitud de Oferta y Oferta, siendo preciso que el Usuario Comerciante y el Usuario Particular se pongan en contacto, por los medios que entiendan oportunos y al margen de la Plataforma, para fijar los términos del contrato y realizar éste.</p>
+                <p>A los efectos de la Relación Contractual, el término "Contenidos de Usuarios" designará cada uno y el conjunto de los datos, informaciones, manifestaciones, opiniones, contenidos, materiales de cualquier naturaleza (gráfica, audiovisual, etc.) o similares que los Usuarios almacenen, utilicen o hagan públicos en la Plataforma por medio de las herramientas puestas a su disposición o que, en general, sean utilizados o facilitados por los Usuarios en el marco de su utilización de la Plataforma.</p>
+                <p>Asimismo, eldeseazo podrá ofrecer a los Usuarios otras utilidades y servicios a través de la Plataforma.</p>
+                <p>La utilización de la Plataforma como Usuario Particular tiene carácter gratuito salvo que otra cosa se derive de los formularios y condiciones particulares aplicables a cada funcionalidad o servicio.</p>
+
+                <h2>Uso de la Plataforma a título personal y bajo la exclusiva responsabilidad del Usuario</h2>
+                <p>El Usuario utilizará la Plataforma en su propio nombre y derecho, por cuenta propia y bajo su entera y sola responsabilidad.</p>
+                
+                <h2>Uso de la Plataforma a título personal y bajo la exclusiva responsabilidad del Usuario</h2>
+                <p>El Usuario se obliga a utilizar la Plataforma de conformidad con las presentes Condiciones de Uso con plena observancia y respeto de la legislación aplicable y de los derechos de terceros asumiendo, además, las siguientes obligaciones:<br />
+                1. Únicamente creará y utilizará una cuenta de usuario asociada a un nombre de usuario, que será público para toda la Plataforma e identificará a todos los efectos su operativa en la misma (la "Cuenta de Usuario"). La Cuenta de Usuario será accesible sólo mediante aquellas claves de acceso o cualesquiera otros recursos de seguridad que estén disponibles en la Plataforma. El Usuario deberá crear y mantener en confidencialidad dicha clave o elementos de seguridad.<br />
+                2. Omitirá el empleo de cualquier dato, información o Contenido de Usuario accesible en la Plataforma para fines distintos del uso de la Plataforma según lo previsto en la Relación Contractual.<br />
+                3. Se abstendrá de dirigir cualquier clase de oferta o propuesta comercial a los Usuarios de forma distinta a la autorizada en la Relación Contractual.<br />
+                4. Preservará la confidencialidad de las claves de acceso y cualesquiera otros elementos que permitan la suplantación de su identidad y, en caso de que considere que se ve amenazada, lo comunicará sin demora a eldeseazo y procederá a su actualización o sustitución inmediata para evitar utilizaciones no autorizadas de su nombre o Cuenta de usuario.<br />
+                5. Asumirá frente a eldeseazo y frente a los demás Usuarios plena responsabilidad por las Solicitudes de Ofertas, Ofertas y en general por cualesquiera actuaciones y Contenidos de Usuario efectuados desde o atribuibles a su nombre o Cuenta de Usuario, salvo que hubiera comunicado con la suficiente antelación a eldeseazo una incidencia que ponga en riesgo la confidencialidad de su clave de acceso, haya adoptado las medidas necesarias para prevenir su uso no autorizado conforme a estas Condiciones de Uso y existan indicios de que dicha actuación no ha sido llevada a cabo por el Usuario.<br />
+                6. Cumplirá puntualmente y en sus términos los contratos o acuerdos que haya convenido con otros Usuarios.<br />
+                7. Suministrará a eldeseazo y al resto de Usuarios siempre datos e información ciertos, auténticos y legítimos.<br />
+                8. Se abstendrá de utilizar la Plataforma para llevar a cabo actuaciones contrarias a la legislación sobre blanqueo de capitales o terrorismo.<br />
+                9. Omitirá el empleo de medios o instrumentos técnicos o informáticos que pudieran impedir o dificultar el normal funcionamiento de la Plataforma o dañar las herramientas y dispositivos técnicos integrados en la Plataforma u otros pertenecientes a eldeseazo o a los Usuarios.<br />
+                10. Omitirá el empleo de cualquier herramienta técnica o informática que permita la extracción, automatizada o sustancial, de datos o contenidos alojados o almacenados en o accesibles por medio de la Plataforma.</p>
+                
+                <h2>Exclusión de garantía</h2>
+                <p>Eldeseazo no garantiza a los Usuarios y declina toda responsabilidad por:</p>
+                <p>1. el funcionamiento correcto, continuo o ininterrumpido de la Plataforma, que eldeseazo podrá cesar en cualquier momento a su discreción sin perjuicio del respeto a los compromisos contractuales asumidos por ella.<br />
+                2. la adecuación de la Plataforma a las necesidades o expectativas de los Usuarios.<br />
+                3. el nivel de satisfacción, ganancia o rentabilidad o la ausencia de pérdidas o daños como consecuencia de la utilización por el Usuario de la Plataforma.<br />
+                4. la veracidad, exactitud y vigencia de los datos correspondientes a los Usuarios.<br />
+                5. la solvencia, fiabilidad técnica, comercial, moral o financiera de los Usuarios.<br />
+                6. la licitud, exactitud, veracidad, y vigencia de los Contenidos de Usuarios.<br />
+                7. la conclusión, buen fin o regularidad de los contratos o acuerdos convenidos entre los Usuarios.<br />
+                8. el almacenamiento constante, preservación o no pérdida de los Contenidos de Usuarios.</p>
+                
+                <h2>Posición neutra, independiente y ajena de eldeseazo en relación con los contenidos y relaciones de los Usuarios y posibles medidas</h2> 
+                <ul>
+                    <li>eldeseazo no realiza, formula, hace propios ni controla los Contenidos de Usuarios, que son creados, almacenados, utilizados y/o publicados por los Usuarios bajo su sola responsabilidad.</li>
+                    <li>eldeseazo no interviene en las relaciones, contratos o acuerdos entabladas entre ellos ni se responsabiliza de su validez, eficacia, cumplimiento o resultado perjudicial o beneficioso.</li>
+                    <li>Sin perjuicio de lo anterior, eldeseazo podrá:</li>
+                </ul>
+                
+                <p>1. retirar, cancelar y/o denunciar ante las autoridades competentes cualesquiera Contenidos de Usuarios en el caso de que la actividad del Usuario resultara contraria a la Relación Contractual, al ordenamiento o a los derechos de terceros, incluidos los derechos de propiedad intelectual, industrial, de imagen y al honor.<br />
+                   2. suspender o cancelar la cuenta de cualquier Usuario o Usuarios que haya cometido actos contrarios a la Relación Contractual, al ordenamiento o a los derechos de terceros, incluidos los derechos de propiedad intelectual, industrial, de imagen y al honor.<br />
+                   3. adoptar, a su sola decisión y criterio, las medidas que estime oportunas para el mejor funcionamiento de la Plataforma y la mayor satisfacción de los Usuarios.</p>   
+
+                <h2>Propiedad intelectual de eldeseazo y no licencia</h2>
+                <p>Pertenecen de forma exclusiva a eldeseazo los derechos de propiedad intelectual e industrial o de cualquier otro tipo existentes o que pudieran existir sobre la Plataforma, sus recursos, bases de datos, elementos y herramientas, incluidas su estructura, ordenación y configuración, sin perjuicio de los derechos del Usuario sobre los Contenidos de Usuario.</p>
+                <p>Ni la utilización de la Plataforma ni la suscripción de ninguna de las condiciones contractuales a ella relativas concede licencia o autorización de uso alguna sobre los derechos descritos en el anterior párrafo salvo en la medida estrictamente necesaria para la utilización de la Plataforma conforme a la Relación Contractual.</p>
+                
+                <h2>Licencia sobre los Contenidos de Usuario</h2>
+                <p>En la medida en que fuere necesario para el cumplimiento de la Relación Contractual, eldeseazo podrá utilizar todos los derechos de propiedad intelectual e industrial relativos a los Contenidos de Usuario facilitados por el Usuario, por ejemplo, para usarlos y ponerlos a disposición de otros Usuarios conforme a la Relación Contractual y, en general, para el funcionamiento de la Plataforma así como conservar una copia de seguridad de dichos Contenidos de Usuario después de su retirada de la Plataforma a fin de acreditar el cumplimiento de las obligaciones legales de eldeseazo o de un Usuario o para colaborar con las autoridades públicas (la "Licencia"). Las referidas copias de seguridad del Contenido de Usuario no serán utilizadas para otra finalidad y podrán ser conservadas durante un plazo máximo correspondiente a la prescripción de las obligaciones legales.</p>
+                <p>El Usuario garantiza a eldeseazo que cuenta con los derechos necesarios para conceder la Licencia y que la utilización de los derechos de propiedad intelectual e industrial licenciados de conformidad con lo previsto en esta Condición General no supone infracción legal, ni vulneración de los derechos de cualquier clase de tercero, ni incumplimiento de obligaciones de cualquier naturaleza contraídas con terceros ni constituye competencia desleal.</p>
+                
+                <h2>Procedimiento en caso de realización de actividades de carácter ilícito</h2>
+                <p>En el caso de que cualquier Usuario considere que existen hechos o circunstancias que revelen el carácter ilícito de la utilización de la Plataforma por otro Usuario o de un Contenido de Usuario (incluyendo la violación de derechos de propiedad intelectual o industrial, la realización de actos de competencia desleal o publicidad ilícita, actos contrarios al derecho al honor o a la propia imagen, etc.) deberá enviar, bajo su responsabilidad y compromiso de que la información proporcionada es exacta y veraz, una notificación a eldeseazo en la que se contengan los siguientes extremos: (a) datos personales que permitan la identificación y el contacto del reclamante; y (b) especificación de la supuesta actividad ilícita llevada a cabo en la Plataforma y, cuando se trate de una supuesta violación de derechos de propiedad intelectual o industrial, indicación precisa y concreta de los derechos infringidos y de los hechos infractores así como de su localización en la Plataforma. Eldeseazo puede poner a disposición de los Usuarios, si así lo decide, otros mecanismos para llevar a cabo estas notificaciones.</p>
+                <p>Estas notificaciones deberán ser enviadas a info (arroba) eldeseazo (punto) com y en el campo del asunto indicarán: "Denuncia de Usuario".</p>
+                <p>Una vez recibida dicha Denuncia de Usuario, eldeseazo llevará a cabo, con la debida celeridad en atención a las circunstancias aplicables, las actuaciones oportunas que le correspondan, que podrán incluir la suspensión o cancelación del Contenido de Usuario o de su cuenta o cualquier otra medida necesaria. Eldeseazo se reserva la facultad de mantener o rehabilitar el Contenido de Usuario o la cuenta si se demuestra su licitud.</p>
+                
+                <h2>Protección de Datos</h2>
+                <p>Para utilizar algunos de los recursos de la Plataforma, los Usuarios deben proporcionar previamente a eldeseazo ciertos datos de carácter personal (los “Datos Personales”). Eldeseazo tratará de manera automatizada los Datos Personales con las finalidades así como bajo las condiciones definidas en su Política de Privacidad publicada en la URL http://eldeseazo.com/politica-privacidad que el Usuario deberá consultar y aceptar específicamente cuando ingrese sus datos personales.</p>
+                
+                <h2>Duración y Terminación</h2>
+                <p>La prestación del servicio de la Plataforma tiene, en principio, una duración indefinida. No obstante, eldeseazo está autorizada para dar por terminada o suspender en todo o en parte la prestación en cualquier momento, sin perjuicio de los compromisos contractuales que puedan existir, en su caso, con los Usuarios Comerciantes. La terminación del servicio de la Plataforma en todo o en parte no obligará a eldeseazo a advertirlo previamente a los Usuarios, sin perjuicio de las obligaciones contractuales asumidas con los Usuarios Comerciantes siempre que sea razonablemente posible.</p>
+                
+                <h2>Cesión del Contrato</h2>
+                <p>El Usuario no podrá ceder la Relación Contractual, en todo o en parte, y los derechos u obligaciones derivados de ella salvo autorización previa expresa y por escrito de eldeseazo.</p>
+                <p>Eldeseazo podrá ceder la Relación Contractual, en todo o en parte, ni los derechos u obligaciones derivados de ella a cualquier tercero de su elección, sin previa autorización del Usuario o comunicación al mismo.</p>
+                
+                <h2>Comunicaciones</h2>
+                <p>Toda comunicación entre las partes deberá hacerse por escrito, sea por correo, telefax o correo electrónico enviados, en el caso de eldeseazo, a las direcciones indicadas en la Condición de Uso 1 y, en el caso del Usuario, a los datos de contacto que éste haya facilitado. Se considerarán debidamente entregadas y recibidas las comunicaciones efectuadas por carta con acuse de recibo y las efectuadas por telegrama, telefax o correo electrónico cuando pueda acreditarse su recepción. Toda comunicación enviada a las direcciones facilitadas por los Usuarios se entenderá correctamente efectuada, excepto si el Usuario hubiera previamente notificado a eldeseazo un cambio de dirección con una antelación mínima de 15 días hábiles.</p>
+                
+                <h2>Modificación de la Relación Contractual</h2>
+                <p>Los Usuarios son conscientes de que eldeseazo podrá modificar las presentes Condiciones de Uso y la Relación Contractual en cualquier momento sin necesidad de informar de ello a los Usuarios. Los Usuarios deberán consultar periódicamente las Condiciones de Uso para conocer su versión aplicable en cada momento.</p>
+                
+                <h2>Miscelánea</h2>
+                <p>Las presentes Condiciones de Uso son la manifestación expresa de la voluntad de las partes en relación con su objeto e invalidan los acuerdos verbales y escritos alcanzados al respecto con anterioridad a su aceptación por el Usuario.</p>
+                <p>La declaración de nulidad o invalidez de cualquier cláusula contenida en las presentes Condiciones de Uso no afectará a la validez y eficacia de las demás cláusulas, que se interpretarán y aplicarán en el sentido lícito más próximo al que se derivase de la aplicación de la cláusula nula.</p>
+                <p>La renuncia por alguna de las partes del incumplimiento de cualquiera de las disposiciones de estas Condiciones de Uso por la otra parte, no constituirá una renuncia a reclamar ante cualquier incumplimiento futuro de la misma o de cualquier otra obligación. El retraso o la omisión de las partes en el ejercicio de algún derecho que le correspondiera por virtud de las Condiciones de Uso tampoco constituirá una renuncia al derecho correspondiente.</p>
+                
+                <h2>Ley aplicable</h2>
+                <p>Las presentes Condiciones de Uso y la Relación Contractual se regirán por la ley española.</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="subMenu">
+            <div class="box">
+                <div class="siteMap">
+                    <div class="boxCuarto">
+                        <span>Eldeseazo</span>
+                        <ul>
+                            <li><a href="home.html" title="Inicio">Inicio</a></li>
+                            <li><a href="listadoDeseos.html" title="Últimos deseos">Últimos deseos</a></li>
+                            <li><a href="listadoOfertas.html" title="Últimas ofertas">Últimas ofertas</a></li>
+                            <li><a href="listadoGenios.html" title="Directorio de genios">Directorio de genios</a></li>
+                        </ul>
+                    </div>
+                    <div class="boxCuarto">
+                        <span>Sobre Nosotros</span>
+                        <ul>
+                            <li><a href="comoFunciona.html" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+                            <li><a href="contacto.html" title="Contacto">Contacto</a></li>
+                            <li><a href="#" title="Blog">Blog</a></li>
+                            <li><a href="prensa.html" title="Sala de prensa">Sala de prensa</a></li>
+                        </ul>
+                    </div>
+                    <div class="boxCuarto">
+                        <span>Acceso</span>
+                        <ul>
+                            <li><a href="acceso.html" title="Mi cuenta">Mi cuenta</a></li>
+                            <li><a href="altaEmpresa.html" title="¿Tienes una empresa?">¿Tienes una empresa?</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="boxCuarto rrss">
+                    <span>Síguenos</span>
+                    <a href="#" title="facebook" target="_blank" class="btnF">&nbsp;</a><a href="#" title="twitter" target="_blank" class="btnT">&nbsp;</a><a href="#" title="Google+" target="_blank" class="btnG">&nbsp;</a><a href="#" title="Rss" target="_blank" class="btnRss">&nbsp;</a>
+                </div>
+            </div>
+        </div>
+        <div class="close">
+            <div class="box">
+                <div class="copy">Eldeseazo el genio de tus compras 2013. Todos los derechos reservados · <a href="politicaDePrivacidad.html" title="Política de privacidad">Política de privacidad</a> · <a href="condicionesDeUso.html" title="Condiciones de uso">Condiciones de uso</a></div>
+                <div class="logos">&nbsp;</div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

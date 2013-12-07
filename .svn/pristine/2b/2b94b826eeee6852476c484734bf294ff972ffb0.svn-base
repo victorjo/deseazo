@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">  
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Language" content="es" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Accede a las más de 50.000 empresas que ya son parte de Eldeseazo." />
+
+    <title>Directorio de genios | Eldeseazo</title>
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+ 
+    <!-- CSS -->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/jqtransform.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    
+    <!-- JS -->
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="js/jquery.jqtransform-min.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+        $(function() { $("form.jqtransform").jqTransform(); /* JS para etiquetas Select -- Necesario estar dentro de etiqueta form */ });
+    </script>
+    
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript">
+        $(window).load(function(){
+            
+            $('input[type="text"]').focusin(function () { if ($(this).val() == $(this).attr('value') ) { $(this).val(''); $(this).removeClass('inputClarito');$(this).addClass('cajaSeleccionada');} });
+            $('input[type="text"]').focusout(function () {  if ($(this).val() == '') {  $(this).val($(this).attr('value')); $(this).addClass('inputClarito');$(this).removeClass('cajaSeleccionada');} });
+            
+            $('.campoForm').focusin(function(){ $(this).removeClass('orange'); $(this).addClass('blue'); });
+            $('.campoForm').focusout(function(){ $(this).removeClass('blue'); if($(this).find('input').val()==''){ $(this).addClass('orange'); } });
+            
+            $('.siteMap .boxCuarto span').click(function(){
+                if($(window).width()<=1024){ $(this).parent().find("ul").slideToggle(); }    
+            });              
+        });
+    </script>
+
+</head>
+<body>
+
+    <header class="header">
+        <nav class="menu">
+            <ul class="box">
+                <li class="btnHome"><a href="home.html" title="Inicio" class="on">Inicio &nbsp;&nbsp;|</a></li>
+                <li><a href="homeViajes.html" title="Viajes">Viajes</a></li>
+                <li><a href="homeElectronica.html" title="Electrónica">Electrónica</a></li>
+                <li><a href="homeMotor.html" title="Motor">Motor</a></li>
+                <li><a href="homeVivienda.html" title="Vivienda">Vivienda</a></li>
+                <li><a href="homeModa.html" title="Moda">Moda</a></li>
+                <li><a href="homeRestaurantes.html" title="Restaurantes">Restaurantes</a></li>
+                <li><a href="homeOcio.html" title="Ocio">Ocio</a></li>
+                <li><a href="homeBienestar.html" title="Bienestar">Bienestar</a></li>
+                <li><a href="homeCursos.html" title="Cursos">Cursos</a></li>
+                <li><a href="homeServicios.html" title="Servicios">Servicios</a></li>
+                <li><a href="homeCategorias.html" title="Más">Más</a></li>
+            </ul>
+        </nav>
+        <div class="box">
+            <div id="logo"><a href="home.html" title="Eldeseazo"><img src="img/logo_el_deseazo.jpg" title="Eldeseazo, el genio de tus compras." alt="Logotipo de Eldeseazo" /></a></div>
+            <div class="registro">
+                <a href="registro.html" title="Registro">Regístrate</a>
+                <a href="acceso.html" title="Entrar" class="btnIn">Entrar</a>
+            </div>
+            <div class="search"><input type="text" value="¿Qué quieres comprar y a qué precio?" /><input type="submit" value="Pide tu deseo" /></div>
+            <a href="#" title="Botón Menu" class="btnMenu">&nbsp;</a>
+        </div>
+    </header>
+    
+    <section class="content">
+        <div class="breadcrumb">
+            <div class="box">
+                <p><b>Estas en:</b> <a href="home.html" title="Inicio">Inicio</a> <span>genios</span></p>
+            </div>
+        </div>
+        <div class="boxWhite">
+            <div class="box">   
+                <div class="titleDeseo boxDosTercios">
+                    <h1>Directorio de genios</h1>
+                    <p>Mas de 50.000 empresas y particulares ya se han unido a Eldeseazo. Ellos son los verdaderos genios de las compras</p>
+                </div>
+                <div class="boxTercio headListado">
+                    <h2>¿Tienes una empresa?</h2>
+                    <p>Conviértete en uno de nuestros genios y ayuda a los usuarios a hacer realidad sus deseos. <a href="#">saber más</a></p>
+                    <a href="formularioEmpresa.html" class="btn" title="Dar de alta mi empresa, gratis">Dar de alta mi empresa, gratis</a>
+                </div>
+            </div>
+        </div>
+        <div class="boxGrey">
+            <div class="box boxFilter">
+                <div class="filters">
+                    <form  class="jqtransform">
+                    <div class="combo">
+                        <label>Ubicación</label><br />
+                        <select>
+                            <option>Madrid</option>
+                            <option>Barcelona</option>
+                            <option>Cuenca</option>
+                            <option>Toledo</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="combo">
+                        <label>Categorías</label><br />
+                        <select>
+                            <option>Todas</option>
+                            <option>Casas</option>
+                            <option>Camas</option>
+                            <option>Cazuelas</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    </form>                    
+                </div>
+                <form><div class="search campoForm"><input type="text" value=" " /><input type="submit" value="Buscar" /></div></form>
+            </div>
+            <ul class="box list genios">  
+                <li class="boxG premium">
+                    <div class="thumbG"><img src="img/thumbBorrar.jpg" alt="alt de la imagen" /></div>
+                    <div class="txt">
+                        <h2 class="txtDate"><a href="#" title="Carlos">Viajes Halcón</a></h2>
+                        <div class="txtInfo">Esto es la descripción de una empresa con una descripción larga que no cabe en la caja.Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris... <a href="#">(leer más)</a></div>
+                    </div>
+                    <div class="boxBtn">
+                        <div class="starts">
+                            <div class="contStart">
+                                <span class="rating r4">Rating : 4 stars out of 5</span>
+                            </div>
+                            <span class="comments"><a href="#" title="(10 comentarios)">(10 comentarios)</a></span>
+                        </div>
+                        <a href="#" title="Ver ofertas" class="btn">Ver ofertas</a>
+                    </div>
+                </li>
+                
+                <li class="boxG premium">
+                    <div class="thumbG"><img src="img/thumbBorrar.jpg" alt="alt de la imagen" /></div>
+                    <div class="txt">
+                        <h2 class="txtDate"><a href="#" title="Carlos">Viajes Halcón</a></h2>
+                        <div class="txtInfo">Esto es la descripción de una empresa con una descripción larga que no cabe en la caja.Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris... <a href="#">(leer más)</a></div>
+                    </div>
+                    <div class="boxBtn">
+                        <div class="starts">
+                            <div class="contStart">
+                               <span class="rating r5">Rating : 5 stars out of 5</span>
+                            </div>
+                            <span class="comments"><a href="#" title="(10 comentarios)">(10 comentarios)</a></span>
+                        </div>
+                        <a href="#" title="Ver ofertas" class="btn">Ver ofertas</a>
+                    </div>
+                </li>
+                
+                <li class="boxG premium">
+                    <div class="thumbG"><img src="img/thumbBorrar.jpg" alt="alt de la imagen" /></div>
+                    <div class="txt">
+                        <h2 class="txtDate"><a href="#" title="Carlos">Viajes Halcón</a></h2>
+                        <div class="txtInfo">Esto es la descripción de una empresa con una descripción larga que no cabe en la caja.Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris... <a href="#">(leer más)</a></div>
+                    </div>
+                    <div class="boxBtn">
+                        <div class="starts">
+                            <div class="contStart">
+                                <span class="rating r3">Rating : 3 stars out of 5</span>
+                            </div>
+                            <span class="comments"><a href="#" title="(10 comentarios)">(10 comentarios)</a></span>
+                        </div>
+                        <a href="#" title="Ver ofertas" class="btn">Ver ofertas</a>
+                    </div>
+                </li>
+                
+                <li class="boxG certificado">
+                    <div class="thumbG"><img src="img/thumbBorrar.jpg" alt="alt de la imagen" /></div>
+                    <div class="txt">
+                        <h2 class="txtDate"><a href="#" title="Carlos">Viajes Halcón</a></h2>
+                        <div class="txtInfo">Esto es la descripción de una empresa con una descripción larga que no cabe en la caja.Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris... <a href="#">(leer más)</a></div>
+                    </div>
+                    <div class="boxBtn">
+                        <div class="starts">
+                            <div class="contStart">
+                               <span class="rating r25">Rating : 25 stars out of 5</span>
+                            </div>
+                            <span class="comments"><a href="#" title="(10 comentarios)">(10 comentarios)</a></span>
+                        </div>
+                        <a href="#" title="Ver ofertas" class="btn">Ver ofertas</a>
+                    </div>
+                </li>
+                
+                <li class="boxG certificado">
+                    <div class="thumbG"><img src="img/thumbBorrar.jpg" alt="alt de la imagen" /></div>
+                    <div class="txt">
+                        <h2 class="txtDate"><a href="#" title="Carlos">Viajes Halcón</a></h2>
+                        <div class="txtInfo">Esto es la descripción de una empresa con una descripción larga que no cabe en la caja.Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris... <a href="#">(leer más)</a></div>
+                    </div>
+                    <div class="boxBtn">
+                        <div class="starts">
+                            <div class="contStart">
+                                <span class="rating r3">Rating : 3 stars out of 5</span>
+                            </div>
+                            <span class="comments"><a href="#" title="(10 comentarios)">(10 comentarios)</a></span>
+                        </div>
+                        <a href="#" title="Ver ofertas" class="btn">Ver ofertas</a>
+                    </div>
+                </li>
+                
+                <li class="boxG">
+                    <div class="thumbG"><img src="img/thumbBorrar.jpg" alt="alt de la imagen" /></div>
+                    <div class="txt">
+                        <h2 class="txtDate"><a href="#" title="Carlos">Viajes Halcón</a></h2>
+                        <div class="txtInfo">Esto es la descripción de una empresa con una descripción larga que no cabe en la caja.Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris... <a href="#">(leer más)</a></div>
+                    </div>
+                    <div class="boxBtn">
+                        <div class="starts">
+                            <div class="contStart">
+                               <span class="rating r4">Rating : 4 stars out of 5</span>
+                            </div>
+                            <span class="comments"><a href="#" title="(10 comentarios)">(10 comentarios)</a></span>
+                        </div>
+                        <a href="#" title="Ver ofertas" class="btn">Ver ofertas</a>
+                    </div>
+                </li>
+                
+            </ul> 
+            <div class="box pages">
+                <div class="enlaces"><a href="#" title="ver genios de inmobiliarias">ver genios de inmobiliarias</a> | <a href="#" title="ver genios de viajes">ver genios de viajes</a> | <a href="#" title="ver genios en Madrid">ver genios en Madrid</a></div>
+                <ul>
+                    <li><a href="#" title="Primera" class="flecha">&laquo;</a></li>
+                    <li><a href="#" title="Anterior" class="flecha" rel="prev">&#8249;</a></li> 
+                    <li><a href="#" title="1">1</a></li>
+                    <li><a href="#" title="2">2</a></li>
+                    <li><a href="#" title="3" class="on">3</a></li>
+                    <li><a href="#" title="4">4</a></li>
+                    <li><a href="#" title="Siguiente" class="flecha" rel="next">&#8250;</a></li>
+                    <li><a href="#" title="Último" class="flecha">&raquo;</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="subMenu">
+            <div class="box">
+                <div class="siteMap">
+                    <div class="boxCuarto">
+                        <span>Eldeseazo</span>
+                        <ul>
+                            <li><a href="home.html" title="Inicio">Inicio</a></li>
+                            <li><a href="listadoDeseos.html" title="Últimos deseos">Últimos deseos</a></li>
+                            <li><a href="listadoOfertas.html" title="Últimas ofertas">Últimas ofertas</a></li>
+                            <li><a href="listadoGenios.html" title="Directorio de genios">Directorio de genios</a></li>
+                        </ul>
+                    </div>
+                    <div class="boxCuarto">
+                        <span>Sobre Nosotros</span>
+                        <ul>
+                            <li><a href="comoFunciona.html" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+                            <li><a href="contacto.html" title="Contacto">Contacto</a></li>
+                            <li><a href="#" title="Blog">Blog</a></li>
+                            <li><a href="prensa.html" title="Sala de prensa">Sala de prensa</a></li>
+                        </ul>
+                    </div>
+                    <div class="boxCuarto">
+                        <span>Acceso</span>
+                        <ul>
+                            <li><a href="acceso.html" title="Mi cuenta">Mi cuenta</a></li>
+                            <li><a href="altaEmpresa.html" title="¿Tienes una empresa?">¿Tienes una empresa?</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="boxCuarto rrss">
+                    <span>Síguenos</span>
+                    <a href="#" title="facebook" target="_blank" class="btnF">&nbsp;</a><a href="#" title="twitter" target="_blank" class="btnT">&nbsp;</a><a href="#" title="Google+" target="_blank" class="btnG">&nbsp;</a><a href="#" title="Rss" target="_blank" class="btnRss">&nbsp;</a>
+                </div>
+            </div>
+        </div>
+        <div class="close">
+            <div class="box">
+                <div class="copy">Eldeseazo el genio de tus compras 2013. Todos los derechos reservados · <a href="politicaDePrivacidad.html" title="Política de privacidad">Política de privacidad</a> · <a href="condicionesDeUso.html" title="Condiciones de uso">Condiciones de uso</a></div>
+                <div class="logos">&nbsp;</div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

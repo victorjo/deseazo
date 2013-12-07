@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">  
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Language" content="es" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content=" " />
+
+    <title>Accede para pedir el deseo | Eldeseazo</title>
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+ 
+    <!-- CSS -->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/jqtransform.css" rel="stylesheet" type="text/css" />
+    
+    <!-- JS -->
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script> 
+    <script src="js/jquery.jqtransform.js" type="text/javascript"></script>
+        
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript">
+        $(window).load(function(){
+            
+            $('input[type="text"]').focusin(function () { if ($(this).val() == $(this).attr('value') ) { $(this).val(''); $(this).removeClass('inputClarito');$(this).addClass('cajaSeleccionada');} });
+            $('input[type="text"]').focusout(function () { $(this).removeClass('cajaSeleccionada'); if ($(this).val() == '') {  $(this).val($(this).attr('value')); $(this).addClass('inputClarito');$(this).removeClass('cajaSeleccionada');}});
+            
+            $('.campoForm').focusin(function(){ $(this).removeClass('orange'); $(this).removeClass('red'); $(this).addClass('blue'); });
+            $('.campoForm').focusout(function(){ $(this).removeClass('blue');$(this).removeClass('red');  if($(this).find('input').val()==''){ $(this).addClass('orange'); } });
+            
+            $(function() { $("form.jqtransform").jqTransform();});
+            
+            $('#btnFinalizar').click(function(){
+                $('.campoForm').each(function(){
+                    if($(this).find('input').val()==''){
+                        $(this).removeClass('orange');
+                        $(this).removeClass('ocre');
+                        $(this).addClass('red');
+                    }    
+                });
+                $('.textForm').each(function(){
+                    if($(this).find('textarea').val()==''){
+                        $(this).removeClass('orange');
+                        $(this).removeClass('ocre');
+                        $(this).addClass('red');
+                    }    
+                });
+            });
+            
+            elpie();
+        });
+        $(window).resize(function(){
+            elpie();
+        }); 
+        function elpie() {
+            if($(window).height() > $('.header').height() + $('.content').height() + $('.footer').height() ){ $('.footer').css({position: 'absolute', bottom : '0', left : '0'});} else{  $('.footer').css({position: 'relative'});}
+        }
+    </script>
+
+</head>
+<body>
+
+    <header class="header">
+        <nav class="menu">
+            <ul class="box">
+                <li class="btnHome"><a href="home.html" title="Inicio" class="on">Volver a inicio</a></li>
+            </ul>
+        </nav>
+        <div class="box">
+            <div id="logo"><a href="home.html" title="Eldeseazo"><img src="img/logo_el_deseazo.jpg" title="Eldeseazo, el genio de tus compras." alt="Logotipo de Eldeseazo" /></a></div>
+            <div class="telefono">
+                <span>¿Necesitas ayuda?</span><br />
+                <strong>902 000 000</strong>
+            </div>
+        </div>
+    </header>
+    
+    <section class="content">
+        
+        <div class="breadcrumb black">
+            <div class="box">    
+                <p><b>Estas en:</b> <a href="home.html">Inicio</a> <span>Pide un deseo</span></p>
+            </div>
+        </div>
+        
+        <div class="landing viajesBlue"></div>        
+        
+        <div class="boxGrey">
+            <div class="boxPedir entrar">
+                
+                <h1>Has pedido un viaje a Italia saliendo de Madrid, dos adultos y un niño, por 300€</h1>
+                
+                <div class="boxForm">
+                    
+                    <h2>Indícanos tu email o entra desde facebook<br />para hacer realidad tu deseazo.</h2>
+                    
+                    <div class="colDos">
+                        <span class="title">Entrar con mi Facebook</span>    
+                        <p>Es la forma más sencilla y rápida<br />de continuar. No accederemos a tu<br />perfil sin tu permiso.</p>
+                        <div class="blockFormCierre">
+                            <input type="button" value="Finalizar" title="facebook Finalizar" class="btn fbFin" />
+                        </div>
+                    </div>
+                    
+                    <div class="colDos formulario">
+                        <span class="title">Entrar con mi email</span> 
+                        <form class="jqtransform">
+                            <div class="rowElem">
+                                <div class="contBlockP campoForm">
+                                    <label>Email</label>
+                                    <input type="text" value="" title="email" />
+                                </div>
+                            </div>
+                            
+                            <div class="rowElem">
+                                <div class="contBlockP campoForm">
+                                    <label>Tu nombre</label>
+                                    <input type="text" value="" title="Tu nombre" />
+                                </div>
+                            </div>
+                            <div class="rowElem acepto">
+                                <input type="checkbox" value="acepto" title="acepto" /><span class="heLeido">He leído y acepto las <a href="condicionesDeUso.html">Condiciones de uso</a> y la <a href="politicaDePrivacidad.html">Política de privacidad</a></span>
+                            </div>
+                            <div class="blockFormCierre">
+                                <input type="button" value="Finalizar" title="Continuar" class="btn" id="btnFinalizar" />
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="close">
+            <div class="box">
+                <div class="copy">Eldeseazo el genio de tus compras 2013. Todos los derechos reservados · <a href="politicaDePrivacidad.html" title="Política de privacidad">Política de privacidad</a> · <a href="condicionesDeUso.html" title="Condiciones de uso">Condiciones de uso</a></div>
+                <div class="logos">&nbsp;</div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

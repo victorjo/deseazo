@@ -1,0 +1,37 @@
+<html>
+<head></head>
+<body style="background-color:#edf0f3;font-family: Arial, sans-serif;">
+	<p style="font-size:10px;color:#8e9596;text-align:center;margin-bottom:22px;margin-top:23px;">
+	Pide tu deseo de compra en Eldeseazo y ahorra tiempo y dinero.<br />
+	Si no ves correctamente este mensaje, <a>haz clic aqu&#237;.</a>
+	</p>
+<head></head>
+	<table align=center><tr><td>
+	<table cellspacing="0">
+		<tr>
+			<td style="padding:0;"><img src="img/imagen-email-grande-1.png" alt=""/></td>
+			<td style="padding:0;"><a href="http://www.eldeseazo.com"><img src="img/imagen-email-grande-2.png" alt="Eldeseazo" border="none"/></a></td>
+		</tr>
+	</table>
+	<table cellspacing="0">
+		<tr>
+			<td style="padding:0;"><img src="img/imagen-email-grande-3.png" alt=""/></td>
+			<td style="padding:0;"><img src="img/imagen-email-grande-4.png" alt=""/></td>
+		</tr>
+	</table>
+	<table cellspacing="0">
+		<tr>
+			<td style="padding:0;"><img src="img/imagen-email-grande-5.png" alt="Bienvenido a Eldeseazo"/></td>
+			<td style="padding:0;"><img src="img/imagen-email-grande-6.png" alt="Tenemos a más de 300 empresas de electrodomésticos que pueden ayudarte"/></td>
+		</tr>
+	</table>
+	<table cellspacing="0">
+		<tr>
+			<td style="padding:0;"><img src="img/imagen-email-grande-7.png" alt="Pero para poder hacerles llegar tu deseo tienes que acceder a tu área privada. ¡Acceder ahora!"/></td>
+			<td style="padding:0;"><a href=""><img src="img/imagen-email-grande-8.png" alt="Acceder a mi área privada" border="none"/></a></td>
+		</tr>
+	</table>
+	</td></tr></table>
+		<p style="font-size:12px;font-family: Arial, sans-serif;text-align:center;color:#8e9596;margin-top:22px;"> Si no deseas seguir recibiendo estos emails puedes <a style="text-decoration:none;color:#2faef9;" href="">darte de baja</a></p>
+</body>
+</html>

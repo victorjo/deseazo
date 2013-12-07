@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">  
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Language" content="es" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content=" " />
+
+    <title>Estadísticas | Eldeseazo</title>
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+ 
+    <!-- CSS -->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/jqtransform.css" rel="stylesheet" type="text/css" />
+    
+    <!-- JS -->
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="js/jquery.jqtransform.js" type="text/javascript"></script>
+    <script src="js/Chart.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+        $(function() { $("form.jqtransform").jqTransform(); /* JS para etiquetas Select -- Necesario estar dentro de etiqueta form */ });
+    </script>
+    
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript">
+        $(window).load(function(){
+            
+            $('input[type="text"]').focusin(function () { if ($(this).val() == $(this).attr('value') ) { $(this).val(''); $(this).removeClass('inputClarito');$(this).addClass('cajaSeleccionada');} });
+            $('input[type="text"]').focusout(function () {  if ($(this).val() == '') {  $(this).val($(this).attr('value')); $(this).addClass('inputClarito');$(this).removeClass('cajaSeleccionada');} });
+            
+            $('.siteMap .boxCuarto span').click(function(){
+                if($(window).width()<=1024){ $(this).parent().find("ul").slideToggle(); }    
+            });
+            elpie();
+        });
+        $(window).resize(function(){
+            elpie();
+        }); 
+        function elpie() {
+            if($(window).height() > $('.header').height() + $('.content').height() + $('.footer').height() ){ $('.footer').css({position: 'absolute', bottom : '0', left : '0'});} else{  $('.footer').css({position: 'relative'});}
+        }
+    </script>
+
+</head>
+<body>
+
+    <header class="header">
+        <nav class="menu">
+            <ul class="box">
+                <li class="btnHome"><a href="home.html" title="Inicio" class="on">Inicio &nbsp;&nbsp;|</a></li>
+                <li><a href="homeViajes.html" title="Viajes">Viajes</a></li>
+                <li><a href="homeElectronica.html" title="Electrónica">Electrónica</a></li>
+                <li><a href="homeMotor.html" title="Motor">Motor</a></li>
+                <li><a href="homeVivienda.html" title="Vivienda">Vivienda</a></li>
+                <li><a href="homeModa.html" title="Moda">Moda</a></li>
+                <li><a href="homeRestaurantes.html" title="Restaurantes">Restaurantes</a></li>
+                <li><a href="homeOcio.html" title="Ocio">Ocio</a></li>
+                <li><a href="homeBienestar.html" title="Bienestar">Bienestar</a></li>
+                <li><a href="homeCursos.html" title="Cursos">Cursos</a></li>
+                <li><a href="homeServicios.html" title="Servicios">Servicios</a></li>
+                <li><a href="homeCategorias.html" title="Más">Más</a></li>
+            </ul>
+        </nav>
+        <div class="box">
+            <div id="logo"><a href="home.html" title="Eldeseazo"><img src="img/logo_el_deseazo.jpg" title="Eldeseazo, el genio de tus compras." alt="Logotipo de Eldeseazo" /></a></div>
+            <div class="logado premium">
+                <div class="foto">
+                    <div class="circle"></div>
+                    <img src="img/bgFotoUser.jpg" alt="foto Usuario" title="Nombre del usuario" />
+                </div>
+                <div class="name">
+                    <strong>Nombre Usuario</strong><br />
+                </div>
+                <div class="out"><a href="#" title="log Out"><img src="img/btnLogOut.png" alt="log Out" /></a></div>
+            </div>
+            <form action="pedirDeseo.html">
+                <div class="search"><input type="text" value="¿Qué quieres comprar y a qué precio?" /><input type="submit" value="Pide tu deseo" /></div>
+            </form>
+            <a href="#" title="Botón Menu" class="btnMenu">&nbsp;</a>
+        </div>
+    </header>
+    
+    <section class="content">
+        
+        <div class="breadcrumb">
+            <div class="box">   
+                <p><b>Estas en:</b> <a href="home.html" title="Inicio">Inicio</a> <a href="perfilPremiumFacturaDetalle.html" title="Facturas">Facturas</a> <span>Factura detalle</span></p>
+            </div>
+        </div>
+        
+        <div class="boxWhite">
+            <div class="box boxUser premium">
+                <div class="colInfoUser titBoxUser">
+                    <h1>Mis estadísticas</h1>
+                </div>
+                <div class="user">
+                    
+                    <div class="colUser">
+                        <div class="foto">
+                            <div class="circle"></div>
+                            <img src="img/bgFotoUser.jpg" alt="foto Usuario" title="Nombre del usuario" />
+                        </div>
+                        <div class="contUser">
+                            <h2>¡Hola Carlos!</h2>
+                            <ul>
+                                <li><a href="#" title="Deseos">Deseos (1)</a></li>
+                                <li><a href="#" title="Ofertas">Ofertas (2)</a></li>
+                                <li><a href="#" title="Mi Cuenta">Mi Cuenta</a></li>
+                                <li><a href="#" title="Estadísticas" class="on">Estadísticas</a></li>
+                                <li><a href="#" title="Facturas">Facturas</a></li>
+                            </ul>
+                            <div class="percentUser">
+                                <h3>Completa tu perfil</h3>
+                                <p>Es muy importante para que nuestros genios puedan hacerte las mejores ofertas</p>
+                                <div class="porcentaje">
+                                    <div class="boxCircle">
+                                        <div class="circle">50</div>
+                                        <p>% del perfil completado</p>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#" title="Añade una foto de perfil">Añade una foto de perfil</a></li>
+                                        <li><a href="#" title="Enlaza con Facebook">Enlaza con Facebook</a></li>
+                                        <li><a href="#" title="Añade tu teléfono móvil">Añade tu teléfono móvil</a></li>
+                                        <li><a href="#" title="Crea una dirección de entrega para tus compras">Crea una dirección de entrega para tus compras</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="colInfoUser">
+                        
+                        <div class="filters estad">
+                            <div class="drops">
+                                <form class="jqtransform">
+                                <span class="txt">De</span>
+                                <div class="combo">
+                                    <select>
+                                        <option>...</option>
+                                        <option>...</option>
+                                        <option>...</option>
+                                        <option>...</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <span class="txt">A</span>
+                                <div class="combo">
+                                    <select>
+                                        <option>...</option>
+                                        <option>...</option>
+                                        <option>...</option>
+                                        <option>...</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                </form>
+                            </div>
+                            <div class="infoPeriodo">Periodo: <strong>2 meses</strong></div>   
+                        </div>
+                        <form class="jqtransform">
+                            <table class="estadisticas">
+                                <tbody>
+                                    <tr>
+                                        <td class="ver" rowspan="2">&nbsp;</td>
+                                        <td class="empresa tit" colspan="2"><strong>Empresa</strong></td>
+                                        <td class="sector tit" colspan="2"><strong>Sector <span class="peq">(viajes)</span></strong></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="empresa peq">Ago 2012</td>
+                                        <td class="empresa date peq">Oct 2012</td>
+                                        <td class="sector peq">Ago 2012</td>
+                                        <td class="sector date peq">Oct 2012</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="ver" rowspan="2">
+                                            <span class="tit">¿Cuántos clientes me han visto?</span>
+                                            <div class="comboP">
+                                                <select>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+                                            <input type="submit" value="ver gráfico" class="btnVerGrafico" />        
+                                        </td>
+                                        <td class="empresa">50</td>
+                                        <td class="empresa">200</td>
+                                        <td class="sector">310</td>
+                                        <td class="sector">930</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="empresa dark" colspan="2">+150 <span class="peq">(200%)</span> <span class="ok"></span></td>
+                                        <td class="sector dark" colspan="2">+150 <span class="peq">(200%)</span> <span class="ok"></span></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td colspan="5" class="tdEstadistica">
+                                            
+                                            <div class="chart">
+                                                <div class="titChart">
+                                                    <div class="titInfoChart">
+                                                        <h3>Número de impresiones totales</h3>
+                                                        <p>Suma de "mis ofertas" + "mi ficha" + "mi teléfono"</p>
+                                                    </div>
+                                                    <div class="btnsChart"><a href="#" class="btnActualizar">Actualizar datos</a><a href="#" class="btnX"></a></div>
+                                                </div>
+                                                
+                                                <canvas class="grafica" id="canvas" width="650" height="200">Tu navegador no puede mostrar las estadisticas actualizalo</canvas>
+                                                
+                                            </div>
+                                            <div class="boxCheck">
+                                                <input type="checkbox" checked="checked" value="acepto" title="acepto" /><span class="heLeido">Comparar con sector (viajes)</span>
+                                            </div>
+                                            <div class="btns"><a href="#" class="btn ocre">CSV</a> <a href="#" class="btn ocre">JPG</a> <a href="#" class="btn ocre">PDF</a></div>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="ver" rowspan="2">
+                                            <span class="tit">Clientes enviados</span>
+                                            <div class="comboP">
+                                                <select>
+                                                    <option>Totales</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+                                            <input type="submit" value="ver gráfico" class="btnVerGrafico" />        
+                                        </td>
+                                        <td class="empresa">50</td>
+                                        <td class="empresa">200</td>
+                                        <td class="sector">310</td>
+                                        <td class="sector">930</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="empresa dark" colspan="2">+150 <span class="peq">(200%)</span> <span class="ok"></span></td>
+                                        <td class="sector dark" colspan="2">+150 <span class="peq">(200%)</span> <span class="ok"></span></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="ver" rowspan="2">
+                                            <span class="tit">Mis contactos con clientes</span>
+                                            <div class="comboP">
+                                                <select>
+                                                    <option>Totales</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+                                            <input type="submit" value="ver gráfica" class="btnVerGrafico" />        
+                                        </td>
+                                        <td class="empresa">50</td>
+                                        <td class="empresa">200</td>
+                                        <td class="sector">310</td>
+                                        <td class="sector">930</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="empresa dark" colspan="2">+150 <span class="peq">(200%)</span> <span class="ok"></span></td>
+                                        <td class="sector dark" colspan="2">+150 <span class="peq">(200%)</span> <span class="ok"></span></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="ver" rowspan="2">
+                                            <span class="tit">Importe medio de los deseos</span>
+                                            <input type="submit" value="ver gráfico" class="btnVerGrafico" />        
+                                        </td>
+                                        <td class="empresa">50</td>
+                                        <td class="empresa">200</td>
+                                        <td class="sector">310</td>
+                                        <td class="sector">930</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="empresa dark" colspan="2">+150 <span class="peq">(200%)</span> <span class="ok"></span></td>
+                                        <td class="sector dark" colspan="2">+150 <span class="peq">(200%)</span> <span class="ok"></span></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="ver" rowspan="2">
+                                            <span class="tit">Velocidad de respuesta a los clientes</span>
+                                            <input type="submit" value="ver gráfico" class="btnVerGrafico" />        
+                                        </td>
+                                        <td class="empresa">50</td>
+                                        <td class="empresa">200</td>
+                                        <td class="sector">310</td>
+                                        <td class="sector">930</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="empresa dark" colspan="2">+150 <span class="peq">(200%)</span> <span class="ok"></span></td>
+                                        <td class="sector dark" colspan="2">+150 <span class="peq">(200%)</span> <span class="ok"></span></td>
+                                    </tr>                                    
+                                    
+                                    <tr>
+                                        <td class="ver" rowspan="2">
+                                            <span class="tit">Mis ofertas</span>
+                                            <div class="comboP">
+                                                <select>
+                                                    <option>Madrid</option>
+                                                    <option>Barcelona</option>
+                                                    <option>Cuenca</option>
+                                                    <option>Toledo</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+                                            <input type="submit" value="ver gráfica" class="btnVerGrafico" />        
+                                        </td>
+                                        <td class="empresa">50</td>
+                                        <td class="empresa">200</td>
+                                        <td class="sector">310</td>
+                                        <td class="sector">930</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="empresa dark" colspan="2">+150 <span class="peq">(200%)</span> <span class="ok"></span></td>
+                                        <td class="sector dark" colspan="2">+150 <span class="peq">(200%)</span> <span class="ok"></span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="ver" rowspan="2">
+                                            <span class="tit">Mi ficha</span>
+                                            <input type="submit" value="ver gráfico" class="btnVerGrafico" />        
+                                        </td>
+                                        <td class="empresa">50</td>
+                                        <td class="empresa">200</td>
+                                        <td class="sector">310</td>
+                                        <td class="sector">930</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="empresa dark" colspan="2">+150 <span class="peq">(200%)</span> <span class="ok"></span></td>
+                                        <td class="sector dark" colspan="2">+150 <span class="peq">(200%)</span> <span class="ok"></span></td>
+                                    </tr>  
+
+                                    <tr>
+                                        <td class="ver" rowspan="2">
+                                            <span class="tit">Mi teléfono</span>
+                                            <input type="submit" value="ver gráfico" class="btnVerGrafico" />        
+                                        </td>
+                                        <td class="empresa">50</td>
+                                        <td class="empresa">200</td>
+                                        <td class="sector">310</td>
+                                        <td class="sector">930</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="empresa dark" colspan="2">+150 <span class="peq">(200%)</span> <span class="ok"></span></td>
+                                        <td class="sector dark" colspan="2">+150 <span class="peq">(200%)</span> <span class="ok"></span></td>
+                                    </tr>  
+                                </tbody>
+                            </table>
+                            <div class="nube">
+                                <h5>Top 10 actividades más pedidas en los deseos del sector:</h5>
+                                <div class="contNube">Nube de tags</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+    <footer class="footer">
+        <div class="subMenu">
+            <div class="box">
+                <div class="siteMap">
+                    <div class="boxCuarto">
+                        <span>Eldeseazo</span>
+                        <ul>
+                            <li><a href="home.html" title="Inicio">Inicio</a></li>
+                            <li><a href="listadoDeseos.html" title="Últimos deseos">Últimos deseos</a></li>
+                            <li><a href="listadoOfertas.html" title="Últimas ofertas">Últimas ofertas</a></li>
+                            <li><a href="listadoGenios.html" title="Directorio de genios">Directorio de genios</a></li>
+                        </ul>
+                    </div>
+                    <div class="boxCuarto">
+                        <span>Sobre Nosotros</span>
+                        <ul>
+                            <li><a href="comoFunciona.html" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+                            <li><a href="contacto.html" title="Contacto">Contacto</a></li>
+                            <li><a href="#" title="Blog">Blog</a></li>
+                            <li><a href="prensa.html" title="Sala de prensa">Sala de prensa</a></li>
+                        </ul>
+                    </div>
+                    <div class="boxCuarto">
+                        <span>Acceso</span>
+                        <ul>
+                            <li><a href="acceso.html" title="Mi cuenta">Mi cuenta</a></li>
+                            <li><a href="altaEmpresa.html" title="¿Tienes una empresa?">¿Tienes una empresa?</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="boxCuarto rrss">
+                    <span>Síguenos</span>
+                    <a href="#" title="facebook" target="_blank" class="btnF">&nbsp;</a><a href="#" title="twitter" target="_blank" class="btnT">&nbsp;</a><a href="#" title="Google+" target="_blank" class="btnG">&nbsp;</a><a href="#" title="Rss" target="_blank" class="btnRss">&nbsp;</a>
+                </div>
+            </div>
+        </div>
+        <div class="close">
+            <div class="box">
+                <div class="copy">Eldeseazo el genio de tus compras 2013. Todos los derechos reservados · <a href="politicaDePrivacidad.html" title="Política de privacidad">Política de privacidad</a> · <a href="#" title="">Condiciones de uso</a></div>
+                <div class="logos">&nbsp;</div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        var lineChartData = {
+            labels : ["1 Ago","15 Ago","1 Sep","15 Sep","1 Oct","15 Oct","1 Nov"],
+            datasets : [
+                {
+                    fillColor : "rgba(201,215,218,0)",
+                    strokeColor : "rgba(201,215,218,1)",
+                    pointColor : "rgba(201,215,218,1)",
+                    pointStrokeColor : "#fff",
+                    data : [320,350,400,440,380,700,920]
+                },
+                {
+                    fillColor : "rgba(201,177,81,0)",
+                    strokeColor : "rgba(201,177,81,1)",
+                    pointColor : "rgba(201,177,81,1)",
+                    pointStrokeColor : "#fff",
+                    data : [280,285,290,300,330,360,400]
+                }
+            ]
+        }
+        var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData, {
+            scaleOverride : true,
+            scaleSteps: 4,
+            scaleStepWidth : 250,
+            bezierCurve: false,
+            scaleFontSize : 10
+        });
+    </script>
+    
+</body>
+</html>
